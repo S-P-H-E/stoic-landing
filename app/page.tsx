@@ -95,7 +95,7 @@ export default function Home() {
           </div>
         {reviews.map((review) => (
           <div key={review.id} className="w-fit pt-10 px-10 border border-[#111111] m-5 rounded-2xl h-fit flex flex-col items-center bg-gradient-to-tr from-[#060708]">
-            <h1 className="text-xl md:w-[500px] text-center">"{review.text}"</h1>
+            <h1 className="text-xl md:w-[500px] text-center">&quot;{review.text}&quot;</h1>
             <div className="flex justify-between w-full items-center gap-2 border-t border-r border-[#111216] m-5 p-2 rounded-2xl">
               <Image src={review.image} alt="profile" width={40} height={0} className="rounded-full"/>
               <h1>{review.author}</h1>
