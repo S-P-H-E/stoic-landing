@@ -1,5 +1,6 @@
 import Video from "@/components/Video";
 import Image from "next/image";
+import Script from "next/script";
 import { BsFillPersonFill } from "react-icons/bs"
 
 export default function Home() {
@@ -32,14 +33,16 @@ export default function Home() {
       </div>
       {/* <Video src={'/video.mp4'}/> */}
       <div className='p-10'>
-            <div style={{ width: "1000px", height: "560px", margin: "0 auto", position: "relative"}} className="video-container rounded-3xl">
-                <video 
-                src={'/video.mp4'}
-                controls
-                style={{ position: "relative", width: "100%", height: "100%", borderRadius: "25px"}} 
-                title="This Is The Future of Education"
-                ></video>
-            </div>
+      <div style={{ width: "1000px", height: "560px", margin: "0 auto", position: "relative"}}>
+          <iframe 
+            src="https://player.vimeo.com/video/870967715?quality=1080p&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            style={{ position: "relative", width: "100%", height: "100%", borderRadius: "25px"}} 
+            title="This Is The Future of Education"
+          ></iframe>
+        </div>
+        <Script src="https://player.vimeo.com/api/player.js" strategy="beforeInteractive" />
         </div>
     </>
   )
