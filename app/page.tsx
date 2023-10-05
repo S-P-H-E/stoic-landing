@@ -1,11 +1,27 @@
+"use client"
 import Video from "@/components/Video";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { BsFillPersonFill, BsFillPeopleFill, BsFillCalendarDateFill, BsStars } from "react-icons/bs"
 import { BiTimeFive, BiLogoStripe } from "react-icons/bi"
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [launch, setLaunch] = useState(true)
+  const router = useRouter();
+
+  useEffect(() => {
+    if (launch) {
+      router.push('/countdown');
+    }
+  }, [launch, router]);
+
+  if (launch) {
+    return;
+  }
+
   const reviews = [
     {
       id: 1,
@@ -26,6 +42,7 @@ export default function Home() {
       author: "Knowledge Kombat"
     },
   ]
+
   return (
     <>
       <div className="flex justify-center z-10 w-full md:fixed">
@@ -43,7 +60,7 @@ export default function Home() {
           </div>
 
           <div className="w-full flex justify-end">
-            <Link href={'https://app.stoiccord.com'} className="bg-[--highlight] text-[--bg] px-4 py-2 rounded-full font-semibold">Login</Link>
+            <Link href={'https://app.stoiccord.com'} className="bg-[--text] text-[--bg] px-4 py-2 rounded-full font-semibold">Login</Link>
           </div>
         </div>
       </div>
