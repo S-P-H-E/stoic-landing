@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [launch, setLaunch] = useState(true)
+  const [launch, setLaunch] = useState(false)
   const router = useRouter();
 
   useEffect(() => {
