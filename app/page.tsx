@@ -3,22 +3,6 @@ import Navbar from "@/components/Hero/Navbar";
 import Video from "@/components/Hero/Video";
 
 export default function Home() {
-<<<<<<< HEAD
-=======
-  const [launch, setLaunch] = useState(false)
-  const router = useRouter();
-
-  useEffect(() => {
-    if (launch) {
-      router.push('/countdown');
-    }
-  }, [launch, router]);
-
-  if (launch) {
-    return;
-  }
-
->>>>>>> f99b174cd02095aaa329d46755ec645cfc916a5f
   const reviews = [
     {
       id: 1,
@@ -42,10 +26,15 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-
-      <Video />
+      <div className="overflow-hidden z-0">
+        <Navbar />
+      </div>
+      <div className="overflow-hidden z-0">
+        <Hero />
+      </div>
+      <div className="z-50">
+        <Video />
+      </div>
     </>
   )
 }

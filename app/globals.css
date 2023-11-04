@@ -13,7 +13,22 @@ body {
     background-color: var(--bg);
 }
 
+/* .gradient-01 {
+    background-image: linear-gradient(
+        270deg,
+        #0e0e0e 0%,
+        #252525 26%,
+        #202020 39%,
+        #111111 50%,
+        #242424 61%,
+        #353535 74%,
+        #838383 100%
+    );
+    filter: blur(125px);
+} */
+
 .get-started {
+    font-weight: 600;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -34,8 +49,8 @@ body {
 .get-started:hover {
     color: var(--bg);
     transform: scale(1.1);
-    /* outline: 2px solid var(--bg); */
-    /* box-shadow: 4px 5px 17px -4px var(--text); */
+    outline: 2px solid var(--text);
+    box-shadow: 4px 5px 30px -4px var(--text);
 }
   
 .get-started::before {

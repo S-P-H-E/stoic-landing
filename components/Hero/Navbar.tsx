@@ -19,8 +19,8 @@ export default function Navbar(){
     }
 
     return(
-        <div className="flex justify-center z-10 w-full md:fixed">
-        <div className="flex justify-between m-5 p-5 w-full md:w-[800px] rounded-full bg-blur border border-[#181818] h-fit">
+        <div className="flex justify-center -z-10 w-full md:fixed">
+        <div className="flex justify-between m-5 p-5 w-full md:w-[800px] rounded-full bg-blurfont-semibold text-white border border-[#181818] h-fit">
           <div className="w-full hidden md:flex items-center">
               <div className="flex gap-6">
                 <button>Testimonials</button>
