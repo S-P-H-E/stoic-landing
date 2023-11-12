@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero/page";
 import Navbar from "@/components/Hero/Navbar";
-import Video from "@/components/Hero/Video";
+import Benefits from "@/components/Hero/Benefits/page";
 
 export default function Home() {
   const reviews = [
@@ -33,7 +33,7 @@ export default function Home() {
         <Hero />
       </div>
       <div className="z-50">
-        <Video />
+        <Benefits />
       </div>
     </>
   )
