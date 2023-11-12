@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import Image from "next/image";
 import { motion } from "framer-motion"
+import clsx from 'clsx';
 
 export default function Card(){
     const copy = [
@@ -15,7 +16,7 @@ export default function Card(){
             image: "/images/community.jpg",
             icon: "/icon/handshake.png",
             title: "The Best Community",
-            description: "You'll have access to an amazing supportive community whom you can network with and further."
+            description: "You'll have access to an amazing supportive community who you can network with and further."
         },
         {
             image: "/images/counter.jpg",
@@ -27,20 +28,26 @@ export default function Card(){
             image: "/images/robot.jpg",
             icon: "/icon/clock.png",
             title: "24/7 Support",
-            description: "You'll have access to Stoic AI that will answer any of your social media questions even when we are offline"
+            description: "You'll have access to Stoic AI that will answer any of your social media questions even when we are offline."
+        },
+        {
+            image: "/images/laptop.jpg",
+            icon: "/icon/clock.png",
+            title: "Innovative Platfrom",
+            description: "We've built a platform like none other on the market it contains our courses, AI, resources and tools built to assist your journey"
         },
     ]
 
     const fadeInAnimationVariants = { 
         initial: {
             opacity: 0,
-            y: 100,
+            y: 200,
         },
         animate: (index: number) => ({
             opacity: 1,
             y: 0,
             transition: {
-                delay: 0.010 * index,
+                delay: 5.05 * index,
             }
         })
       }
@@ -56,9 +63,9 @@ export default function Card(){
                         once: true,
                     }}
                     
-                    key={index} className="border shadow-xl text-black p-10 rounded-3xl flex items-center gap-10 w-[80vw] mx-auto">
+                    key={index} className={"border shadow-xl text-black p-10 rounded-3xl flex items-center gap-10 w-[80vw] mx-auto"}>
                     <Image src={info.image} alt='edu' width={300} height={0} className="rounded-xl"/>
-                    <div className="w-[600px] flex flex-col gap-4">
+                    <div className={"w-full flex flex-col gap-4"}>
                     {/* <Image src={info.image} alt='edu' width={90} height={0} className="bg-[#181818] p-2 rounded-2xl"/> */}
                         <h1 className="text-4xl font-semibold">{info.title}</h1>
                         <p>{info.description}</p>

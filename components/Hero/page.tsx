@@ -2,15 +2,16 @@
 import { BsFillPersonFill } from "react-icons/bs"
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useState } from "react"
+import Image from "next/image";
 
 type Visibility = "visible" | "hidden";
 
 export default function Hero(){
     const { scrollYProgress } = useScroll()
-    const position = useTransform(scrollYProgress, [0, 1], [-100, 21000])
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
+    const position = useTransform(scrollYProgress, [0, 1], [-100, 2500])
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
     const scale2 = useTransform(scrollYProgress, [0, 1], [1, -10]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [1, -10])
+    const opacity = useTransform(scrollYProgress, [0, 1], [1, -1])
     // const rotate = useTransform(scrollYProgress, [0, 1], [1, -100])
 
     const [muted, setMuted] = useState('&muted=true')
@@ -35,7 +36,7 @@ export default function Hero(){
                     
                     <motion.div className="w-[900px] -z-0 m-5 aspect-video mx-auto">
                         <div style={{visibility: visibility}} className="absolute w-[900px] aspect-video bg-black/60 flex items-center justify-center cursor-pointer rounded-3xl" onClick={handlePlay}>
-                            <img src="/images/play.png" />
+                            <Image src="/images/play.png" alt='play' width={50} height={0}/>
                         </div>
                         <iframe
                             className="rounded-3xl shadow-xl  w-full h-full"
@@ -57,7 +58,7 @@ export default function Hero(){
     )
 }
 
-// 5500
+// 21000
 // 
 
 // style={{ position: 'relative', scale: scale2}}

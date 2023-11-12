@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero/page";
 import Navbar from "@/components/Hero/Navbar";
-import Benefits from "@/components/Hero/Benefits/page";
+import Benefits from "@/components/Benefits/page";
+import Courses from "@/components/Courses/page";
 
 export default function Home() {
   const reviews = [
@@ -35,6 +36,7 @@ export default function Home() {
       <div className="z-50">
         <Benefits />
       </div>
+      <Courses />
     </>
   )
 }
