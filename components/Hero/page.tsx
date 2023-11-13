@@ -31,11 +31,11 @@ export default function Hero(){
                 <motion.div style={{y: position, scale: scale, opacity: opacity}} > 
                     {/* <motion.div style={{ scaleX: scrollYProgress }} className="h-[10px] bg-red-500"/> */}
 
-                    <h1 className="text-4xl md:text-6xl p-4 mt-[15vh] uppercase"><mark className="bg-transparent text-white font-semibold">Conquer</mark> The Social Media Algorithm</h1>
-                    <p className="text-sm px-10 md:text-2xl md:w-[800px] text-center mx-auto">Learn how to get views, get paid and stop wasting time</p>
+                    <h1 className="text-4xl md:text-[3vw] p-4 mt-[20vh] uppercase"><mark className="bg-transparent text-white font-semibold">Conquer</mark> The Social Media Algorithm</h1>
+                    <p className="text-sm px-10 md:text-[1.5vw] md:w-[800px] text-center mx-auto">Learn how to get views, get paid and stop wasting time</p>
                     
-                    <motion.div className="w-[900px] -z-0 m-5 aspect-video mx-auto">
-                        <div style={{visibility: visibility}} className="absolute w-[900px] aspect-video bg-black/60 flex items-center justify-center cursor-pointer rounded-3xl" onClick={handlePlay}>
+                    <motion.div className="w-[50vw] -z-0 m-5 aspect-video mx-auto">
+                        <div style={{visibility: visibility}} className="absolute w-[50vw] aspect-video bg-black/60 flex items-center justify-center cursor-pointer rounded-3xl" onClick={handlePlay}>
                             <Image src="/images/play.png" alt='play' width={50} height={0}/>
                         </div>
                         <iframe
@@ -46,12 +46,9 @@ export default function Hero(){
                         ></iframe>
                     </motion.div>
 
-                    <button className="get-started">
+                    {/* <button className="get-started">
                         Get Started
-                    </button>
-
-                    
-
+                    </button> */}
                 </motion.div>
             </div>
         </>
