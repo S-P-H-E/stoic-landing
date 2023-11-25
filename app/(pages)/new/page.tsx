@@ -1,18 +1,26 @@
-import Header from "@/components/Header/page";
+import Image from "next/image";
 import { BsArrowDownShort } from "react-icons/bs";
-
+import Landing from '@/public/landing.webp'
+import Logo from '@/public/stoic.svg'
 
 export default function New(){
+
     return(
-        <div className="h-screen">
-            <Header />
-            {/* <div className="absolute bottom-0 p-10 -z-10 flex justify-between items-center w-full">
-                <h1 className="text-3xl font-semibold w-[430px]">The platform that gives cutting edge-information on going viral on social media</h1>
-                <button className="bg-white text-black p-5 rounded-full font-semibold flex items-center gap-1">
-                    Scroll to learn more
-                    <BsArrowDownShort size={35}/>
-                </button>
-            </div> */}
+        <div>
+            <div className="flex w-[80vw] mx-auto p-10 items-center gap-3">
+                <Image src={Logo} alt='Logo' className="w-[25px]"/>
+                <h1 className="font-medium text-[1.24rem]">STOIC</h1>
+            </div>
+
+            <div className="flex flex-col items-center p-10 gap-10 bg-gradient-to-t from-[#002fff] via-[#050046] via-50% to-90% to-transparent">
+                <h1 className="text-8xl font-semibold">Make money online</h1>
+                <p className="text-xl mx-auto w-[700px] text-center">Design your site on a familiar free-form canvas. Visually set up your breakpoints to make it responsive.</p>
+                <Image src={Landing} className="grayscale" alt='lanidng'/>
+            </div>
+
+            <div className="p-10">
+                <h1>Hello</h1>
+            </div>
         </div>
     )
 }

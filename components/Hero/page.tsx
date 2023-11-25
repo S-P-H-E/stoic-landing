@@ -27,7 +27,7 @@ export default function Hero(){
     return(
         <>
             <div className="h-full w-full absolute gradient-01 -z-10 bottom-[500px]"/>
-            <div className="w-[1500px] mx-auto text-center flex flex-col items-center justify-center gap-2 m-20">
+            <div className="w-[70vw] mx-auto text-center flex flex-col items-center justify-center gap-2 m-20">
                 <motion.div style={{y: position, scale: scale, opacity: opacity}} className="flex flex-col justify-center items-center h-[100dvh]"> 
                     {/* <motion.div style={{ scaleX: scrollYProgress }} className="h-[10px] bg-red-500"/> */}
 
