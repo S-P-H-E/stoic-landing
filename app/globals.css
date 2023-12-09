@@ -43,6 +43,21 @@ body {
     filter: blur(125px);
 } */
 
+.radial {
+    background: radial-gradient(#e66465, rgba(255, 255, 255, 0));
+}
+
+.dot {
+    --dot-bg: #0d0d0d;
+    --dot-color: #7e7e7e;
+    --dot-size: 1px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+  }
+
 .gradient {
     background: radial-gradient(211.50000000000003% 113.1% at -66.4% 35.9%,#0b014a 39.13195153221485%,rgb(0,73,184) 51.424349881796694%,rgb(50,100,227) 67.59505338573997%,var(--token-ee053477-e115-4fec-a5f5-cdc637ed6ddc, rgb(0, 204, 255)) 77.36876020980384%,rgb(110,255,211) 90%,rgb(236,241,56) 100%);
     flex: none;
