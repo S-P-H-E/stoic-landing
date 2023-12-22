@@ -13,7 +13,6 @@ body {
     background-color: var(--bg);
 }
 
-
 .bg-blur {
     backdrop-filter: blur(10px);
     background-color: #afafaf31;
@@ -62,7 +61,7 @@ body {
           linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-color);
-  }
+}
 
 .gradient {
     background: radial-gradient(211.50000000000003% 113.1% at -66.4% 35.9%,#0b014a 39.13195153221485%,rgb(0,73,184) 51.424349881796694%,rgb(50,100,227) 67.59505338573997%,var(--token-ee053477-e115-4fec-a5f5-cdc637ed6ddc, rgb(0, 204, 255)) 77.36876020980384%,rgb(110,255,211) 90%,rgb(236,241,56) 100%);
