@@ -289,7 +289,7 @@ export default function New(){
             <div className="flex flex-wrap gap-3 mx-auto w-fit">
                 {reviews.map(review => (
                     <div key={review.id} className="bg-[#191919] w-[550px] rounded-3xl p-5 relative flex flex-col justify-between gap-4">
-                        <h1 className="text-[#c6c6c6] font-medium">"{review.text}"</h1>
+                        <h1 className="text-[#c6c6c6] font-medium">&quot;{review.text}&quot;</h1>
                         <div className="flex gap-3 items-center">
                             <img src={review.image ? review.image : 'https://yt3.googleusercontent.com/ytc/AIf8zZQ6Beteem4h6iwgtemlku2M0sJjq64BgZFculaewg=s900-c-k-c0x00ffffff-no-rj'} className="rounded-full w-[40px]"/>
                             <h1 className="font-semibold">{review.author}</h1>
