@@ -6,6 +6,7 @@
     --text: white;
     --highlight: #eccf00;
     --bg: #0d0d0d;
+    --upgrade: #1a60f6;
 }
 
 body {
@@ -120,3 +121,66 @@ body {
 .bg-blur {
     backdrop-filter: blur(10px);
 }
+
+
+.upgrade {
+    font-weight: bold;
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    padding: 0.4em 0.7em;
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--upgrade);
+    transition: all 1000ms;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid var(--upgrade);
+  }
+  
+  .upgrade:hover {
+    color: white;
+    transform: scale(1.1);
+    outline: 2px solid var(--upgrade);
+    box-shadow: 4px 5px 17px -4px var(--upgrade);
+  }
+  
+  .upgrade::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--upgrade);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 700ms;
+  }
+  
+  .upgrade:hover::before {
+    width: 250%;
+  }
+
+  .icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon.down {
+    transform: rotate(0deg);
+  }
+  
+  .icon.up {
+    transform: rotate(180deg);
+  }
+  
+  .answer-container {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .answer-container.expanded {
+    max-height: 200px; /* Set a fixed max height for the answer container */
+  }

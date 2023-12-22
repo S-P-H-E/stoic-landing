@@ -2,12 +2,17 @@
 import Image from "next/image";
 import Landing from '@/public/landing.png'
 import { useState } from "react";
-import { FaGlobeAmericas, FaUserCircle, FaYoutube } from "react-icons/fa";
+import { FaGlobeAmericas, FaTrophy, FaUserCircle, FaYoutube } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import Phone from '@/public/iphone.png'
 import Stoic from '@/public/stoic.png'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useSpring, animated, config } from 'react-spring';
+import { FaBook, FaGraduationCap, FaStripe } from 'react-icons/fa'
+import { BsFillPersonFill, BsStars, BsFillCheckCircleFill, BsPeopleFill } from 'react-icons/bs'
+import FAQs from "@/components/FAQs/page";
+import Link from "next/link";
+import axios from "axios";
 
 type Visibility = "visible" | "hidden";
 
@@ -15,6 +20,7 @@ export default function New(){
     const [muted, setMuted] = useState('&muted=true')
     const [controls, setControls] = useState('&controls=false')
     const [visibility, setVisibility] = useState<Visibility>('visible')
+    const currentYear = new Date().getFullYear();
 
     const handlePlay = () => {
         setMuted('')
@@ -53,29 +59,51 @@ export default function New(){
             
         })
     }
-    const navAnimation1 = useSpring({
-        from: { opacity: 0, transform: 'translateY(130px)' },
-        to: { opacity: 1, transform: 'translateY(0)' },
-        delay: 200
-    })
 
-    const navAnimation2 = useSpring({
-        from: { opacity: 0, transform: 'translateY(130px)' },
-        to: { opacity: 1, transform: 'translateY(0)' },
-        delay: 250
-    })
-
-    const navAnimation3 = useSpring({
-        from: { opacity: 0, transform: 'translateY(130px)' },
-        to: { opacity: 1, transform: 'translateY(0)' },
-        delay: 300
-    })
-
-    const shopIconAnimation = useSpring({
-        from: { opacity: 0, transform: 'translateY(130px)' },
-        to: { opacity: 1, transform: 'translateY(0)' },
-        delay: 550
-    })
+    //Upgrade Animation
+    const fadeInAnimationVariants = { // for framer motion  
+        initial: {
+            opacity: 0,
+            y: 100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.05 * index,
+            }
+        })
+    } 
+    
+      
+    
+      const features = [
+        {
+          id: 1,
+          icon: <FaBook size={25}/>,
+          name: 'Courses'
+        },
+        {
+          id: 2,
+          icon: <BsStars size={25}/>,
+          name: 'AI Tools'
+        },
+        {
+          id: 3,
+          icon: <FaGraduationCap size={25}/>,
+          name: 'In-Depth Tutorials'
+        },
+        {
+            id: 4,
+            icon: <BsPeopleFill size={25}/>,
+            name: 'Community'
+        },
+        {
+          id: 5,
+          icon: <FaTrophy size={25}/>,
+          name: 'No Experience Required'
+        },
+      ]
 
     const reviews = [
         {
@@ -98,8 +126,24 @@ export default function New(){
         },
     ]
 
+    const handleSubscription = async (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        const { data } = await axios.post('/api/payment',
+            // {
+            //     priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
+            //     promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO'
+            // },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }
+        );
+        window.location.assign(data)
+    }
+
     return(
-        <div>
+        <>
             <div className="image"/>
             {/*<img src='/wave.avif' className="absolute grayscale opacity-20 -z-10 w-[100vw]"/>*/}
 
@@ -125,7 +169,7 @@ export default function New(){
                             Login
                             <FaUserCircle />
                         </button>
-                        <button className="bg-white px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2">
+                        <button className="bg-white px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2" onClick={handleSubscription}>
                             Join Premium
                             <FiArrowUpRight />
                         </button>
@@ -242,12 +286,18 @@ export default function New(){
                             <p className="text-center font-medium text-md text-[#a8a8a8]">Having a custom platform allows you to have the best curated experience </p>
                         </motion.div>
 
-                        <div
-                            className="border-2 border-[#1b1b1b] bg-repeat h-full w-1/5 rounded-3xl flex flex-col justify-center items-center gap-2 relative">
+                        <motion.div
+                            initial='initial'
+                            variants={fadeInBox}
+                            whileInView="animate"
+                            viewport={{
+                                once: true,
+                            }}
+                            className="border-2 border-[#1b1b1b] bg-repeat h-full w-1/5 rounded-3xl flex flex-col justify-center items-center gap-2 relative dot">
                             <FaYoutube size={80}/>
                             <h1 className="text-xl font-semibold">Video Converters</h1>
                             {/* <p className="text-center font-medium text-md text-[#a8a8a8]">Having a custom platform allows you to have the best curated experience </p> */}
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>
@@ -299,25 +349,93 @@ export default function New(){
             </div>
 
             {/* Pricing */}
-            <div className="p-20 flex flex-col items-center gap-6">
+            <div className="pt-40 pb-10 flex flex-col items-center gap-6">
                 <h1 className="text-5xl font-semibold text-center">Lets get you started.</h1>
                 {/* <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Empower your creative journey with our state-of-the-art platform, offering a 24/7 AI support system to guide you at every step. Easily convert videos for major social media platforms with our specialized tools. Dive into a rich resources library, providing all the assets you need for seamless editing. Whether you're utilizing our AI support, video converters, or resource library, our platform ensures you have the powerful yet familiar tools to craft your ultimate content.</p> */}
-                <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Pick the plan that fits your needs.</p>
+                <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Lock-in this price before it increases.</p>
             </div>
+
+            <div className="flex items-center justify-center">
+                <motion.div className=' border border-[#1C1C1D] w-[450px] rounded-3xl p-8 flex flex-col items-center gap-2 bg-gradient-to-tl from-[white]/5'
+                    custom={1}
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                    once: true,
+                    }}
+                >
+                <div className='flex flex-col justify-center items-center w-full'>
+                    <h1 className='text-2xl uppercase'>Upgrade to premium</h1>
+                </div>
+
+                <h1 className='text-4xl text-[--upgrade] pb-5 flex flex-col items-center font-medium'>
+                    <mark className='bg-transparent text-xl text-gray-500 line-through'>$99.99</mark>$49.99
+                </h1>
+
+                {features.map((feature) => (
+                    <motion.div initial="initial" whileInView="animate" viewport={{once: true,}} key={feature.id} custom={feature.id} variants={fadeInAnimationVariants} className='flex justify-between items-center gap-1 w-full p-2 rounded-md border border-[#1C1C1D]'>
+                        <div className='flex items-center'>
+                        <div className='text-[--upgrade] p-2 rounded-lg' style={{backgroundColor: `rgba(var(--upgrade), 0.1)`}}>
+                            {feature.icon}
+                        </div>
+                        <h1 className='px-2 font-medium'>{feature.name}</h1>
+                        </div>
+                        
+                        <BsFillCheckCircleFill className='text-[--upgrade]'/>
+                    </motion.div>
+                ))}
+                <motion.button className='upgrade mt-5'
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{ delay: 0.5 }}
+
+                    onClick={handleSubscription}
+                    >
+                    UPGRADE
+                    </motion.button>
+
+                    <div className='flex items-center gap-1 border border-[--border] px-2 rounded-lg mt-6'>
+                    <p className='text-sm'>Secured by</p>
+                    <FaStripe size={35}/>
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* FAQs */}
+            <div className="pt-40 pb-10 flex flex-col items-center gap-6">
+                <h1 className="text-5xl font-semibold text-center">Still unsure wether to upgrade?</h1>
+                <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Here are some commonly asked questions.</p>
+            </div>
+            <FAQs />
 
             {/* CTA */}
             <div className="bg-[#0d0d0dff] shadow-xl border-2 border-[#1b1b1b] rounded-3xl m-20 mx-auto w-[80vw] text-white h-[400px] flex justify-between items-center dot relative overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.01]">
                 <div className="flex flex-col gap-5 p-10">
                     <h1 className="text-6xl font-semibold w-[650px]">Begin using our cutting edge platform</h1>
-                    <button className="bg-white text-black font-semibold px-5 py-3 flex items-center rounded-full gap-2 w-fit">
-                        <FaGlobeAmericas />
-                        Get Premium
+                    <button className="bg-white px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2 w-fit" onClick={handleSubscription}>
+                            Join Premium
+                            <FiArrowUpRight />
                     </button>
                 </div>
                 <Image src={Phone} alt="phone" className="h-full w-fit"/>
 
                 <div className='absolute w-[2000px] right-[200px] bottom-[-500px] h-[500px] bg-[#272727] rounded-full opacity-0 group-hover:opacity-90 blur-[120px] transition duration-500 z-20'/>
             </div>
-        </div>
+
+            {/* Footer */}
+            <div className="bg-[#0d0d0dff] p-20 rounded-2xl rounded-br-none rounded-bl-none border-2 border-[#1C1C1D] flex items-center justify-between mx-auto w-[80vw]">
+                <h1 className="text-[#949494]">{currentYear} © Stoic, All rights reserved.</h1>
+                <div className="flex gap-2">
+                    <Link href="/Legal/Terms of Service.pdf" target="_blank">
+                        <button className="text-[#949494] hover:underline">Terms of Service</button>
+                    </Link>
+                    <h1 className="text-[#949494]">|</h1>
+                    <Link href="/Legal/Privacy Policy.pdf" target="_blank">
+                        <button className="text-[#949494] hover:underline">Privacy Policy</button>
+                    </Link>
+                </div>
+            </div>
+        </>
     )
 }
