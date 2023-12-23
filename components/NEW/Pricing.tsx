@@ -1,10 +1,9 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaBook, FaGraduationCap, FaStripe, FaTrophy } from 'react-icons/fa';
-import { BsFillCheckCircleFill, BsPeopleFill, BsStars } from 'react-icons/bs';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import { BsFillCheckCircleFill, BsPeopleFill, BsStars } from 'react-icons/bs';
+import { FaBook, FaGraduationCap, FaStripe, FaTrophy } from 'react-icons/fa';
 
 export default function Pricing() {
     

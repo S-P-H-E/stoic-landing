@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
 
 type Visibility = 'visible' | 'hidden';
 

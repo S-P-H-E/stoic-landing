@@ -1,6 +1,5 @@
 import { getCurrentYear } from '@/app/lib/utils';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Footer() {
   const currentYear = getCurrentYear();

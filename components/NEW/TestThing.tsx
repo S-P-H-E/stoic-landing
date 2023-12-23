@@ -5,9 +5,7 @@ import { useRef } from "react";
 
 const TestThing = () => {
   return (
-    <>
-      <HorizontalScrollCarousel />
-    </>
+    <HorizontalScrollCarousel />
   );
 };
 

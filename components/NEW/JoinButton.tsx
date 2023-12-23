@@ -2,7 +2,6 @@
 
 import axios from 'axios';
 import clsx from 'clsx';
-import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 
 export default function JoinButton({noGroup}: {noGroup?: boolean}) {

@@ -1,11 +1,9 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaYoutube } from 'react-icons/fa';
-import Image from 'next/image';
 import Stoic from '@/public/stoic.png';
-import JoinButton from './JoinButton';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { FaYoutube } from 'react-icons/fa';
 
 export default function Features() {
   const fadeInBox = {
