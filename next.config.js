@@ -5,6 +5,6 @@ module.exports = nextConfig
 
 module.exports = {
     images: {
-      domains: ['cdn.discordapp.com'],
+      domains: ['cdn.discordapp.com', 'yt3.googleusercontent.com'],
     },
   }
