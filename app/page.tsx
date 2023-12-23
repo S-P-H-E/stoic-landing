@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero/page";
-import Navbar from "@/components/Hero/Navbar";
-import Benefits from "@/components/Benefits/page";
-import Courses from "@/components/Software/page";
+import Hero from "@/components/Old/Hero/page";
+import Navbar from "@/components/Old/Hero/Navbar";
+import Benefits from "@/components/Old/Benefits/page";
+import Courses from "@/components/Old/Software/page";
 
 export default function Home() {
   const reviews = [
