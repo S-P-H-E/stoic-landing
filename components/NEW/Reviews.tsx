@@ -37,7 +37,7 @@ export default function Reviews() {
         y: 0,
         transition: {
           type: 'spring',
-          delay: 0.2 * index,
+          delay: 0.15 * index,
         },
       }),
     };

@@ -16,7 +16,7 @@ export default function Hero() {
     setVisibility('hidden');
   };
   return (
-    <div className="flex flex-col items-center px-10 relative dot max-w-8xl mx-auto">
+    <div className="flex flex-col items-center px-10 relative dot mx-auto">
       <div className="absolute w-full h-full bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d] via-20% to-80% to-transparent " />
       <div className="absolute w-full h-full bg-gradient-to-b from-[#0d0d0d] to-5% to-transparent " />
 
@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="bg-gradient-to-t from-[#0140fd] to-transparent to-95% absolute w-full h-full z-10 opacity-20"/>
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
-      <div className="w-[50vw] relative max-w-7xl z-20 m-5 aspect-video mx-auto">
+      <div className="w-[50vw] relative max-w-8xl z-20 m-5 aspect-video mx-auto">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0 }}

@@ -55,7 +55,7 @@ body {
 
 .dot {
     --dot-bg: #0d0d0d;
-    --dot-color: #7e7e7e;
+    --dot-color: rgba(126, 126, 126, 0.9);
     --dot-size: 1px;
     --dot-space: 22px;
       background:

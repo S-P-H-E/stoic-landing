@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 const faqs = [
   {
@@ -84,13 +85,13 @@ export default function FAQs() {
               once: true,
             }}
             key={index}
-            className="bg-[#191919] my-4 p-4 rounded-2xl"
+            onClick={() => toggleExpanded(index)}
+            className="bg-[#191919] hover:bg-[#151515] my-4 p-4 rounded-2xl transition duration-200 cursor-pointer"
           >
             <button
               className="font-bold md:font-medium text-[14px] md:text-2xl flex justify-between w-full items-center"
-              onClick={() => toggleExpanded(index)}
             >
-              {faq.question}
+              <p className={clsx('transition duration-300', expandedIndex === index && 'scale-110 translate-x-[5%]')}>{faq.question}</p>
               <div
                 className={`icon ${expandedIndex === index ? 'up' : 'down'}`}
               >
