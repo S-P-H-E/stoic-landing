@@ -38,8 +38,8 @@ export default function Hero() {
       <div className="w-[50vw] relative max-w-7xl z-20 m-5 aspect-video mx-auto">
         <motion.div
           className="w-full h-full"
-          initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ stiffness: 85, type: 'spring' }}
         >
           <div

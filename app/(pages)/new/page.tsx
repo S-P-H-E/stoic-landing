@@ -6,6 +6,7 @@ import Pricing from "@/components/NEW/Pricing";
 import CallToAction from "@/components/NEW/CallToAction";
 import Footer from "@/components/NEW/Footer";
 import Navbar from "@/components/NEW/Navbar";
+import TestThing from "@/components/NEW/TestThing";
 
 export default function New(){
     return(
@@ -18,6 +19,8 @@ export default function New(){
             <Features/>
 
             <Reviews/>
+
+            <TestThing/>
 
             <Pricing/>
 

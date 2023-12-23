@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const renderButton = (text: string) => (
     <button
-      className="text-[#7e7e7e] py-3 px-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white hover:text-black"
+      className="text-[#7e7e7e] py-2 px-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white hover:text-black"
     >
       {text}
     </button>
