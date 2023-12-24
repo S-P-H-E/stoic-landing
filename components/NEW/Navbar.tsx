@@ -4,6 +4,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import JoinButton from './JoinButton';
+import clsx from 'clsx';
 
 export default function Navbar() {
   const logoAnimation = {
@@ -33,7 +34,7 @@ export default function Navbar() {
 
     useMotionValueEvent(scrollY, 'change', (latest) => {
       const previous = scrollY.getPrevious()
-      if (latest > previous && latest > 150) {
+      if (latest > previous && latest > 49) {
         setHidden(true)
       } else {
         setHidden(false)
@@ -41,7 +42,7 @@ export default function Navbar() {
     })
 
   return (
-      <motion.nav transition={{duration: 0.35, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className="bg-[#0d0d0d] z-50 sticky top-0 w-full p-8 border-b border-neutral-700 text-white">
+      <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full p-8 text-white backdrop-blur-md"}>
         <div className='w-full flex items-center justify-between max-w-8xl mx-auto'>
           <div className="flex items-center gap-3 w-[300px]">
             <motion.h1

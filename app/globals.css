@@ -4,7 +4,7 @@
 
 * {
   --text: white;
-  --highlight: #eccf00;
+  --gray: #a8a8a8;
   --bg: #0d0d0d;
   --upgrade: #1a60f6;
 }
@@ -12,11 +12,6 @@
 body {
   color: var(--text);
   background-color: var(--bg);
-}
-
-.bg-blur {
-  backdrop-filter: blur(10px);
-  background-color: #afafaf31;
 }
 
 .radial {

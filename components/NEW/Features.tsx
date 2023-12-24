@@ -75,7 +75,7 @@ export default function Features() {
                 <h1 className="text-5xl font-semibold text-center w-fit mx-auto">
                   Community
                 </h1>
-                <p className="w-[350px] text-center font-medium text-md text-[#a8a8a8]">
+                <p className="w-[350px] text-center font-medium text-md text-[--gray]">
                   Meet like-minded individuals and help each other along your
                   social media journey
                 </p>
@@ -112,7 +112,7 @@ export default function Features() {
               className="border-2 border-[#1b1b1b] dot h-full w-4/5 rounded-3xl flex flex-col items-start justify-end p-8"
             >
               <h1 className="text-5xl font-semibold">Custom Platform</h1>
-              <p className="text-center font-medium text-md text-[#a8a8a8]">
+              <p className="text-center font-medium text-md text-[--gray]">
                 Having a custom platform allows you to have the best curated
                 experience{' '}
               </p>
@@ -129,7 +129,7 @@ export default function Features() {
             >
               <FaYoutube size={80} />
               <h1 className="text-xl font-semibold">Video Converters</h1>
-              {/* <p className="text-center font-medium text-md text-[#a8a8a8]">Having a custom platform allows you to have the best curated experience </p> */}
+              {/* <p className="text-center font-medium text-md text-[--gray]">Having a custom platform allows you to have the best curated experience </p> */}
             </motion.div>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function Features() {
             <h1 className="text-4xl font-semibold text-center w-1/2">
               High Quality Resources
             </h1>
-            <p className="font-medium text-md text-[#a8a8a8] text-center w-3/5">
+            <p className="font-medium text-md text-[--gray] text-center w-3/5">
               We have endless high quality resources for editing
             </p>
             <div className="absolute w-[200px] -left-20 bottom-[-300px] h-[200px] bg-white rounded-full opacity-100 blur-[120px] transition duration-500 z-20" />
@@ -165,7 +165,7 @@ export default function Features() {
             <h1 className="text-4xl font-semibold text-center">
               24/7 AI Support
             </h1>
-            <p className="text-center font-medium text-md text-[#a8a8a8]">
+            <p className="text-center font-medium text-md text-[--gray]">
               We have built an AI system that will be there to help you at all
               times during your path to social media conquest
             </p>
