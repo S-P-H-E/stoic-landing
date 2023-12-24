@@ -14,15 +14,15 @@ export default function Reviews() {
         },
         {
           id: 2,
-          text: "exellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much",
-          image: "https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80",
-          author: "The Last Rebel"
-        },
-        {
-          id: 3,
           text: "If you are new to video editing and are looking for a place to receive 1-on-1 help and feedback, well, then you have found the right place. The staff members are welcoming and wonderful to chat with. Not only do they provide assistance, but they also offer creative ideas and supervised tutorials to expedite your learning. The coaching calls have proven quite helpful in receiving personalized feedback on each of my videos.",
           image: "https://cdn.discordapp.com/avatars/277460064531644416/be8c9f4771f325a4dd9c6025ea6887b7.webp?size=80",
           author: "Knowledge Kombat"
+        },
+        {
+          id: 3,
+          text: "exellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much",
+          image: "https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80",
+          author: "The Last Rebel"
         },
     ]
 
@@ -54,12 +54,12 @@ export default function Reviews() {
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto flex flex-wrap gap-3 w-fit"
+      <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-3 px-8 gap-3 w-fit"
       >
         {reviews.map((review, index) => (
           <motion.div
             key={review.id}
-            className="bg-[#191919] w-[550px] rounded-3xl p-5 relative flex flex-col justify-between gap-4"
+            className="bg-[#191919] rounded-2xl w-fullrounded-3xl p-5 relative flex flex-col justify-between gap-4"
             initial="initial"
             variants={fadeInBox}
             custom={index}
