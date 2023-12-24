@@ -43,7 +43,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="max-w-8xl mx-auto p-20 flex flex-col items-center gap-6">
+      <div className="max-w-8xl mx-auto pb-20 px-8 flex flex-col items-center gap-6">
         <h1 className="text-5xl font-semibold text-center">
           Hundreds of
           <br />
@@ -54,7 +54,7 @@ export default function Reviews() {
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-3 px-8 gap-3 w-fit"
+      <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-3 pb-20 px-8 gap-3 w-fit"
       >
         {reviews.map((review, index) => (
           <motion.div

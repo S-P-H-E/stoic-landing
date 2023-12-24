@@ -68,7 +68,10 @@ export default function Pricing() {
 
   return (
     <>
-      <div className="max-w-8xl mx-auto pt-40 pb-10 flex flex-col items-center gap-6">
+
+    {/* !!!!!!!!!!!!!!!!!! DELETED pt-40 CUZ THE HORIZONTAL SCROLL ALREADY GIVES ENOUGH PADDING !!!!!!!!!!!!!! */}
+
+      <div className="max-w-8xl mx-auto pb-10 flex flex-col items-center gap-6"> 
         <h1 className="text-5xl font-semibold text-center">
           Lets get you started.
         </h1>

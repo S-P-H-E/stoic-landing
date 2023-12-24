@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const TestThing = () => {
-  return <HorizontalScrollCarousel />;
+  return (
+    <>
+      <HorizontalScrollCarousel />
+    </>
+  );
 };
 
 const fadeInAnimationVariants = {
@@ -17,7 +21,7 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.08 * index,
+      delay: 0.1 * index,
     },
   }),
 };
@@ -32,7 +36,16 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[200vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flex flex-col h-[50%] items-center overflow-hidden">
+        <div className="max-w-8xl pb-20 px-8 mx-auto flex flex-col items-center gap-6">
+          <h1 className="text-5xl font-semibold text-center">
+            Sneak peak of the platform.
+          </h1>
+          {/* <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Empower your creative journey with our state-of-the-art platform, offering a 24/7 AI support system to guide you at every step. Easily convert videos for major social media platforms with our specialized tools. Dive into a rich resources library, providing all the assets you need for seamless editing. Whether you're utilizing our AI support, video converters, or resource library, our platform ensures you have the powerful yet familiar tools to craft your ultimate content.</p> */}
+          <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">
+            Lorem ipsum gay ralle.
+          </p>
+        </div>
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card, index) => {
             return <Card index={index} card={card} key={card.id} />;
