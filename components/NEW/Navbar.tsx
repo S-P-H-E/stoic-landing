@@ -43,7 +43,7 @@ export default function Navbar() {
     })
 
   return (
-      <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full p-8 text-white backdrop-blur-md bg-black/40"}>
+      <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full p-8 text-white backdrop-blur-md bg-[#0d0d0d] bg-opacity-70"}>
         <div className='w-full flex items-center justify-between max-w-8xl mx-auto'>
           <div className="flex items-center gap-3 w-[300px]">
             <motion.h1
