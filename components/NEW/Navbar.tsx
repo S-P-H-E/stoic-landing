@@ -4,7 +4,6 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import JoinButton from './JoinButton';
-import clsx from 'clsx';
 import Link from 'next/link';
 
 export default function Navbar() {

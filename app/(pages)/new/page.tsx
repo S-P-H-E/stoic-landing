@@ -24,7 +24,7 @@ export default function New(){
 
             <Pricing/>
 
-            <FAQs />
+            <FAQs/>
 
             <CallToAction/>
 
