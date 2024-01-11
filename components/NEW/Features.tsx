@@ -87,8 +87,9 @@ export default function Features() {
                 viewport={{
                   once: true,
                 }}
-                className="bg-gradient-to-tl from-[#213ffa] via-[#062fec] to-[#213ffa] border-t border-l border-[#7caef8] h-full w-full rounded-3xl flex flex-col items-center justify-center gap-3 relative"
+                className="bg-gradient-to-tl from-[#55beee] via-[#3cacdf] to-[#2fa1d5] border-t border-l border-[#7caef8] h-full w-full rounded-3xl flex flex-col items-center justify-center gap-3 relative"
               >
+                {/* from-[#213ffa] via-[#062fec] to-[#213ffa] */}
                 <div className="flex gap-6 items-center justify-center">
                   <Image
                     placeholder="blur"
