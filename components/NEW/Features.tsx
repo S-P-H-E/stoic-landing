@@ -21,6 +21,8 @@ export default function Features() {
     }),
   };
 
+  {/* from-[#213ffa] via-[#062fec] to-[#213ffa] */}
+
   return (
     <>
       <div className="p-20 flex flex-col items-center gap-6 max-w-8xl mx-auto">
@@ -89,7 +91,6 @@ export default function Features() {
                 }}
                 className="bg-gradient-to-tl from-[#55beee] via-[#3cacdf] to-[#2fa1d5] border-t border-l border-[#7caef8] h-full w-full rounded-3xl flex flex-col items-center justify-center gap-3 relative"
               >
-                {/* from-[#213ffa] via-[#062fec] to-[#213ffa] */}
                 <div className="flex gap-6 items-center justify-center">
                   <Image
                     placeholder="blur"
