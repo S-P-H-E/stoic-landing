@@ -128,7 +128,7 @@ export default function Pricing() {
           ))}
 
           
-{/*           <motion.button
+          <motion.button
             className="upgrade mt-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -136,16 +136,17 @@ export default function Pricing() {
             onClick={handleSubscription}
           >
             UPGRADE
-          </motion.button> */}
+          </motion.button>
 
-          <motion.div
+          {/* <motion.div
             className="pt-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
+            onClick={handleSubscription}
           >
             <JoinButton2 />
-          </motion.div>
+          </motion.div> */}
 
           <div className="flex items-center gap-1 border border-[--border] px-2 rounded-lg mt-6">
             <p className="text-sm">Secured by</p>
