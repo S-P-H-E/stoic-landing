@@ -93,7 +93,7 @@ export default function Pricing() {
           }}
         >
           <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="text-2xl uppercase">Upgrade to premium</h1>
+            <h1 className="text-2xl font-semibold uppercase">Upgrade to premium</h1>
           </div>
 
           <h1 className="text-4xl text-[--upgrade] pb-5 flex flex-col items-center font-medium">
