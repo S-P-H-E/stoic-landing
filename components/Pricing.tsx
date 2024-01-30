@@ -49,7 +49,9 @@ export default function Pricing() {
         },
       }
     );
-    window.location.assign(data);
+    if (typeof window !== 'undefined') {
+      window.location.assign(data);
+    }
   };
 
   const fadeInAnimationVariants = {

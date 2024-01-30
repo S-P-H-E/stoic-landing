@@ -19,7 +19,9 @@ export default function JoinButton({noGroup}: {noGroup?: boolean}) {
         },
       }
     );
-    window.location.assign(data);
+    if (typeof window !== 'undefined') {
+      window.location.assign(data);
+    }
   };
 
   return (

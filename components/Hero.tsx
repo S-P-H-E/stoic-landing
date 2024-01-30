@@ -24,7 +24,7 @@ export default function Hero() {
         {/* <div className="px-3 py-1 rounded-full border border-[#535353] text-[#535353] bg-[#0d0d0d] font-semibold w-fit mx-auto">
             <h1>LEARN NOW</h1>
         </div> */}
-        <h1 className="text-7xl font-semibold bg-gradient-to-r from-white to-[#8f8f8f] bg-clip-text text-transparent p-5">
+        <h1 className="text-7xl font-semibold bg-gradient-to-r from-white to-[#8f8f8f] bg-clip-text text-transparent p-5 ">
           Conquer The Algorithm.
         </h1>
         <p className="text-3xl mx-auto w-[800px] text-center mb-10 text-[#858585] font-medium">

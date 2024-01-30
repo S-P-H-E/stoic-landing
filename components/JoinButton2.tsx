@@ -20,7 +20,9 @@ const JoinButton2 = () => {
         },
       }
     );
-    window.location.assign(data);
+      if (typeof window !== 'undefined') {
+          window.location.assign(data);
+      }
   };
 
   return (
