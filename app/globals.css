@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 * {
   --text: white;
   --gray: #a8a8a8;
   --bg: #0d0d0d;
   --upgrade: #55beee;
+  --highlight: #FFCF24;
 }
 
 body {
   color: var(--text);
   background-color: var(--bg);
+}
+
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
 }
 
 .radial {

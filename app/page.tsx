@@ -1,7 +1,12 @@
-import Hero from "@/components/Old/Hero/page";
-import Navbar from "@/components/Old/Hero/Navbar";
-import Benefits from "@/components/Old/Benefits/page";
-import Courses from "@/components/Old/Software/page";
+import FAQs from "@/components/FAQs";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Reviews from "@/components/Reviews";
+import Pricing from "@/components/Pricing";
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import TestThing from "@/components/TestThing";
 
 export default function Home() {
   const reviews = [
@@ -25,18 +30,28 @@ export default function Home() {
     },
   ]
 
-  return (
+  
+
+  return(
     <>
-      <div className="overflow-hidden z-0">
-        <Navbar />
-      </div>
-      <div className="overflow-hidden z-0">
-        <Hero />
-      </div>
-      <div className="z-50">
-        <Benefits />
-      </div>
-      <Courses />
+        {/*<img src='/wave.avif' className="absolute grayscale opacity-20 -z-10 w-[100vw]"/>*/}
+        <Navbar/>
+
+        <Hero/>
+
+        <Features/>
+
+        <Reviews/>
+
+        <TestThing/>
+
+        <Pricing/>
+
+        <FAQs/>
+
+        <CallToAction/>
+
+        <Footer/>
     </>
   )
 }

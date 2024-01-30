@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import styles from '../styles/join.module.css';
+import styles from './styles/join.module.css';
 import axios from 'axios';
 
 const JoinButton2 = () => {
