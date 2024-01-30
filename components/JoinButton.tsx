@@ -24,7 +24,7 @@ export default function JoinButton({noGroup}: {noGroup?: boolean}) {
 
   return (
     <button
-      className={clsx('bg-[#322D1D] border-b border-[--highlight] px-6 py-3 text-white flex items-center gap-2 w-fit transition duration-200 work-sans hover:shadow-2xl shadow-[--highlight]', !noGroup && 'group')}
+      className={clsx('bg-[--highlight-low] border-b border-[--highlight] px-6 py-3 text-white flex items-center gap-2 w-fit transition duration-200 work-sans hover:shadow-2xl shadow-[--highlight]', !noGroup && 'group')}
       onClick={handleSubscription}
     >
       Join Premium

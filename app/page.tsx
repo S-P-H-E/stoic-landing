@@ -1,3 +1,4 @@
+"use client"
 import FAQs from "@/components/FAQs";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
@@ -7,8 +8,12 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TestThing from "@/components/TestThing";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [countdown, setCountdown] = useState(true);
+  const router = useRouter()
   const reviews = [
     {
       id: 1,
@@ -30,28 +35,34 @@ export default function Home() {
     },
   ]
 
-  
+  if (countdown) {
+    router.push('/countdown')
+  }
 
   return(
     <>
         {/*<img src='/wave.avif' className="absolute grayscale opacity-20 -z-10 w-[100vw]"/>*/}
-        <Navbar/>
+        {!countdown && (
+          <>
+          <Navbar/>
 
-        <Hero/>
+          <Hero/>
 
-        <Features/>
+          <Features/>
 
-        <Reviews/>
+          <Reviews/>
 
-        <TestThing/>
+          <TestThing/>
 
-        <Pricing/>
+          <Pricing/>
 
-        <FAQs/>
+          <FAQs/>
 
-        <CallToAction/>
+          <CallToAction/>
 
-        <Footer/>
+          <Footer/>
+          </>
+        )}
     </>
   )
 }
