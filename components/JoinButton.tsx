@@ -24,11 +24,11 @@ export default function JoinButton({noGroup}: {noGroup?: boolean}) {
 
   return (
     <button
-      className={clsx('bg-white px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2 w-fit hover:bg-white/[.85] transition duration-200', !noGroup && 'group')}
+      className={clsx('bg-[#322D1D] border-b border-[--highlight] px-6 py-3 text-white flex items-center gap-2 w-fit transition duration-200 work-sans hover:shadow-2xl shadow-[--highlight]', !noGroup && 'group')}
       onClick={handleSubscription}
     >
       Join Premium
-      <FiArrowUpRight className={clsx(!noGroup &&"group-hover:rotate-45 transition duration-200")}/>
+      <FiArrowUpRight className={clsx(!noGroup &&"group-hover:rotate-45 transition duration-200 text-[--highlight]")}/>
     </button>
   );
 }

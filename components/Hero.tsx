@@ -31,11 +31,12 @@ export default function Hero() {
           Learn how to get views, get paid and stop wasting time.
         </p>
       </div>
+      
       {/* <div className="relative">
         <div className="bg-gradient-to-t from-[#0140fd] to-transparent to-95% absolute w-full h-full z-10 opacity-20"/>
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
-      <div className="w-[50vw] relative max-w-8xl z-20 m-5 aspect-video mx-auto">
+      {/* <div className="w-[50vw] relative max-w-8xl z-20 m-5 aspect-video mx-auto">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0 }}
@@ -57,7 +58,7 @@ export default function Hero() {
           ></iframe>
         </motion.div>
         <div className="absolute top-0 w-[50vw] max-w-7xl rounded-2xl aspect-video mx-auto bg-neutral-800 animate-pulse -z-10" />
-      </div>
+      </div> */}
     </div>
   );
 }
