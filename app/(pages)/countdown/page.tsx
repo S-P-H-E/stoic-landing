@@ -21,6 +21,7 @@ export default function Countdown() {
     ></video> */}
                 <Image src={patternImage} alt="Pattern Background" fill placeholder="blur"
                        className='absolute min-w-full min-h-full blur-sm'/>
+                <div className="w-full h-full z-10 absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black"/>
             </div>
 
             {/* <h1 className='text-3xl font-semibold pb-5'>February 5, 2024</h1> */}
