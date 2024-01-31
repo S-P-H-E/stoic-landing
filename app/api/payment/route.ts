@@ -47,6 +47,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(session.url);
     } catch (error) {
         console.error('Error in server POST:', error);
-        return null
+        return NextResponse.json('Error occurred.')
     }
 }
