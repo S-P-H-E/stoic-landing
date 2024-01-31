@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const [countdown, setCountdown] = useState(true);
   const router = useRouter()
+  
   const reviews = [
     {
       id: 1,

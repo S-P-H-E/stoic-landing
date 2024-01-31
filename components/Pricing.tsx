@@ -1,4 +1,4 @@
-'use client';
+
 
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -37,20 +37,26 @@ export default function Pricing() {
 
   const handleSubscription = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const { data } = await axios.post(
-      '/api/payment',
-      // {
-      //     priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-      //     promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO'
-      // },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
+
+    try {
+      const { data } = await axios.post(
+          '/api/payment',
+          // Add your request payload here if needed
+          {},
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+      );
+
+      if (typeof window !== undefined) {
+        // Access window.location only on the client side
+        window.location.assign(data);
       }
-    );
-    if (typeof window !== 'undefined') {
-      window.location.assign(data);
+    } catch (error) {
+      console.error('Error while processing subscription:', error);
+      // Handle error as needed
     }
   };
 
@@ -135,7 +141,7 @@ export default function Pricing() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            onClick={handleSubscription}
+            // onClick={handleSubscription}
           >
             UPGRADE
           </motion.button>

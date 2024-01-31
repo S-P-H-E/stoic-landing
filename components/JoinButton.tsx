@@ -1,5 +1,3 @@
-'use client';
-
 import axios from 'axios';
 import clsx from 'clsx';
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -7,20 +5,26 @@ import { FiArrowUpRight } from 'react-icons/fi';
 export default function JoinButton({noGroup}: {noGroup?: boolean}) {
   const handleSubscription = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const { data } = await axios.post(
-      '/api/payment',
-      // {
-      //     priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-      //     promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO'
-      // },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
+
+    try {
+      const { data } = await axios.post(
+          '/api/payment',
+          // Add your request payload here if needed
+          {},
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+      );
+
+      if (typeof window !== undefined) {
+        // Access window.location only on the client side
+        window.location.assign(data);
       }
-    );
-    if (typeof window !== 'undefined') {
-      window.location.assign(data);
+    } catch (error) {
+      console.error('Error while processing subscription:', error);
+      // Handle error as needed
     }
   };
 
