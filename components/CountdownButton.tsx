@@ -35,8 +35,9 @@ const CountdownButton = () => {
 
     const scramble = () => {
         setTextHover(true)
-        let pos = 0;
+        clearInterval(intervalRef2.current || undefined);
 
+        let pos = 0;
         intervalRef.current = setInterval(() => {
             const scrambled = TARGET_TEXT.split("")
                 .map((char, index) => {
@@ -60,6 +61,7 @@ const CountdownButton = () => {
 
     const scrambleAgain = () => {
         setTextHover(true)
+        clearInterval(intervalRef.current || undefined);
         let pos = 0;
 
         intervalRef2.current = setInterval(() => {
@@ -104,7 +106,7 @@ const CountdownButton = () => {
             onMouseEnter={scramble}
             onMouseLeave={handleMouseLeave}
             onClick={handleButtonClick}
-            className="group relative overflow-hidden bg-[#181818] disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 work-sans w-[25rem] justify-center"
+            className="group relative overflow-hidden bg-[#181818] disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 work-sans w-[80%] max-w-[25rem] md:w-[25rem] justify-center"
         >
             <div className="relative z-10 flex items-center gap-2">
                 <span>{isPending ? <div className="items-center flex gap-2"><FiLoader className="animate-spin" /> RESERVING YOUR SPOT</div> : textHover ? text : 'RESERVE YOUR SPOT'}</span>
