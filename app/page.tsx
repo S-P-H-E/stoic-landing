@@ -12,7 +12,7 @@ import {useState} from "react";
 import {useRouter} from "next/navigation";
 
 export default function Home() {
-  const [countdown, setCountdown] = useState(true);
+  const [countdown, setCountdown] = useState(false);
   const router = useRouter();
 
   const reviews = [
