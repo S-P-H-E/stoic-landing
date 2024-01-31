@@ -2,42 +2,37 @@
 
 import axios from 'axios';
 import clsx from 'clsx';
-import { FiArrowUpRight } from 'react-icons/fi';
-import React from "react";
+import {FiArrowUpRight, FiLoader} from 'react-icons/fi';
+import React, {useTransition} from "react";
+import {handleSubscription} from "@/app/lib/utils";
+import {useRouter} from "next/navigation";
 
 export default function JoinButton({noGroup}: {noGroup?: boolean}) {
-  const handleSubscription = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
 
-    try {
-      const response = await fetch('/api/payment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-/*        body: JSON.stringify({
-          priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-          promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO',
-        }),*/
-      });
+  const [isPending, startTransition] = useTransition()
 
-      if (!response.ok) {
-        new Error(`Something wrong happened with your checkout! Status: ${response.status}`);
+  const router = useRouter()
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    startTransition(async () => {
+      try {
+        e.preventDefault();
+
+        const data = await handleSubscription(e);
+        router.push(data);
+      } catch (error: any) {
+        console.error('Error during subscription:', error.message);
       }
-
-      const data = await response.json();
-      console.log(data);
-    } catch (error: any) {
-      console.error('Error during fetch:', error.message);
-    }
+    });
   };
 
   return (
     <button
-      className={clsx('bg-white px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2 w-fit hover:bg-white/[.85] transition duration-200', !noGroup && 'group')}
-      onClick={handleSubscription}
+        disabled={isPending}
+      className={clsx('bg-white disabled:opacity-50 active:scale-95 px-4 py-2 font-semibold rounded-lg text-black flex items-center gap-2 w-fit hover:bg-white/[.85] transition duration-200', !noGroup && 'group')}
+      onClick={handleButtonClick}
     >
-      Join Premium
+      {isPending ? <div className="gap-2 flex items-center"><FiLoader className="animate-spin"/> Processing </div>: 'Join Premium'}
       <FiArrowUpRight className={clsx(!noGroup &&"group-hover:rotate-45 transition duration-200")}/>
     </button>
   );

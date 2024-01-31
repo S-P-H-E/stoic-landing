@@ -3,40 +3,36 @@
 import Link from 'next/link';
 import styles from '../styles/join.module.css';
 import axios from 'axios';
-import React from "react";
+import React, {useTransition} from "react";
+import {handleSubscription} from "@/app/lib/utils";
+import {useRouter} from "next/navigation";
+import {FiLoader} from "react-icons/fi";
 
 const JoinButton2 = () => {
 
-    const handleSubscription = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
+    const [isPending, startTransition] = useTransition()
 
-        try {
-            const response = await fetch('/api/payment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                /*        body: JSON.stringify({
-                          priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-                          promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO',
-                        }),*/
-            });
+    const router = useRouter()
 
-            if (!response.ok) {
-                new Error(`Something wrong happened with your checkout! Status: ${response.status}`);
+    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        startTransition(async () => {
+            try {
+                e.preventDefault();
+
+                const data = await handleSubscription(e);
+                router.push(data);
+            } catch (error: any) {
+                console.error('Error during subscription:', error.message);
             }
-
-            const data = await response.json();
-            console.log(data);
-        } catch (error: any) {
-            console.error('Error during fetch:', error.message);
-        }
+        });
     };
 
-  return (
-    <div>
-      <button onClick={handleSubscription} className={styles.button}>UPGRADE</button>
-    </div>
-  );
+    return (
+        <div>
+            <button disabled={isPending} onClick={handleButtonClick} className={styles.button}>{isPending ?
+                <div className="gap-2 flex items-center"><FiLoader className="animate-spin"/> Processing
+                </div> : 'UPGRADE'}</button>
+        </div>
+    );
 };
 export default JoinButton2;
