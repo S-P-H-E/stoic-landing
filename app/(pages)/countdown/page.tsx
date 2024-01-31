@@ -42,10 +42,10 @@ export default function Countdown() {
         <div className="flex flex-col h-screen justify-center items-center">
             <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-[-1]">
                 {/* <video
-        src="10.mp4" 
-        autoPlay 
-        loop 
-        muted 
+        src="10.mp4"
+        autoPlay
+        loop
+        muted
         className="absolute min-w-full min-h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover grayscale blur-sm opacity-50"
     ></video> */}
                 <Image src={patternImage} alt="Pattern Background" fill placeholder="blur"
@@ -53,7 +53,7 @@ export default function Countdown() {
             </div>
 
             {/* <h1 className='text-3xl font-semibold pb-5'>February 5, 2024</h1> */}
-{/*            <div className='flex bg-black/50 backdrop-blur-sm p-6 rounded-2xl gap-4 border border-[#141414]'>
+            <div className='flex bg-black/50 backdrop-blur-sm p-6 rounded-2xl gap-4 border border-[#141414]'>
                 <div className='flex flex-col items-center p-6 rounded-md w-[100px]'>
                     <p className='text-7xl font-semibold'>{timeLeft.days}</p>
                     Days
@@ -67,8 +67,8 @@ export default function Countdown() {
                 <div className='flex flex-col items-center p-6 rounded-md w-[100px]'>
                     <p className='text-7xl font-semibold'>{timeLeft.seconds}</p> Seconds
                 </div>
-            </div>*/}
 
+            </div>
             <button
                 onClick={handleButtonClick}
                 disabled={isPending}
