@@ -10,13 +10,13 @@ export function middleware(request: NextRequest) {
 
     const isDevelopmentMode = request.url.includes('http://localhost:3000');
     const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
-    const isPaymentAPIRoute = nextUrl.pathname.startsWith('api/payment');
+    const isPaymentAPIRoute = nextUrl.pathname.startsWith('/api/payment');
 
     if (isPaymentAPIRoute) {
         return null;
     }
 
-    if (!isPublicRoute && isDevelopmentMode) {
+    if (!isPublicRoute && !isDevelopmentMode) {
         return Response.redirect(new URL (
             `${publicRoutes[0]}`,
             nextUrl
