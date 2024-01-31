@@ -67,7 +67,7 @@ const CountdownItem = ({num, text}: { num: number; text: string }) => {
                         initial={{ y: "100%" }}
                         animate={{ y: "0%" }}
                         exit={{ y: "-100%" }}
-                        transition={{ ease: "backIn", duration: 0.75 }}
+                        transition={{ type: 'spring', ease: "backIn", duration: 0.75 }}
                         className="block text-6xl md:text-7xl font-semibold"
                     >
                         {num}

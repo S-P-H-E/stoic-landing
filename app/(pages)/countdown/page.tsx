@@ -11,7 +11,7 @@ export default function Countdown() {
 
     return (
         <div className="flex flex-col h-screen justify-center items-center">
-            <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-[-1]">
+            <div className="fixed top-0 left-0 w-screen h-[100svh] overflow-hidden z-[-1]">
                 {/* <video
         src="10.mp4"
         autoPlay
