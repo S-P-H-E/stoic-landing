@@ -1,5 +1,3 @@
-'use client';
-
 import axios from 'axios';
 import clsx from 'clsx';
 import {FiArrowUpRight, FiLoader} from 'react-icons/fi';
