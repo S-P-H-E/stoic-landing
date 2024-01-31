@@ -4,7 +4,8 @@ import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
 import {handleSubscription} from "@/app/lib/utils";
 
-const TARGET_TEXT = "RESERVE  YOUR SPOT";
+const TARGET_TEXT = "JOIN NOW";
+const TARGET_TEXT_AGAIN = "RESERVE YOUR SPOT"
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 28;
 
@@ -12,6 +13,8 @@ const CHARS = "\!21@#$%^&*():{};|,.<>2/?";
 
 const CountdownButton = () => {
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const intervalRef2 = useRef<ReturnType<typeof setInterval> | null>(null);
+    const [textHover, setTextHover] = useState(false)
     const [text, setText] = useState(TARGET_TEXT);
     const [isPending, startTransition] = useTransition()
 
@@ -31,6 +34,7 @@ const CountdownButton = () => {
 
 
     const scramble = () => {
+        setTextHover(true)
         let pos = 0;
 
         intervalRef.current = setInterval(() => {
@@ -54,11 +58,39 @@ const CountdownButton = () => {
         }, SHUFFLE_TIME);
     };
 
+    const scrambleAgain = () => {
+        setTextHover(true)
+        let pos = 0;
+
+        intervalRef2.current = setInterval(() => {
+            const scrambled_again = TARGET_TEXT_AGAIN.split("")
+                .map((char, index) => {
+                    if (pos / CYCLES_PER_LETTER > index) {
+                        return char;
+                    }
+
+                    const randomCharIndex = Math.floor(Math.random() * CHARS.length);
+                    return CHARS[randomCharIndex];
+                })
+                .join("");
+
+            setText(scrambled_again);
+            pos++;
+            if (pos >= TARGET_TEXT.length * CYCLES_PER_LETTER) {
+                clearInterval(intervalRef2.current || undefined);
+                setText('RESERVE YOUR SPOT')
+            }
+        }, SHUFFLE_TIME);
+    };
+
     const stopScramble = () => {
         clearInterval(intervalRef.current || undefined);
-
-        setText(TARGET_TEXT);
     };
+
+    const handleMouseLeave = () => {
+        setTextHover(false)
+        scrambleAgain()
+    }
 
     return (
         <motion.button
@@ -68,13 +100,15 @@ const CountdownButton = () => {
             whileTap={{
                 scale: 0.975,
             }}
+            disabled={isPending}
             onMouseEnter={scramble}
-            onMouseLeave={stopScramble}
-            className="group relative overflow-hidden disabled:opacity-50 bg-[#181818] duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 work-sans w-80 justify-center"
+            onMouseLeave={handleMouseLeave}
+            onClick={handleButtonClick}
+            className="group relative overflow-hidden bg-[#181818] disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 work-sans w-[25rem] justify-center"
         >
             <div className="relative z-10 flex items-center gap-2">
-                <span>{isPending ? <FiLoader className="animate-spin" /> : text}</span>
-                <FiArrowUpRight className="rotate-45"/>
+                <span>{isPending ? <div className="items-center flex gap-2"><FiLoader className="animate-spin" /> RESERVING YOUR SPOT</div> : textHover ? text : 'RESERVE YOUR SPOT'}</span>
+                {!isPending && <FiArrowUpRight className="rotate-45"/>}
             </div>
             <motion.span
                 initial={{
