@@ -1,39 +1,38 @@
 
 
 import Link from 'next/link';
-import styles from './styles/join.module.css';
+import styles from '../styles/join.module.css';
 import axios from 'axios';
+import React, {useTransition} from "react";
+import {handleSubscription} from "@/app/lib/utils";
+import {useRouter} from "next/navigation";
+import {FiLoader} from "react-icons/fi";
 
 const JoinButton2 = () => {
 
-  const handleSubscription = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-      try {
-          const { data } = await axios.post(
-              '/api/payment',
-              // Add your request payload here if needed
-              {},
-              {
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-              }
-          );
+    const [isPending, startTransition] = useTransition()
 
-          if (typeof window !== undefined) {
-              // Access window.location only on the client side
-              window.location.assign(data);
-          }
-      } catch (error) {
-          console.error('Error while processing subscription:', error);
-          // Handle error as needed
-      }
-  };
+    const router = useRouter()
 
-  return (
-    <div>
-      <button onClick={handleSubscription} className={styles.button}>UPGRADE</button>
-    </div>
-  );
+    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        startTransition(async () => {
+            try {
+                e.preventDefault();
+
+                const data = await handleSubscription(e);
+                router.push(data);
+            } catch (error: any) {
+                console.error('Error during subscription:', error.message);
+            }
+        });
+    };
+
+    return (
+        <div>
+            <button disabled={isPending} onClick={handleButtonClick} className={styles.button}>{isPending ?
+                <div className="gap-2 flex items-center"><FiLoader className="animate-spin"/> Processing
+                </div> : 'UPGRADE'}</button>
+        </div>
+    );
 };
 export default JoinButton2;
