@@ -53,7 +53,7 @@ export default function Countdown() {
             </div>
 
             {/* <h1 className='text-3xl font-semibold pb-5'>February 5, 2024</h1> */}
-            <div className='flex bg-black/50 backdrop-blur-sm p-6 rounded-2xl gap-4 border border-[#141414]'>
+{/*            <div className='flex bg-black/50 backdrop-blur-sm p-6 rounded-2xl gap-4 border border-[#141414]'>
                 <div className='flex flex-col items-center p-6 rounded-md w-[100px]'>
                     <p className='text-7xl font-semibold'>{timeLeft.days}</p>
                     Days
@@ -67,9 +67,8 @@ export default function Countdown() {
                 <div className='flex flex-col items-center p-6 rounded-md w-[100px]'>
                     <p className='text-7xl font-semibold'>{timeLeft.seconds}</p> Seconds
                 </div>
+            </div>*/}
 
-
-            </div>
             <button
                 onClick={handleButtonClick}
                 disabled={isPending}
