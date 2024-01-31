@@ -27,7 +27,7 @@ export default function Countdown() {
             {/* <h1 className='text-3xl font-semibold pb-5'>February 5, 2024</h1> */}
             <CountdownTimer/>
 
-            <CountdownButton/>
+            <CountdownButton glitch scanLines/>
             <div className='text-[#ffffff] flex items-center gap-2'>
                 <MdLock/>
                 <p className='text-[14px]'>INCLUDES ACCESS TO ALL COURSES</p>

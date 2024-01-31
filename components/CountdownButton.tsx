@@ -11,7 +11,7 @@ const SHUFFLE_TIME = 28;
 
 const CHARS = "\!21@#$%^&*():{};|,.<>2/?";
 
-const CountdownButton = () => {
+const CountdownButton = ({glitch, scanLines, label}: { glitch?: boolean, scanLines?: boolean, label?: string }) => {
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
     const intervalRef2 = useRef<ReturnType<typeof setInterval> | null>(null);
     const [textHover, setTextHover] = useState(false)
@@ -109,24 +109,29 @@ const CountdownButton = () => {
             className="group relative overflow-hidden bg-[#181818] disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 work-sans w-[80%] max-w-[25rem] md:w-[25rem] justify-center"
         >
             <div className="relative z-10 flex items-center gap-2">
-                <span>{isPending ? <div className="items-center flex gap-2"><FiLoader className="animate-spin" /> RESERVING YOUR SPOT</div> : textHover ? text : 'RESERVE YOUR SPOT'}</span>
+                <span>{isPending ?
+                    <div className="items-center flex gap-2"><FiLoader className="animate-spin"/> RESERVING YOUR SPOT
+                    </div> : glitch ? textHover ? text : 'RESERVE YOUR SPOT' : label ? label : 'RESERVE YOUR SPOT'}
+                </span>
                 {!isPending && <FiArrowUpRight className="rotate-45"/>}
             </div>
-            <motion.span
-                initial={{
-                    y: "100%",
-                }}
-                animate={{
-                    y: "-100%",
-                }}
-                transition={{
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                    duration: 1,
-                    ease: "linear",
-                }}
-                className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-transparent from-50% via-white group-hover:via-black/50 to-transparent to-60% opacity-0 transition-opacity group-hover:opacity-100"
-            />
+            {scanLines &&
+                <motion.span
+                    initial={{
+                        y: "100%",
+                    }}
+                    animate={{
+                        y: "-100%",
+                    }}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: "mirror",
+                        duration: 1,
+                        ease: "linear",
+                    }}
+                    className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-transparent from-50% via-white group-hover:via-black/50 to-transparent to-60% opacity-0 transition-opacity group-hover:opacity-100"
+                />
+            }
         </motion.button>
     );
 };

@@ -33,7 +33,7 @@ export default function Hero() {
         </p>
         <div className='mx-auto w-fit flex items-center gap-6'>
           <div className='w-[12.5rem] h-[1px] bg-gradient-to-l from-[#ffffff]'/>
-          <CountdownButton />
+          <CountdownButton label={'JOIN NOW'} />
           <div className='w-[12.5rem] h-[1px] bg-gradient-to-r from-[#ffffff]'/>
         </div>
       </div>
