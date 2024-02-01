@@ -25,7 +25,7 @@ export default function About() {
                 </div>
                 <div className='w-[600px] h-[600px] relative'>
                     {/* <div className='bg-gradient-to-t from-[--bg] h-full w-full absolute'/> */}
-                    <img src='laptop-results.png' className='w-full h-full object-cover' />
+                    <img src='laptop-results.png' className='w-full h-full object-cover drop-shadow-xl' />
                 </div>
                 
             </div>
