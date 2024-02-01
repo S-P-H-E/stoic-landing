@@ -8,6 +8,8 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TestThing from "@/components/TestThing";
+import About from "@/components/About";
+import Features2 from "@/components/Features2";
 
 export default function Home() {
 
@@ -36,12 +38,13 @@ export default function Home() {
         <>
             <Navbar/>
             <Hero/>
-            <Features/>
-            <Reviews/>
-            <TestThing/>
-            <Pricing/>
+            <About />
+            <Features2 />
+            {/* <Reviews/> */}
+            {/* <TestThing/> */}
+            {/* <Pricing/> */}
             <FAQs/>
-            <CallToAction/>
+            {/* <CallToAction/> */}
             <Footer/>
         </>
     );

@@ -1,5 +1,6 @@
 'use client';
-
+import clsx from 'clsx'
+import { Playfair } from 'next/font/google'
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import { motion } from 'framer-motion';
@@ -37,6 +38,11 @@ const faqs = [
   },
 ];
 
+const font = Playfair({
+  subsets: ['latin'],
+  weight: ['500'],
+})
+
 export default function FAQs() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -66,15 +72,15 @@ export default function FAQs() {
   return (
     <>
       <div className="pt-40 pb-10 flex flex-col items-center gap-6 max-w-8xl mx-auto">
-        <h1 className="text-5xl font-semibold text-center">
-          Still unsure wether to upgrade?
-        </h1>
-        <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">
-          Here are some commonly asked questions.
-        </p>
+        <div>
+          <p className="text-[--description] tracking-widest text-center">
+            STILL UNSURE?
+          </p>
+          <h1 className={clsx("text-8xl font-medium text-center", font.className)}>Frequently Asked<br /><mark className="bg-transparent text-white italic">Questions</mark></h1>
+        </div>
       </div>
 
-      <div className="w-3/4 mx-auto max-w-8xl">
+      <div className="w-3/4 mx-auto max-w-8xl bg-[#191919] rounded-2xl px-5 pt-1">
         {faqs.map((faq, index) => (
           <motion.div
             initial="initial"
@@ -85,7 +91,7 @@ export default function FAQs() {
             }}
             key={index}
             onClick={() => toggleExpanded(index)}
-            className="bg-[#191919] my-4 p-4 rounded-2xl cursor-pointer"
+            className={clsx("my-4 p-7 cursor-pointer", index === faqs.length - 1 && "border-none", "border-b border-[#2C2B2A]")}
           >
             <button
               className="font-bold md:font-medium text-[14px] md:text-2xl flex justify-between w-full items-center"
@@ -98,9 +104,8 @@ export default function FAQs() {
               </div>
             </button>
             <div
-              className={`answer-container ${
-                expandedIndex === index ? 'expanded' : ''
-              }`}
+              className={`answer-container ${expandedIndex === index ? 'expanded' : ''
+                }`}
             >
               <p className="my-3 text-[#858585]">{faq.answer}</p>
             </div>
@@ -110,3 +115,4 @@ export default function FAQs() {
     </>
   );
 }
+
