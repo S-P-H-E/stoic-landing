@@ -1,12 +1,34 @@
-'use client';
+
 
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { BsFillCheckCircleFill, BsPeopleFill, BsStars } from 'react-icons/bs';
 import { FaBook, FaGraduationCap, FaStripe, FaTrophy } from 'react-icons/fa';
 import JoinButton2 from './JoinButton2';
+import React, {useTransition} from "react";
+import {handleSubscription} from "@/app/lib/utils";
+import {useRouter} from "next/navigation";
+import {FiLoader} from "react-icons/fi";
 
 export default function Pricing() {
+
+  const [isPending, startTransition] = useTransition()
+
+  const router = useRouter()
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    startTransition(async () => {
+      try {
+        e.preventDefault();
+
+        const data = await handleSubscription(e);
+        router.push(data);
+      } catch (error: any) {
+        console.error('Error during subscription:', error.message);
+      }
+    });
+  };
+
   const features = [
     {
       id: 1,
@@ -35,25 +57,6 @@ export default function Pricing() {
     },
   ];
 
-  const handleSubscription = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    const { data } = await axios.post(
-      '/api/payment',
-      // {
-      //     priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-      //     promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO'
-      // },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-    if (typeof window !== 'undefined') {
-      window.location.assign(data);
-    }
-  };
-
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
@@ -70,7 +73,6 @@ export default function Pricing() {
 
   return (
     <>
-
     {/* !!!!!!!!!!!!!!!!!! DELETED pt-40 CUZ THE HORIZONTAL SCROLL ALREADY GIVES ENOUGH PADDING !!!!!!!!!!!!!! */}
 
       <div className="max-w-8xl mx-auto pb-10 flex flex-col items-center gap-6"> 
@@ -131,13 +133,14 @@ export default function Pricing() {
 
           
           <motion.button
-            className="upgrade mt-5"
+            className="upgrade active:scale-95 mt-5 disabled:!opacity-50 flex items-center justify-center"
+            disabled={isPending}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            onClick={handleSubscription}
+            onClick={handleButtonClick}
           >
-            UPGRADE
+            {isPending ? <FiLoader className="animate-spin"/> : 'UPGRADE'}
           </motion.button>
 
           {/* <motion.div

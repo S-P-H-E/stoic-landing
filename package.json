@@ -9,20 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.2",
+    "antd": "^5.13.3",
     "axios": "^1.5.1",
-    "clsx": "^2.0.0",
-    "framer-motion": "^10.16.16",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "embla-carousel-react": "^8.0.0-rc22",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.321.0",
     "next": "^14.0.4",
     "npm": "^10.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
+    "react-slideshow-image": "^4.3.0",
     "react-spring": "^9.7.3",
     "sharp": "^0.33.1",
-    "stripe": "^14.10.0"
+    "stripe": "^14.10.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

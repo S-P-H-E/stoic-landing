@@ -45,17 +45,12 @@ export default function Navbar() {
       <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full p-8 text-white backdrop-blur-md bg-gradient-to-b from-[#0d0d0d] via-[#0d0d0d] to-transparent bg-opacity-70"}>
         <div className='w-full flex items-center justify-between max-w-8xl mx-auto'>
           <div className="flex items-center gap-3 w-[300px]">
-            <motion.h1
-              initial="initial"
-              variants={logoAnimation}
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
+            <h1
               className="font-medium text-[1.24rem]"
             >
               STOIC
-            </motion.h1>
+            </h1>
+            <img src='stoic.png' width={15} height={15}/>
           </div>
           <div className="flex gap-6 px-2 py-2 rounded-xl">
             {renderButton('Features')}
@@ -63,12 +58,12 @@ export default function Navbar() {
             {renderButton('About Us')}
           </div>
           <div className="flex gap-4 w-[300px] justify-end">
-            <Link rel="noopener noreferrer" target="_blank" href={'https://app.stoiccord.com'} className="bg-[#0d0d0d] hover:bg-[#2e2e2e] transition duration-200 border border-[#535353] px-4 py-2 font-semibold rounded-lg text-white flex items-center gap-2">
+            <Link rel="noopener noreferrer" target="_blank" href={'https://app.stoiccord.com'} className="bg-[#0d0d0d] hover:bg-[#2e2e2e] transition duration-200 border border-[#535353] px-4 py-2 font-semibold text-white flex items-center gap-2">
               <p>Login</p>
               <FaUserCircle />
             </Link>
 
-            <JoinButton />
+            {/* <JoinButton /> */}
           </div>
         </div>
       </motion.nav>
