@@ -16,7 +16,7 @@ export default function JoinButton({noGroup}: {noGroup?: boolean}) {
       {
         headers: {
           'Content-Type': 'application/json',
-        },
+        }, 
       }
     );
     if (typeof window !== 'undefined') {

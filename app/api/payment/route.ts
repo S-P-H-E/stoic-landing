@@ -13,11 +13,11 @@ export async function POST (request: NextRequest) {
                 quantity: 1,
             }
         ],
-        // discounts: [
-        //     {
-        //       promotion_code: process.env.PROMO_ID,
-        //     },
-        // ],
+        discounts: [
+            {
+              promotion_code: process.env.PROMO_ID,
+            },
+        ],
         // custom_text: {
         //     shipping_address: {
         //       message: 'Please note that the email you use here is the same email you should use when making an account on our platform.',

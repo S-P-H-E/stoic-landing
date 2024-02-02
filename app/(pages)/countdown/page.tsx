@@ -1,4 +1,5 @@
 "use client"
+import axios from 'axios';
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -15,6 +16,25 @@ export default function Countdown() {
 
         return () => clearInterval(timer); // Clear the interval when the component unmounts
     }, []);
+
+    const handleSubscription = async (e: { preventDefault: () => void }) => {
+        e.preventDefault();
+        const { data } = await axios.post(
+          '/api/payment',
+          // {
+          //     priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
+          //     promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO'
+          // },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+        if (typeof window !== 'undefined') {
+          window.location.assign(data);
+        }
+      };
 
     return (
         <div className="flex flex-col h-screen justify-center items-center">
@@ -47,7 +67,7 @@ export default function Countdown() {
             </div>
             <button
                 className={clsx('bg-[#181818] transition-all border-b px-7 py-4 my-5 text-white text-xl flex items-center gap-2 w-fit duration-300 work-sans')}
-                
+                onClick={handleSubscription}
                 >
                 RESERVE YOUR SPOT
                 <FiArrowUpRight className="rotate-45" />
