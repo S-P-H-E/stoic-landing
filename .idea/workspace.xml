@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="optional countdown checks">
-      <change beforePath="$PROJECT_DIR$/components/JoinButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JoinButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/JoinButton2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JoinButton2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pricing.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="extra anim and price" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +13,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DarKS4ys"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="357f1ec2-5cf9-48d3-bddb-0b97675ade5e" />
+        <option name="url" value="https://github.com/S-P-H-E/stoic-landing" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -46,7 +59,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\Melih Yardım\\Desktop\\landing\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -55,6 +68,7 @@
       <map>
         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
@@ -68,6 +82,7 @@
       <updated>1706637928492</updated>
       <workItem from="1706637930061" duration="1537000" />
       <workItem from="1706639483096" duration="2594000" />
+      <workItem from="1706964193086" duration="4517000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -77,7 +92,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706639383363</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="animation and max width">
+      <option name="closed" value="true" />
+      <created>1706967353706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706967353706</updated>
+    </task>
+    <task id="LOCAL-00003" summary="extra anim and price">
+      <option name="closed" value="true" />
+      <created>1706968345063</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706968345063</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +117,19 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="window fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="window fix" />
+    <MESSAGE value="animation and max width" />
+    <MESSAGE value="extra anim and price" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra anim and price" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/Slideshow.tsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
