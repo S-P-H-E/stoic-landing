@@ -93,7 +93,7 @@ export default function Pricing() {
 
 
     return (
-        <>
+        <motion.div initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
             <div className="max-w-8xl mx-auto my-20 flex flex-col items-center gap-4">
                 <div>
                     <p className='text-[--description] tracking-widest text-center'>JOIN THE 1%</p>
@@ -110,10 +110,11 @@ export default function Pricing() {
                         <p className='text-[--description] tracking-widest'>Let&apos;s begin your jounrey...</p>
                     </div>
 
-                    <div>
-                        <h1 className={clsx("text-5xl", font.className)}>$29.99
+                    <div className="flex flex-col items-end leading-2">
+                        <h1 className={clsx("text-5xl leading-5", font.className)}>$29.99
                             <mark className='bg-transparent text-xl text-white italic'>/month</mark>
                         </h1>
+                        <h2 className={clsx("text-3xl leading-tight line-through text-[--description]", font.className)}>$49.99</h2>
                     </div>
                 </div>
 
@@ -138,6 +139,6 @@ export default function Pricing() {
             <div className='w-fit mx-auto'>
                 <CountdownButton glitch scanLines/>
             </div>
-        </>
+        </motion.div>
     );
 }
