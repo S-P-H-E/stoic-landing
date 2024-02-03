@@ -14,7 +14,7 @@ export default function BannerMessage() {
             <h1 className={clsx("text-[5.5rem] leading-[5rem] text-center w-[1000px]", font.className)}>
                 Over <mark className='bg-transparent text-white italic'>5 Billion</mark> People are on social media <mark className='bg-transparent text-white italic'>everyday</mark>
             </h1>
-            <p className='text-[--description] text-xl tracking-widest text-center'>Don't you want to have a piece of that pie. People are making money everyday <br/> and you don't need 5 billion followers, just a few hundred thousand will do.</p>
+            <p className='text-[--description] text-xl tracking-widest text-center'>Don&apos;t you want to have a piece of that pie. People are making money everyday <br/> and you don&apos;t need 5 billion followers, just a few hundred thousand will do.</p>
             <CountdownButton />
         </div>
         <div className='w-[99vw] h-[550px] top-0 left-0 absolute -z-10'>

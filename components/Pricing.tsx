@@ -95,7 +95,7 @@ export default function Pricing() {
         <div className='bg-[#141312] flex justify-between items-center p-10'>
           <div>
             <h1 className={clsx("text-5xl", font.className)}>Take Action</h1>
-            <p className='text-[--description] tracking-widest'>Let's begin your jounrey...</p>
+            <p className='text-[--description] tracking-widest'>Let&apos;s begin your jounrey...</p>
           </div>
 
           <div>

@@ -12,7 +12,7 @@ export default function About() {
         <div className='flex flex-col gap-10 py-20'>
             <div className="flex flex-col items-center justify-center">
                 <p className="text-[--description] tracking-widest">A FEW WEEKS IS ALL YOU NEED</p>
-                <h1 className={clsx("text-7xl text-center font-medium", font.className)}>You don't need <br/><mark className="bg-transparent text-white italic">years</mark> to get good</h1>
+                <h1 className={clsx("text-7xl text-center font-medium", font.className)}>You don&apos;t need <br/><mark className="bg-transparent text-white italic">years</mark> to get good</h1>
             </div>
             <div className='flex items-center mx-auto w-fit gap-16'>
                 <div className='flex flex-col gap-5'>
