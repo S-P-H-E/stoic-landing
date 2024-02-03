@@ -42,7 +42,7 @@ export default function Hero() {
         <div className='mx-auto w-fit flex items-center gap-6'>
           <div className='w-[12.5rem] h-[1px] bg-gradient-to-l from-[#ffffff]'/>
           <div className='flex flex-col items-center'>
-            <CountdownButton className='!w-[350px]' glitch/>
+            <CountdownButton className='!w-[350px]' glitch scanLines/>
           </div>
           <div className='w-[12.5rem] h-[1px] bg-gradient-to-r from-[#ffffff]'/>
         </div>

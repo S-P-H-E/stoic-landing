@@ -1,6 +1,9 @@
 import clsx from 'clsx'
 import { Playfair } from 'next/font/google'
 import CountdownButton from './CountdownButton'
+import {motion} from 'framer-motion'
+import Results from '@/public/results.png'
+import Image from "next/image";
 
 const font = Playfair({
     subsets: ['latin'],
@@ -9,7 +12,8 @@ const font = Playfair({
 
 export default function About() {
     return (
-        <div className='flex flex-col gap-10 py-20'>
+        <div className='overflow-x-hidden flex flex-col gap-10 py-20'>
+            <motion.div initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 25}} viewport={{once:true}}>
             <div className="flex flex-col items-center justify-center">
                 <p className="text-[--description] tracking-widest">A FEW WEEKS IS ALL YOU NEED</p>
                 <h1 className={clsx("text-7xl text-center font-medium", font.className)}>You don&apos;t need <br/><mark className="bg-transparent text-white italic">years</mark> to get good</h1>
@@ -25,10 +29,10 @@ export default function About() {
                 </div>
                 <div className='w-[600px] h-[400px] relative'>
                     {/* <div className='bg-gradient-to-t from-[--bg] h-full w-full absolute'/> */}
-                    <img src='results.png' className='w-full h-full object-cover' />
+                    <Image alt="Results" src={Results} quality={99} placeholder="blur" fill className='w-full h-full object-cover' />
                 </div>
-                
             </div>
+            </motion.div>
             <div className='bg-[#161616] text-[--gray] tracking-widest p-10 text-2xl text-center'>
                 ARE YOU READY TO PUT THE WORK IN? 
             </div>

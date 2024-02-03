@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      maxWidth: {
+        '8xl': '1366px',
+        '9xl': '1440px'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

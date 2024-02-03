@@ -48,7 +48,7 @@ export default function Home() {
             {/* <TestThing/> */}
             <Pricing/>
             <FAQs/>
-            {/* <CallToAction/> */}
+            {/*<CallToAction/>*/}
             <Footer/>
         </>
     );

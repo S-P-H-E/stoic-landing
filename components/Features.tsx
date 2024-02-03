@@ -9,7 +9,7 @@ export default function Features() {
   const fadeInBox = {
     initial: {
       opacity: 0,
-      y: 100,
+      y: 50,
     },
     animate: (index: number) => ({
       opacity: 1,
