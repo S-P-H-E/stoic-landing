@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 const TestThing = () => {
-  return (
+  return ( 
     <>
       <HorizontalScrollCarousel />
     </>

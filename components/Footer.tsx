@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = getCurrentYear();
 
   return (
-    <div className="max-w-8xl bg-[#0d0d0dff] p-20 rounded-2xl rounded-br-none rounded-bl-none border-2 border-b-0 border-[#1C1C1D] flex items-center justify-between mx-auto w-[80vw]">
+    <div className=" bg-[#0d0d0dff] p-20 border-t-2  border-[#1C1C1D] flex items-center justify-between mt-20">
       <h1 className="text-[#949494]">
         {currentYear} © Stoic, All rights reserved.
       </h1>

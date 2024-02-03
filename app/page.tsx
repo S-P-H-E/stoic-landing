@@ -44,9 +44,9 @@ export default function Home() {
             <Features2 />
             <BannerMessage />
             <Slideshow />
-            {/* <Reviews/> */}
+            <Reviews/>
             {/* <TestThing/> */}
-            {/* <Pricing/> */}
+            <Pricing/>
             <FAQs/>
             {/* <CallToAction/> */}
             <Footer/>

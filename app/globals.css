@@ -8,6 +8,7 @@
   --text: white;
   --description: #A7A297;
   --gray: #a8a8a8;
+  --border: #2E2D2D;
   --bg: #0d0d0d;
   --upgrade: #55beee;
   --highlight: #FFCF24;
@@ -33,6 +34,10 @@ body {
   );
   position: absolute;
   z-index: -10;
+}
+
+.vignette {
+  box-shadow: 0 0 200px var(--bg) inset;
 }
 
 .image {
