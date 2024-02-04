@@ -53,7 +53,7 @@ export default function Hero() {
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
-      <div className="w-[50vw] relative max-w-8xl z-20 m-5 aspect-video mx-auto">
+      <div className="w-[50vw] overflow-hidden rounded relative max-w-8xl z-20 m-5 aspect-video mx-auto">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0 }}

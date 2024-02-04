@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { Playfair } from 'next/font/google'
 import CountdownButton from './CountdownButton'
 import {motion} from 'framer-motion'
-import Results from '@/public/results.png'
+import Results from '@/public/results_undedited.png'
 import Image from "next/image";
 
 const font = Playfair({
@@ -18,7 +18,7 @@ export default function About() {
                 <p className="text-[--description] tracking-widest">A FEW WEEKS IS ALL YOU NEED</p>
                 <h1 className={clsx("text-7xl text-center font-medium", font.className)}>You don&apos;t need <br/><mark className="bg-transparent text-white italic">years</mark> to get good</h1>
             </div>
-            <div className='flex items-center mx-auto w-fit gap-16'>
+            <div className='flex items-center mx-auto w-fit gap-16 mt-8'>
                 <div className='flex flex-col gap-5'>
                     <h1 className={clsx("text-5xl font-medium", font.className)}>A few weeks of focus <br/> will get you there</h1>
                     <div className='text-[--gray] flex flex-col gap-5'>
@@ -27,7 +27,7 @@ export default function About() {
                     </div>
                     <CountdownButton />
                 </div>
-                <div className='w-[600px] h-[400px] relative'>
+                <div className='w-[640px] h-[290px] relative rounded-xl overflow-hidden shadow-[0_0px_35px_rgba(5,_5,_5,_0.95)]'>
                     {/* <div className='bg-gradient-to-t from-[--bg] h-full w-full absolute'/> */}
                     <Image alt="Results" src={Results} quality={99} placeholder="blur" fill className='w-full h-full object-cover' />
                 </div>

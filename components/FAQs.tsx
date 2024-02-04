@@ -64,7 +64,7 @@ export default function FAQs() {
       y: 0,
       transition: {
         type: 'spring',
-        delay: 3.05 * index,
+        delay: .07 * index,
       },
     }),
   };
@@ -90,17 +90,18 @@ export default function FAQs() {
               once: true,
             }}
             key={index}
+            custom={index}
             onClick={() => toggleExpanded(index)}
             className={clsx("my-4 p-7 cursor-pointer", index === faqs.length - 1 && "border-none", "border-b border-[#2C2B2A]")}
           >
             <button
-              className="font-bold md:font-medium text-[14px] md:text-2xl flex justify-between w-full items-center"
+              className="font-bold md:font-medium md:text-2xl flex justify-between w-full text-start items-center"
             >
               <p>{faq.question}</p>
               <div
                 className={`icon ${expandedIndex === index ? 'up' : 'down'}`}
               >
-                {expandedIndex === index ? <BiChevronUp /> : <BiChevronDown />}
+                <BiChevronDown />
               </div>
             </button>
             <div

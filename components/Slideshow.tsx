@@ -66,9 +66,9 @@ export default function Slideshow() {
             <div className='py-20 flex flex-col gap-32'>
                 {cards.map(card => (
                     <div key={card.id} className={clsx('flex justify-between', card.id % 2 === 0 && 'flex-row-reverse')}>
-                        <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: 100, opacity: 0} : {x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}} className='w-[600px] h-[400px] relative bg-red-500'>
+                        <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: 100, opacity: 0} : {x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}} className='shadow-[0_0px_50px_rgba(5,_5,_5,_0.3)] shadow-black rounded-xl w-[600px] h-[400px] relative'>
                             {/* <div className='bg-gradient-to-t from-[--bg] absolute z-10 w-full h-full'/> */}
-                            <Image alt="Platform Image" fill quality={90} src={card.url} className='w-full h-full object-cover'/>
+                            <Image alt="Platform Image" fill quality={90} src={card.url} className='w-full h-full object-cover rounded-xl'/>
                         </motion.div>
                         <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: -100, opacity: 0} : {x: 100, opacity: 0}} viewport={{once: true}} whileInView={{x: 0, opacity: 1}} className='p-20 flex flex-col justify-center'>
                             <h1 className={clsx("text-[5.5rem] leading-[5rem]", font.className)}>{card.title}</h1>

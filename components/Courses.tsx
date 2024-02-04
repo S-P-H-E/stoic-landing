@@ -19,7 +19,7 @@ const MyComponent = () => {
             opacity: 1,
             y: 0,
             transition: {
-                delay: 0.08 * index,
+                delay: 0.15 * index,
             },
         }),
     };
@@ -38,11 +38,13 @@ const MyComponent = () => {
     ]
 
     return (
-        <motion.div id={'courses'} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once:true}} className="scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
-            <p className="text-[--description] tracking-widest">THE BEST INFORMATION</p>
-            <h1 className={clsx("text-8xl font-medium", font.className)}>
-                <mark className="bg-transparent text-white">What you will learn</mark>
-            </h1>
+        <motion.div id={'courses'} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once:true}} className="py-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
+            <div className="text-center items-center justify-center flex flex-col gap-2">
+                <p className="text-[--description] tracking-widest leading-3">THE BEST INFORMATION</p>
+                <h1 className={clsx("text-8xl font-medium", font.className)}>
+                    <mark className="bg-transparent text-white">What you will learn</mark>
+                </h1>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {courses.map((course, index) => (
                     <motion.div key={index}

@@ -93,7 +93,7 @@ export default function Pricing() {
 
 
     return (
-        <motion.div initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
+        <motion.div viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
             <div className="max-w-8xl mx-auto my-20 flex flex-col items-center gap-4">
                 <div>
                     <p className='text-[--description] tracking-widest text-center'>JOIN THE 1%</p>
@@ -128,7 +128,8 @@ export default function Pricing() {
                              whileInView="animate"
                              viewport={{
                                  once: true,
-                             }} className='flex text-[--description] gap-2 items-center'>
+                             }}
+                             className='flex text-white gap-2 items-center'>
                             <FaCheck size={14}/>
                             <h1>{feature.name}</h1>
                         </motion.div>

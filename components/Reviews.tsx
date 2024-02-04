@@ -27,7 +27,7 @@ export default function Reviews() {
         },
         {
           id: 3,
-          text: "exellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much",
+          text: "Excellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much",
           image: "https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80",
           author: "The Last Rebel"
         },
@@ -75,7 +75,7 @@ export default function Reviews() {
               once: true,
             }}
           >
-            <h1 className="text-[#c6c6c6] font-medium">
+            <h1 className={clsx("text-[#c6c6c6] font-medium", review.text.length < 200 && 'text-lg')}>
               &quot;{review.text}&quot;
             </h1>
             <div className="flex gap-3 items-center">

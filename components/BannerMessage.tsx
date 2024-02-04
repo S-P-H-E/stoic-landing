@@ -12,7 +12,7 @@ const font = Playfair({
 
 export default function BannerMessage() {
  return(
-    <div className="h-[600px] flex flex-col items-center justify-center relative">
+    <div className="h-[600px] flex flex-col items-center justify-center relative my-4">
         <motion.div initial={{scale: 0.8, opacity: 0}} transition={{type: 'spring', damping: 20}} whileInView={{scale: 1, opacity: 1}} viewport={{once: true}} className='flex flex-col justify-center items-center gap-10 max-w-8xl mx-auto'>
             <h1 className={clsx("text-[5.5rem] leading-[5rem] text-center w-[1000px]", font.className)}>
                 Over <mark className='bg-transparent text-white italic'>5 Billion</mark> People are on social media <mark className='bg-transparent text-white italic'>everyday</mark>
