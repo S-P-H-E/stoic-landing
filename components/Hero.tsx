@@ -25,7 +25,7 @@ export default function Hero() {
     setVisibility('hidden');
   };
   return (
-    <div className="flex flex-col items-center px-10 relative dot mx-auto">
+    <div className="flex flex-col min-w-[20rem] items-center px-10 relative dot mx-auto">
       <div className="absolute w-full h-full bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d] via-20% to-80% to-transparent " />
       <div className="absolute w-full h-full bg-gradient-to-b from-[#0d0d0d] to-5% to-transparent " />
 
@@ -33,18 +33,18 @@ export default function Hero() {
         {/* <div className="px-3 py-1 rounded-full border border-[#535353] text-[#535353] bg-[#0d0d0d] font-semibold w-fit mx-auto">
             <h1>LEARN NOW</h1>
         </div> */}
-        <h1 className={clsx("text-[5.5rem] p-1", font.className)}>
+          <h1 className={clsx("text-6xl md:text-8xl my-4 text-center p-1", font.className)}>
           Conquer The Algorithm.
         </h1>
-        <p className="text-3xl mx-auto w-[900px] text-center mb-5 text-[#858585] font-medium">
+        <p className="text-xl break-words md:text-2xl mx-auto text-center mb-5 text-[#858585] font-medium">
           Learn how to make high quality videos that get engagement.
         </p>
-        <div className='mx-auto w-fit flex items-center gap-6'>
-          <div className='w-[12.5rem] h-[1px] bg-gradient-to-l from-[#ffffff]'/>
-          <div className='flex flex-col items-center'>
-            <CountdownButton className='!w-[350px]' glitch scanLines/>
+        <div className='mx-auto w-full justify-center flex items-center gap-6'>
+          <div className='hidden md:flex w-[8.5rem] lg:w-[12.5rem] h-[1px] bg-gradient-to-l from-[#ffffff]'/>
+          <div className='flex flex-col items-center w-full md:w-[400px]'>
+            <CountdownButton className='' glitch scanLines/>
           </div>
-          <div className='w-[12.5rem] h-[1px] bg-gradient-to-r from-[#ffffff]'/>
+          <div className='hidden md:flex w-[8.5rem] lg:w-[12.5rem] h-[1px] bg-gradient-to-r from-[#ffffff]'/>
         </div>
       </div>
       
@@ -53,7 +53,7 @@ export default function Hero() {
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
-      <div className="w-[50vw] overflow-hidden rounded relative max-w-8xl z-20 m-5 aspect-video mx-auto">
+      <div className="w-[min(100%,45rem)] lg:w-[min(100%,50vw)] overflow-hidden rounded-lg relative max-w-8xl z-20 m-5 aspect-video mx-auto">
         <motion.div
           className="w-full h-full"
           initial={{ opacity: 0 }}

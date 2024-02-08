@@ -46,6 +46,7 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json(session.url);
     } catch (error) {
+        console.log(error)
         return NextResponse.json('Error occurred with payment, please try again later or contact us.')
     }
 }

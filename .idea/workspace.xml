@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="fix type and animation">
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="rounded">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Reviews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/payment/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/payment/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/VS Code/stoic-landing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Melih Yardım/Desktop/tr-rehber&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -77,6 +75,11 @@
       </map>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Melih Yardım\Desktop\landing\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -91,6 +94,10 @@
       <workItem from="1706969436404" duration="1744000" />
       <workItem from="1706971351005" duration="2134000" />
       <workItem from="1706982498325" duration="73000" />
+      <workItem from="1707060685193" duration="5901000" />
+      <workItem from="1707086092752" duration="7000" />
+      <workItem from="1707316291427" duration="34000" />
+      <workItem from="1707401644309" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -132,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706971165996</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rounded">
+      <option name="closed" value="true" />
+      <created>1707062650324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707062650324</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +160,8 @@
     <MESSAGE value="extra anim and price" />
     <MESSAGE value="test courses" />
     <MESSAGE value="fix type and animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix type and animation" />
+    <MESSAGE value="rounded" />
+    <option name="LAST_COMMIT_MESSAGE" value="rounded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

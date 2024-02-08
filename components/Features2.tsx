@@ -6,7 +6,7 @@ import {MdOutlineTaskAlt} from "react-icons/md";
 import {MdSimCardDownload} from "react-icons/md";
 import {RiBrainFill} from "react-icons/ri";
 import Image from "next/image";
-import IphoneDashboard from '@/public/iphone-dashboard.png'
+import IphoneDashboard from '@/public/iphone-dashboard-trim.png'
 import {motion} from 'framer-motion'
 
 const font = Playfair({
@@ -57,19 +57,19 @@ export default function Features2() {
         },
     ]
     return (
-        <div className="flex w-fit mx-auto py-24">
-            <motion.div viewport={{once: true}} initial={{x: 100, opacity:0}} whileInView={{x: 0, opacity: 1}} transition={{type: 'spring', damping: 15}} className="relative w-fit h-[700px]">
+        <div className="flex overflow-x-hidden flex-col lg:flex-row w-full relative lg:w-fit mx-auto pb-24">
+            <motion.div viewport={{once: true}} initial={{x: 100, opacity:0}} whileInView={{x: 0, opacity: 1}} transition={{type: 'spring', damping: 15}}
+                        className="relative lg:w-fit h-[700px]">
                 <div className="w-full h-full bg-gradient-to-t from-[--bg] z-10 absolute"/>
-                <div className="relative w-[800px] h-full">
-                    <Image alt="Iphone dashboard" fill src={IphoneDashboard} quality={95} className="h-full w-full object-cover"/>
+                <div className="w-[80%] mx-auto h-full relative lg:w-[550px] xl:w-[700px]">
+                    <Image alt="Iphone dashboard" fill src={IphoneDashboard} quality={95} className="mx-auto h-full object-contain"/>
                 </div>
             </motion.div>
 
-            <motion.div viewport={{once: true}} initial={{opacity: 0}} transition={{type: 'tween', duration: 1}} whileInView={{opacity: 1}}>
+            <motion.div className="px-16 lg:items-start lg:text-start items-center text-center flex flex-col" viewport={{once: true}} initial={{opacity: 0}} transition={{type: 'tween', duration: 1}} whileInView={{opacity: 1}}>
                 <p className="text-[--description] tracking-widest">GET ACCESS TO</p>
-                <h1 className={clsx("text-8xl font-medium", font.className)}>
-                    <mark className="bg-transparent text-white italic">Innovative</mark>
-                    <br/> Features
+                <h1 className={clsx("text-7xl xl:text-8xl font-medium lg:mb-0 mb-4", font.className)}>
+                    <mark className="bg-transparent text-white italic">Innovative </mark> <br className="hidden lg:flex"/> Features
                 </h1>
                 <div className='py-5 flex flex-col gap-10'>
                     {features.map((feature, index) => (
@@ -86,7 +86,7 @@ export default function Features2() {
                             <div className='text-[--bg] bg-[--text] p-2 rounded-lg'>
                                 {feature.icon}
                             </div>
-                            <h1 className='text-xl font-medium'>{feature.text}</h1>
+                            <h1 className='text-xl font-medium text-start'>{feature.text}</h1>
                         </motion.div>
                     ))}
                 </div>

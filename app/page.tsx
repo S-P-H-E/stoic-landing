@@ -24,13 +24,12 @@ export default function Home() {
             <Features2 />
             <Courses/>
             <BannerMessage />
-            <Slideshow />
+{/*            <Slideshow />
             <Reviews/>
-            {/* <TestThing/> */}
             <Pricing/>
             <FAQs/>
             <CallToAction/>
-            <Footer/>
+            <Footer/>*/}
         </>
     );
 }

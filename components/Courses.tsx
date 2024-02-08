@@ -38,14 +38,14 @@ const MyComponent = () => {
     ]
 
     return (
-        <motion.div id={'courses'} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once:true}} className="py-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
+        <motion.div id={'courses'} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once:true}} className="pb-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
             <div className="text-center items-center justify-center flex flex-col gap-2">
                 <p className="text-[--description] tracking-widest leading-3">THE BEST INFORMATION</p>
-                <h1 className={clsx("text-8xl font-medium", font.className)}>
+                <h1 className={clsx("text-7xl md:text-8xl font-medium", font.className)}>
                     <mark className="bg-transparent text-white">What you will learn</mark>
                 </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
                 {courses.map((course, index) => (
                     <motion.div key={index}
                                 custom={index}
@@ -56,7 +56,7 @@ const MyComponent = () => {
                                     once: true,
                                 }}
                                 className="rounded-lg overflow-hidden border border-[--border] flex flex-col">
-                        <div className="bg-[#161616] justify-center text-center items-center p-8 flex flex-col gap-2">
+                        <div className="bg-[#161616] justify-center text-center items-center px-4 py-8 flex flex-col gap-2">
                             <h1 className="text-2xl">{course.title}</h1>
                             <h2 className="text-[--gray] font-light">{course.description}</h2>
                         </div>

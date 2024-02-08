@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import JoinButton from './JoinButton';
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function Navbar() {
   const logoAnimation = {
@@ -50,9 +51,9 @@ export default function Navbar() {
             >
               STOIC
             </h1>
-            <img src='stoic.png' width={15} height={15}/>
+            <Image alt="Stoic Logo" src='/stoic.png' width={15} height={15}/>
           </div>
-          <div className="flex gap-6 px-2 py-2 rounded-xl">
+          <div className="hidden md:flex gap-6 px-2 py-2 rounded-xl">
             {renderButton('Features')}
             {renderButton('Pricing')}
             {renderButton('About Us')}
