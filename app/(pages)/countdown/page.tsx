@@ -28,7 +28,7 @@ export default function Countdown() {
             <CountdownTimer/>
 
             <CountdownButton glitch scanLines/>
-            <div className='text-[#ffffff] flex items-center gap-2'>
+            <div className='text-white flex items-center gap-2'>
                 <MdLock/>
                 <p className='text-[14px]'>INCLUDES ACCESS TO ALL COURSES</p>
             </div>

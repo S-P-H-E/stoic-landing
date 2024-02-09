@@ -18,6 +18,15 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        'border': '#2E2D2D',
+        'description': '#A7A297',
+        'background': '#0d0d0d',
+        'gray': '#a8a8a8',
+        'upgrade': '#55beee',
+        'light-gray': '#151515',
+        'highlight': '#c6c6c6'
+      },
       maxWidth: {
         '8xl': '1366px',
         '9xl': '1440px'

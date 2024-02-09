@@ -107,7 +107,7 @@ const CountdownButton = ({glitch, scanLines, label, className}: { glitch?: boole
             onMouseEnter={scramble}
             onMouseLeave={handleMouseLeave}
             onClick={handleButtonClick}
-            className={clsx("group relative overflow-hidden bg-[#181818] disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4" +
+            className={clsx("group relative overflow-hidden bg-light-gray disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4" +
                 " my-5 text-white text-lg md:text-xl flex items-center gap-2 work-sans w-[100%] max-w-[25rem] md:w-[25rem] justify-center", className)}
         >
             <div className="relative z-10 flex items-center gap-2">

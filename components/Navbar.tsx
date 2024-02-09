@@ -24,7 +24,7 @@ export default function Navbar() {
 
   const renderButton = (text: string) => (
     <button
-      className="text-[#7e7e7e] py-2 px-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white hover:scale-105 active:scale-95 hover:text-black"
+      className="text-gray py-2 px-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white hover:scale-105 active:scale-95 hover:text-black"
     >
       {text}
     </button>
@@ -43,7 +43,7 @@ export default function Navbar() {
     })
 
   return (
-      <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full p-8 text-white backdrop-blur-md bg-gradient-to-b from-[#0d0d0d] via-[#0d0d0d] to-transparent bg-opacity-70"}>
+      <motion.nav transition={{duration: 0.45, ease: "easeInOut"}} animate={hidden ? 'hidden' : 'visible'} variants={{visible: {y: 0}, hidden: {y: "-100%"}}} className={"z-50 sticky top-0 w-full px-8 py-6 text-white backdrop-blur-lg bg-gradient-to-b from-background via-background to-transparent bg-opacity-70"}>
         <div className='w-full flex items-center justify-between max-w-8xl mx-auto'>
           <div className="flex items-center gap-3 w-[300px]">
             <h1
@@ -59,7 +59,7 @@ export default function Navbar() {
             {renderButton('About Us')}
           </div>
           <div className="flex gap-4 w-[300px] justify-end">
-            <Link rel="noopener noreferrer" target="_blank" href={'https://app.stoiccord.com'} className="bg-[#0d0d0d] hover:bg-[#2e2e2e] transition duration-200 border border-[#535353] px-4 py-2 font-semibold text-white flex items-center gap-2">
+            <Link rel="noopener noreferrer" target="_blank" href={'https://app.stoiccord.com'} className="bg-background hover:bg-border/50 transition duration-200 border border-border px-4 py-2 font-semibold text-white flex items-center gap-2">
               <p>Login</p>
               <FaUserCircle />
             </Link>

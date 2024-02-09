@@ -53,7 +53,7 @@ export default function Slideshow() {
         <div className="flex flex-col py-20 w-[80vw] max-w-8xl mx-auto">
             <motion.div viewport={{ once: true }} initial={{opacity: 0 }} whileInView={{opacity: 1}} className='flex flex-col lg:flex-row gap-8 justify-between w-full'>
                 <div>
-                    <p className='text-[--description] tracking-widest'>GET FULL ACCESS TO</p>
+                    <p className='text-description tracking-widest'>GET FULL ACCESS TO</p>
                     <h1 className={clsx("text-5xl md:text-7xl lg:text-[5.5rem] lg:leading-[5rem]", font.className)}>
                         The power of<br className="hidden xl:flex"/> <mark className='bg-transparent text-white italic'>Stoic 2.0</mark>
                     </h1>
@@ -68,13 +68,13 @@ export default function Slideshow() {
                     <div key={card.id} className={clsx('flex flex-col xl:flex-row justify-between', card.id % 2 === 0 && 'xl:flex-row-reverse')}>
                         <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: 100, opacity: 0} : {x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}}
                                     className='shadow-[0_0px_50px_rgba(5,_5,_5,_0.3)] shadow-black rounded-xl w-full h-[50svw] xl:w-[600px] xl:h-[400px] relative'>
-                            {/* <div className='bg-gradient-to-t from-[--bg] absolute z-10 w-full h-full'/> */}
+                            {/* <div className='bg-gradient-to-t from-background absolute z-10 w-full h-full'/> */}
                             <Image alt="Platform Image" fill quality={95} src={card.url} className='w-full h-full object-cover rounded-xl'/>
                         </motion.div>
                         <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: -100, opacity: 0} : {x: 100, opacity: 0}} viewport={{once: true}} whileInView={{x: 0, opacity: 1}}
                                     className={clsx('xl:p-20 flex flex-col justify-center xl:mt-0 mt-4', card.id % 2 === 0 && 'items-end text-end xl:text-start xl:items-baseline')}>
                             <h1 className={clsx("text-6xl 2xl:text-[5.5rem] lg:leading-[5rem]", font.className)}>{card.title}</h1>
-                            <p className='w-full xl:w-[300px] 2xl:w-[390px] text-[--description] tracking-widest'>{card.description}</p>
+                            <p className='w-full xl:w-[300px] 2xl:w-[390px] text-description tracking-widest'>{card.description}</p>
                         </motion.div>
                     </div>
                 ))}

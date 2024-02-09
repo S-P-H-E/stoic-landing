@@ -56,8 +56,7 @@ export default function Reviews() {
           <br />
           users talk about us.
         </h1>
-        {/* <p className="w-[50vw] text-center font-medium text-2xl text-[#898989]">Empower your creative journey with our state-of-the-art platform, offering a 24/7 AI support system to guide you at every step. Easily convert videos for major social media platforms with our specialized tools. Dive into a rich resources library, providing all the assets you need for seamless editing. Whether you're utilizing our AI support, video converters, or resource library, our platform ensures you have the powerful yet familiar tools to craft your ultimate content.</p> */}
-        <p className="text-center text-[--description] tracking-widest">
+        <p className="text-center text-description tracking-widest">
           Here is what a few had to say.
         </p>
       </div>
@@ -66,7 +65,7 @@ export default function Reviews() {
         {reviews.map((review, index) => (
           <motion.div
             key={review.id}
-            className="bg-[#141312] w-full max-w-[650px] border border-[--border] p-5 relative flex flex-col justify-between gap-4"
+            className="bg-light-gray w-full max-w-[650px] border border-border p-5 relative flex flex-col justify-between gap-4"
             initial="initial"
             variants={fadeInBox}
             custom={index}
@@ -75,7 +74,7 @@ export default function Reviews() {
               once: true,
             }}
           >
-            <h1 className={clsx("text-[#c6c6c6] font-medium", review.text.length < 200 && 'text-lg')}>
+            <h1 className={clsx("text-highlight font-medium", review.text.length < 200 && 'text-lg')}>
               &quot;{review.text}&quot;
             </h1>
             <div className="flex gap-3 items-center">

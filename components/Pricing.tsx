@@ -96,25 +96,25 @@ export default function Pricing() {
         <motion.div className="px-8" viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
             <div className="max-w-8xl mx-auto my-12 flex flex-col items-center gap-4 ">
                 <div>
-                    <p className='text-[--description] tracking-widest text-center'>JOIN THE 1%</p>
+                    <p className='text-description tracking-widest text-center'>JOIN THE 1%</p>
                     <h1 className={clsx("text-5xl lg:text-7xl lg:text-start text-center lg:leading-[5rem]", font.className)}>
                         The <mark className='bg-transparent text-white italic'>choice</mark> is yours
                     </h1>
                 </div>
             </div>
 
-            <div className='border border-[--border] min-h-[400px] w-full max-w-[900px] mx-auto'>
-                <div className='bg-[#141312] flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
+            <div className='border border-border min-h-[400px] w-full max-w-[900px] mx-auto'>
+                <div className='bg-light-gray flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
                     <div>
                         <h1 className={clsx("text-5xl", font.className)}>Take Action</h1>
-                        <p className='text-[--description] tracking-widest'>Let&apos;s begin your jounrey...</p>
+                        <p className='text-description tracking-widest'>Let&apos;s begin your jounrey...</p>
                     </div>
 
                     <div className="flex flex-col items-center md:items-end leading-3">
                         <h1 className={clsx("font-normal text-5xl leading-5", font.className)}>$29.<span className="text-4xl">99</span>
                             <mark className='bg-transparent text-xl text-white italic'>/month</mark>
                         </h1>
-                        <h2 className="text-2xl order-first md:order-last leading-tight items-center flex line-through text-[--description]">$49.99<span className="text-lg italic">/month</span></h2>
+                        <h2 className="text-2xl order-first md:order-last leading-tight items-center flex line-through text-description">$49.99<span className="text-lg italic">/month</span></h2>
                     </div>
                 </div>
 

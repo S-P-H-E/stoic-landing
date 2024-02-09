@@ -10,7 +10,8 @@
   --gray: #a8a8a8;
   --border: #2E2D2D;
   --bg: #0d0d0d;
-  --upgrade: #55beee;
+  --upgrade: rgba(85, 190, 238, 1);
+  --upgrade-glow: rgba(85, 190, 238, 0.15);
   --highlight: #FFCF24;
   --highlight-low: #322D1D;
 }

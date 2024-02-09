@@ -46,7 +46,7 @@ export default function Features() {
               viewport={{
                 once: true,
               }}
-              className="border-2 border-[#1b1b1b] dot h-full w-full rounded-3xl flex flex-col"
+              className="border-2 border-border dot h-full w-full rounded-3xl flex flex-col"
             >
               <div className="flex flex-col items-center p-10 gap-4">
                 <h1 className="text-5xl font-semibold text-center w-fit">
@@ -55,7 +55,7 @@ export default function Features() {
                 {/* <JoinButton/> */}
               </div>
 
-              <div className="border border-b-0 border-[#1b1b1b] bg-[#0d0d0d] h-full transition-all w-3/4 mx-auto rounded-t-2xl group relative overflow-hidden flex-col items-center justify-center">
+              <div className="border border-b-0 border-border bg-background h-full transition-all w-3/4 mx-auto rounded-t-2xl group relative overflow-hidden flex-col items-center justify-center">
                 <div className="p-6 flex flex-col justify-center h-full gap-3 text-[#8d8d8d]">
                   <div className="font-medium text-center w-4/5 h-1/5 mx-auto bg-[#222222] rounded-md animate-pulse" />
                   <div className="font-light text-center w-3/5 h-1/5 mx-auto bg-[#222222] rounded-md animate-pulse" />
@@ -71,13 +71,13 @@ export default function Features() {
                 viewport={{
                   once: true,
                 }}
-                className="border-2 border-[#1b1b1b] dot h-full w-full rounded-3xl flex flex-col items-center justify-center relative overflow-hidden"
+                className="border-2 border-border dot h-full w-full rounded-3xl flex flex-col items-center justify-center relative overflow-hidden"
               >
                 <div className="absolute w-[200px] right-0 bottom-[-300px] h-[200px] bg-white rounded-full opacity-100 blur-[120px] transition duration-500 z-20" />
                 <h1 className="text-5xl font-semibold text-center w-fit mx-auto">
                   Community
                 </h1>
-                <p className="w-[350px] text-center font-medium text-md text-[--gray]">
+                <p className="w-[350px] text-center font-medium text-md text-gray">
                   Meet like-minded individuals and help each other along your
                   social media journey
                 </p>
@@ -89,7 +89,7 @@ export default function Features() {
                 viewport={{
                   once: true,
                 }}
-                className="bg-gradient-to-tl from-[#55beee] via-[#3cacdf] to-[#2fa1d5] border-t border-l border-[#7caef8] h-full w-full rounded-3xl flex flex-col items-center justify-center gap-3 relative"
+                className="bg-gradient-to-tl from-upgrade via-[#3cacdf] to-[#2fa1d5] border-t border-l border-[#7caef8] h-full w-full rounded-3xl flex flex-col items-center justify-center gap-3 relative"
               >
                 <div className="flex gap-6 items-center justify-center">
                   <Image
@@ -111,10 +111,10 @@ export default function Features() {
               viewport={{
                 once: true,
               }}
-              className="border-2 border-[#1b1b1b] dot h-full w-4/5 rounded-3xl flex flex-col items-start justify-end p-8"
+              className="border-2 border-border dot h-full w-4/5 rounded-3xl flex flex-col items-start justify-end p-8"
             >
               <h1 className="text-5xl font-semibold">Custom Platform</h1>
-              <p className="text-center font-medium text-md text-[--gray]">
+              <p className="text-center font-medium text-md text-gray">
                 Having a custom platform allows you to have the best curated
                 experience{' '}
               </p>
@@ -127,11 +127,11 @@ export default function Features() {
               viewport={{
                 once: true,
               }}
-              className="border-2 border-[#1b1b1b] bg-repeat h-full w-1/5 rounded-3xl flex flex-col justify-center items-center gap-2 relative dot"
+              className="border-2 border-border bg-repeat h-full w-1/5 rounded-3xl flex flex-col justify-center items-center gap-2 relative dot"
             >
               <FaYoutube size={80} />
               <h1 className="text-xl font-semibold">Video Converters</h1>
-              {/* <p className="text-center font-medium text-md text-[--gray]">Having a custom platform allows you to have the best curated experience </p> */}
+              {/* <p className="text-center font-medium text-md text-gray">Having a custom platform allows you to have the best curated experience </p> */}
             </motion.div>
           </div>
         </div>
@@ -144,12 +144,12 @@ export default function Features() {
             viewport={{
               once: true,
             }}
-            className="border-2 border-[#1b1b1b] dot h-2/5 w-full rounded-3xl flex flex-col items-center justify-center relative overflow-hidden"
+            className="border-2 border-border dot h-2/5 w-full rounded-3xl flex flex-col items-center justify-center relative overflow-hidden"
           >
             <h1 className="text-4xl font-semibold text-center w-1/2">
               High Quality Resources
             </h1>
-            <p className="font-medium text-md text-[--gray] text-center w-3/5">
+            <p className="font-medium text-md text-gray text-center w-3/5">
               We have endless high quality resources for editing
             </p>
             <div className="absolute w-[200px] -left-20 bottom-[-300px] h-[200px] bg-white rounded-full opacity-100 blur-[120px] transition duration-500 z-20" />
@@ -161,13 +161,13 @@ export default function Features() {
             viewport={{
               once: true,
             }}
-            className="border-2 border-[#1b1b1b] dot h-4/5 w-full rounded-3xl flex flex-col items-center justify-center p-5 relative overflow-hidden"
+            className="border-2 border-border dot h-4/5 w-full rounded-3xl flex flex-col items-center justify-center p-5 relative overflow-hidden"
           >
             <div className="absolute w-[200px] -left-20 top-[-260px] h-[200px] bg-white rounded-full opacity-100 blur-[120px] transition duration-500 z-20" />
             <h1 className="text-4xl font-semibold text-center">
               24/7 AI Support
             </h1>
-            <p className="text-center font-medium text-md text-[--gray]">
+            <p className="text-center font-medium text-md text-gray">
               We have built an AI system that will be there to help you at all
               times during your path to social media conquest
             </p>
