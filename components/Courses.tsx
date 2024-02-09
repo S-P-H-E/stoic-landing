@@ -39,13 +39,13 @@ const MyComponent = () => {
 
     return (
         <motion.div id={'courses'} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once:true}} className="pb-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
-            <div className="text-center items-center justify-center flex flex-col gap-2">
+            <div className="text-center items-center justify-center flex flex-col gap-2 px-6">
                 <p className="text-[--description] tracking-widest leading-3">THE BEST INFORMATION</p>
-                <h1 className={clsx("text-7xl md:text-8xl font-medium", font.className)}>
+                <h1 className={clsx("text-5xl md:text-6xl lg:text-8xl font-medium", font.className)}>
                     <mark className="bg-transparent text-white">What you will learn</mark>
                 </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-8">
                 {courses.map((course, index) => (
                     <motion.div key={index}
                                 custom={index}

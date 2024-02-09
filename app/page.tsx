@@ -20,16 +20,16 @@ export default function Home() {
         <>
             <Navbar/>
             <Hero/>
-            <About />
-            <Features2 />
+            <About/>
+            <Features2/>
             <Courses/>
-            <BannerMessage />
-{/*            <Slideshow />
+            <BannerMessage/>
+            <Slideshow/>
             <Reviews/>
             <Pricing/>
             <FAQs/>
             <CallToAction/>
-            <Footer/>*/}
+            <Footer/>
         </>
     );
 }

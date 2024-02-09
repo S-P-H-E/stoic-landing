@@ -9,7 +9,7 @@ export default function Footer() {
       <h1 className="text-[#949494]">
         {currentYear} © Stoic, All rights reserved.
       </h1>
-      <div className="flex gap-2">
+      <div className="flex gap-2 items-center">
         <Link href="/Legal/Terms of Service.pdf" target="_blank">
           <button className="text-[#949494] hover:underline">
             Terms of Service

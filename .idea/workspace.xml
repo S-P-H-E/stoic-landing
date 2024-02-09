@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="rounded">
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="responsive 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/payment/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/payment/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,8 @@
       <workItem from="1707086092752" duration="7000" />
       <workItem from="1707316291427" duration="34000" />
       <workItem from="1707401644309" duration="1018000" />
+      <workItem from="1707419004880" duration="7579000" />
+      <workItem from="1707430550751" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -147,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707062650324</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="responsive 1">
+      <option name="closed" value="true" />
+      <created>1707430483078</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707430483078</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +170,8 @@
     <MESSAGE value="test courses" />
     <MESSAGE value="fix type and animation" />
     <MESSAGE value="rounded" />
-    <option name="LAST_COMMIT_MESSAGE" value="rounded" />
+    <MESSAGE value="responsive 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

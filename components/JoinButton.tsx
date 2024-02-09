@@ -27,7 +27,7 @@ export default function JoinButton({noGroup}: {noGroup?: boolean}) {
   return (
     <button
         disabled={isPending}
-      className={clsx('border disabled:opacity-50 active:scale-95 px-4 py-2 text-white flex items-center gap-2 w-fit hover:bg-white/[.85] hover:text-black transition duration-200', !noGroup && 'group')}
+      className={clsx('border disabled:opacity-50 rounded-lg active:scale-95 px-4 py-2 text-white flex items-center gap-2 w-fit hover:bg-white/[.85] hover:text-black transition duration-200', !noGroup && 'group')}
       onClick={handleButtonClick}
     >
       {isPending ? <div className="gap-2 flex items-center"><FiLoader className="animate-spin"/> Processing </div>: 'Join Premium'}

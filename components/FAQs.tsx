@@ -71,16 +71,16 @@ export default function FAQs() {
 
   return (
     <>
-      <div className="pt-40 pb-10 flex flex-col items-center gap-6 max-w-8xl mx-auto">
+      <div className="pt-40 pb-10 px-6 flex flex-col items-center gap-6 max-w-8xl mx-auto">
         <div>
           <p className="text-[--description] tracking-widest text-center">
             STILL UNSURE?
           </p>
-          <h1 className={clsx("text-8xl font-medium text-center", font.className)}>Frequently Asked<br /><mark className="bg-transparent text-white italic">Questions</mark></h1>
+          <h1 className={clsx("text-6xl lg:text-[5.5rem] lg:leading-[5.5rem] font-medium text-center", font.className)}>Frequently Asked<br /><mark className="bg-transparent text-white italic">Questions</mark></h1>
         </div>
       </div>
 
-      <div className="w-3/4 mx-auto max-w-8xl bg-[#191919] rounded-2xl px-5 pt-1">
+      <div className="w-5/6 md:w-3/4 mx-auto max-w-8xl bg-[#191919] rounded-2xl px-5 pt-1">
         {faqs.map((faq, index) => (
           <motion.div
             initial="initial"
@@ -92,10 +92,10 @@ export default function FAQs() {
             key={index}
             custom={index}
             onClick={() => toggleExpanded(index)}
-            className={clsx("my-4 p-7 cursor-pointer", index === faqs.length - 1 && "border-none", "border-b border-[#2C2B2A]")}
+            className={clsx("my-4 p-8 cursor-pointer", index === faqs.length - 1 && "border-none", "border-b border-[#2C2B2A]")}
           >
             <button
-              className="font-bold md:font-medium md:text-2xl flex justify-between w-full text-start items-center"
+              className="font-bold md:font-medium text-xl md:text-2xl flex justify-between w-full text-start items-center"
             >
               <p>{faq.question}</p>
               <div
