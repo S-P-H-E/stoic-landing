@@ -21,13 +21,13 @@ export default function About() {
                 <div className='flex lg:flex-row flex-col px-10 items-center justify-center mx-auto lg:w-fit gap-10 mt-10'>
                     <div className='flex flex-col lg:w-auto w-full text-center lg:text-start lg:items-start justify-center items-center gap-5'>
                         <h1 className={clsx("text-4xl lg:text-5xl font-medium", font.className)}>A few weeks of focus <br/> will get you there</h1>
-                        <div className='text-[--gray] w-full lg:w-1/2 flex flex-col gap-5'>
+                        <div className='max-w-[700px] text-[--gray] text-sm md:text-base w-full lg:w-1/2 flex flex-col gap-5'>
                             <p>...only if you are dedicated and are prepared to be coached.</p>
                             <p className="lg:w-[400px] xl:w-[500px]">We will give you the exact guidance and information you need to learn social media. We offer the best assets to assist you in your social media journey.</p>
                         </div>
                         <CountdownButton />
                     </div>
-                    <div className='order-first lg:order-last w-[85%] aspect-[16/7] lg:aspect-auto lg:w-[500px] lg:h-[220px] xl:w-[620px] xl:h-[280px] relative rounded-xl overflow-hidden shadow-[0_0px_35px_rgba(5,_5,_5,_0.95)]'>
+                    <div className='order-first lg:order-last w-full max-w-[620px] aspect-[16/7] lg:aspect-auto lg:w-[500px] lg:h-[220px] xl:w-[620px] xl:h-[280px] relative rounded-xl overflow-hidden shadow-[0_0px_35px_rgba(5,_5,_5,_0.95)]'>
                         <div className='bg-gradient-to-t from-[--bg] h-full w-full absolute'/>
                         <Image alt="Results" src={Results} quality={99} placeholder="blur" fill className='w-full h-full object-cover' />
                     </div>

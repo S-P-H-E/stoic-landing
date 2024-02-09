@@ -97,7 +97,7 @@ export default function Pricing() {
             <div className="max-w-8xl mx-auto my-12 flex flex-col items-center gap-4 ">
                 <div>
                     <p className='text-[--description] tracking-widest text-center'>JOIN THE 1%</p>
-                    <h1 className={clsx("text-5xl lg:text-7xl lg:leading-[5rem]", font.className)}>
+                    <h1 className={clsx("text-5xl lg:text-7xl lg:text-start text-center lg:leading-[5rem]", font.className)}>
                         The <mark className='bg-transparent text-white italic'>choice</mark> is yours
                     </h1>
                 </div>

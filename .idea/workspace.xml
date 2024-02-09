@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="responsive 1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="responsive 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,6 +97,7 @@
       <workItem from="1707401644309" duration="1018000" />
       <workItem from="1707419004880" duration="7579000" />
       <workItem from="1707430550751" duration="15000" />
+      <workItem from="1707490192904" duration="12881000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -156,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707430483078</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="responsive 2">
+      <option name="closed" value="true" />
+      <created>1707505403542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707505403542</updated>
+    </task>
+    <task id="LOCAL-00009" summary="responsive 3">
+      <option name="closed" value="true" />
+      <created>1707506564957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707506564957</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +186,9 @@
     <MESSAGE value="fix type and animation" />
     <MESSAGE value="rounded" />
     <MESSAGE value="responsive 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive 1" />
+    <MESSAGE value="responsive 2" />
+    <MESSAGE value="responsive 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
