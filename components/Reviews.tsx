@@ -61,7 +61,7 @@ export default function Reviews() {
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-3 pb-20 px-8 gap-3 w-fit"
+      <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-3 pb-20 px-8 gap-6 w-fit"
       >
         {reviews.map((review, index) => (
           <motion.div
