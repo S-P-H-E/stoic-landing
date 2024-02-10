@@ -26,7 +26,7 @@ export default function About() {
                 </div>
                 <div className='flex lg:flex-row flex-col px-10 items-center justify-center mx-auto lg:w-fit gap-4 mt-6 lg:gap-10 lg:mt-10'>
                     <div className='flex flex-col lg:w-auto w-full text-center lg:text-start lg:items-start justify-center items-center gap-3 lg:gap-5'>
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl">A few weeks of focus <br/> will get you there</h1>
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light">A few weeks of focus <br/> will get you there</h1>
                         <div className='max-w-[700px] font-light text-gray text-sm md:text-base w-full lg:w-1/2 flex flex-col gap-2 lg:gap-5'>
                             <p>...only if you are dedicated and are prepared to be coached.</p>
                             <p className="lg:w-[400px] xl:w-[500px] font-">We will give you the exact guidance and information you need to learn social media. We offer the best assets to assist you in your social media journey.</p>

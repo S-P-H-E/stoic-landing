@@ -72,7 +72,7 @@ export default function Hero() {
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
-            <div className="order-first shadow-xl group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto">
+            <div className="order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto">
                 <motion.div
                     className="w-full h-full"
                     initial={{opacity: 0}}

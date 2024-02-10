@@ -47,31 +47,35 @@ export default function Slideshow() {
 
     return (
         <div className="flex flex-col pt-20 pb-8 w-[80vw] max-w-8xl mx-auto">
-            <motion.div viewport={{ once: true }} initial={{opacity: 0 }} whileInView={{opacity: 1}} className='flex flex-col lg:flex-row gap-8 justify-between w-full'>
+            <motion.div viewport={{ once: true }} initial={{opacity: 0 }} whileInView={{opacity: 1}}
+                        className='flex flex-col lg:flex-row gap-8 justify-center items-center w-full'>
                 <div>
-                    <p className='text-description tracking-widest'>GET FULL ACCESS TO</p>
+                    <p className='text-description text-center tracking-widest'>GET FULL ACCESS TO</p>
                     <h1 className="text-5xl md:text-7xl font-medium lg:text-[5.5rem] lg:leading-[5rem]">
-                        The power of<br className="hidden xl:flex"/> <mark className='bg-transparent font-semibold text-white italic'>Stoic 2.0</mark>
+                        The power of <mark className='bg-transparent font-semibold text-white'>Stoic 2.0</mark>
                     </h1>
                     <div className='bg-gradient-to-l from-white h-[1px] w-full mt-5'/>
                 </div>
-                <div className='h-fit my-auto'>
+     {/*           <div className='h-fit my-auto'>
                     <CountdownButton />
-                </div>
+                </div>*/}
             </motion.div>
-            <div className='overflow-x-hidden py-20 flex flex-col gap-20 mt-4'>
+            <div className='overflow-x-hidden py-20 flex flex-col gap-24 mt-4'>
                 {cards.map(card => (
-                    <div key={card.id} className={clsx('flex flex-col xl:flex-row justify-between', card.id % 2 === 0 && 'xl:flex-row-reverse')}>
+                    <div key={card.id} className={clsx('flex relative flex-col xl:flex-row justify-between', card.id % 2 === 0 ? 'xl:flex-row-reverse pr-12' : 'pl-12')}>
                         <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: 100, opacity: 0} : {x: -150, opacity: 0}} whileInView={{x: 0, opacity: 1}} viewport={{once: true}}
-                                    className='shadow-[0_0px_50px_rgba(5,_5,_5,_0.3)] shadow-black rounded-xl w-full h-[50svw] xl:w-[600px] xl:h-[400px] relative'>
+                                    className='z-10 shadow-[0_0px_40px_rgba(5,_5,_5,_0.3)] shadow-black rounded-xl w-full h-[50svw] xl:w-[600px] xl:h-[400px] relative'>
                             {/* <div className='bg-gradient-to-t from-background absolute z-10 w-full h-full'/> */}
                             <Image alt="Platform Image" fill quality={95} src={card.url} className='w-full h-full object-cover rounded-xl'/>
                         </motion.div>
                         <motion.div transition={{type: 'spring', damping: 20}} initial={card.reverse ? {x: -100, opacity: 0} : {x: 150, opacity: 0}} viewport={{once: true}} whileInView={{x: 0, opacity: 1}}
-                                    className={clsx('xl:p-20 flex flex-col justify-center xl:mt-0 mt-4', card.id % 2 === 0 && 'items-end text-end xl:text-start xl:items-baseline')}>
+                                    className={clsx('z-10 xl:p-20 flex flex-col justify-center xl:mt-0 mt-4', card.id % 2 === 0 && 'items-end text-end xl:text-start xl:items-baseline')}>
                             <h1 className="text-5xl lg:text-6xl 2xl:text-[5.5rem] lg:leading-[5rem]">{card.title}</h1>
                             <p className='w-full xl:w-[300px] 2xl:w-[390px] text-description tracking-widest'>{card.description}</p>
                         </motion.div>
+
+                        <motion.div initial={{opacity:0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} viewport={{once:true}} transition={{stiffness: 150, damping: 25,delay: .4, type: 'spring'}}
+                                    className="absolute h-[115%] -top-8 inset-0 bg-light-gray rounded-xl"/>
                     </div>
                 ))}
             </div>

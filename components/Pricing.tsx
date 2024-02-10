@@ -73,7 +73,7 @@ export default function Pricing() {
                 </div>
             </div>
 
-            <div className='border border-border min-h-[400px] w-full max-w-[900px] mx-auto'>
+            <div className='rounded overflow-hidden border border-border min-h-[400px] w-full max-w-[900px] mx-auto'>
                 <div onMouseMove={handleMouseMove} className='relative group bg-light-gray flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
                     <motion.div
                         className="md:block hidden pointer-events-none absolute -inset-px transition duration-300 group-hover:opacity-100 opacity-0"

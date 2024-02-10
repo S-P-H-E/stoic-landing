@@ -55,7 +55,7 @@ export default function Features2() {
 
 
     return (
-        <div className="flex overflow-x-hidden flex-col lg:flex-row w-full relative lg:w-fit mx-auto pb-24">
+        <div className="flex overflow-hidden flex-col lg:flex-row w-full relative lg:w-fit mx-auto pb-24">
             <motion.div viewport={{once: true}} initial={{y: 100, opacity:0}} whileInView={{y: 0, opacity: 1}} transition={{type: 'spring', damping: 10}}
                         className="relative flex items-center justify-center lg:w-fit min-h-[400px] lg:min-h-[500px] h-[43svh] md:h-[70svh] lg:h-[700px]">
                 <div className="w-full h-full bg-gradient-to-t from-background z-10 absolute"/>
