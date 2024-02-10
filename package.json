@@ -22,6 +22,7 @@
     "embla-carousel-autoplay": "^8.0.0-rc22",
     "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^10.18.0",
+    "geist": "^1.2.2",
     "lucide-react": "^0.321.0",
     "next": "^14.0.4",
     "npm": "^10.2.3",

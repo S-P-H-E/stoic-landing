@@ -1,39 +1,13 @@
-import axios from 'axios';
-import {motion} from 'framer-motion';
-import {BsFillCheckCircleFill, BsPeopleFill, BsStars} from 'react-icons/bs';
-import {FaBook, FaCheck, FaGraduationCap, FaStripe, FaTrophy} from 'react-icons/fa';
-import JoinButton2 from './JoinButton2';
-import React, {useTransition} from "react";
-import {handleSubscription} from "@/app/lib/utils";
-import {useRouter} from "next/navigation";
-import {FiLoader} from "react-icons/fi";
+"use client"
+
+import {motion, useMotionTemplate, useMotionValue} from 'framer-motion';
+import {BsPeopleFill, BsStars} from 'react-icons/bs';
+import {FaBook, FaCheck, FaGraduationCap, FaTrophy} from 'react-icons/fa';
+import React from "react";
 import clsx from 'clsx'
-import {Playfair} from 'next/font/google'
 import CountdownButton from './CountdownButton';
 
-const font = Playfair({
-    subsets: ['latin'],
-    weight: ['400'],
-})
-
 export default function Pricing() {
-
-    const [isPending, startTransition] = useTransition()
-
-    const router = useRouter()
-
-    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        startTransition(async () => {
-            try {
-                e.preventDefault();
-
-                const data = await handleSubscription(e);
-                router.push(data);
-            } catch (error: any) {
-                console.error('Error during subscription:', error.message);
-            }
-        });
-    };
 
     const features = [
         {
@@ -63,20 +37,6 @@ export default function Pricing() {
         },
     ];
 
-    const fadeInAnimationVariants = {
-        initial: {
-            opacity: 0,
-            y: 100,
-        },
-        animate: (index: number) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                delay: 0.05 * index,
-            },
-        }),
-    };
-
     const fadeInAnimationVariants2 = {
         initial: {
             opacity: 0,
@@ -91,27 +51,50 @@ export default function Pricing() {
         }),
     };
 
+    let mouseX = useMotionValue(0);
+    let mouseY = useMotionValue(0);
+
+    function handleMouseMove(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+        let currentTarget = event.currentTarget as HTMLDivElement;
+        let {left, top} = currentTarget.getBoundingClientRect();
+
+        mouseX.set(event.clientX - left);
+        mouseY.set(event.clientY - top);
+    }
 
     return (
-        <motion.div className="px-8" viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
+        <motion.div className="px-8 pb-8" viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
             <div className="max-w-8xl mx-auto my-12 flex flex-col items-center gap-4 ">
                 <div>
                     <p className='text-description tracking-widest text-center'>JOIN THE 1%</p>
-                    <h1 className={clsx("text-5xl lg:text-7xl lg:text-start text-center lg:leading-[5rem]", font.className)}>
-                        The <mark className='bg-transparent text-white italic'>choice</mark> is yours
+                    <h1 className="text-5xl font-medium lg:text-7xl lg:text-start text-center lg:leading-[5rem]">
+                        The <mark className='bg-transparent font-semibold text-white'>choice</mark> is yours
                     </h1>
                 </div>
             </div>
 
             <div className='border border-border min-h-[400px] w-full max-w-[900px] mx-auto'>
-                <div className='bg-light-gray flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
+                <div onMouseMove={handleMouseMove} className='relative group bg-light-gray flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
+                    <motion.div
+                        className="md:block hidden pointer-events-none absolute -inset-px transition duration-300 group-hover:opacity-100 opacity-0"
+                        style={{
+                            background: useMotionTemplate`
+                                    radial-gradient(
+                                    650px circle at ${mouseX}px ${mouseY}px,
+                                    var(--glow),
+                                    transparent 75%
+                                    )
+                                `,
+                        }}
+                    />
+
                     <div>
-                        <h1 className={clsx("text-5xl", font.className)}>Take Action</h1>
-                        <p className='text-description tracking-widest'>Let&apos;s begin your jounrey...</p>
+                        <h1 className="font-medium text-5xl">Take Action</h1>
+                        <p className='text-description tracking-widest'>Let&apos;s begin your journey...</p>
                     </div>
 
                     <div className="flex flex-col items-center md:items-end leading-3">
-                        <h1 className={clsx("font-normal text-5xl leading-5", font.className)}>$29.<span className="text-4xl">99</span>
+                        <h1 className="font-medium text-5xl leading-5">$29.<span className="text-4xl">99</span>
                             <mark className='bg-transparent text-xl text-white italic'>/month</mark>
                         </h1>
                         <h2 className="text-2xl order-first md:order-last leading-tight items-center flex line-through text-description">$49.99<span className="text-lg italic">/month</span></h2>
@@ -121,15 +104,15 @@ export default function Pricing() {
                 <div className='p-8 flex flex-col gap-4'>
                     {features.map((feature, index) => (
                         <motion.div
-                             key={index}
-                             custom={index}
-                             variants={fadeInAnimationVariants2}
-                             initial="initial"
-                             whileInView="animate"
-                             viewport={{
-                                 once: true,
-                             }}
-                             className='flex text-white gap-2 items-center'>
+                            key={index}
+                            custom={index}
+                            variants={fadeInAnimationVariants2}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{
+                                once: true,
+                            }}
+                            className='flex text-white gap-2 items-center'>
                             <FaCheck size={14}/>
                             <h1>{feature.name}</h1>
                         </motion.div>

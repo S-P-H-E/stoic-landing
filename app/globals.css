@@ -11,7 +11,7 @@
   --border: #2E2D2D;
   --bg: #0d0d0d;
   --upgrade: rgba(85, 190, 238, 1);
-  --upgrade-glow: rgba(85, 190, 238, 0.15);
+  --glow: rgba(168,168,168, 0.2);
   --highlight: #FFCF24;
   --highlight-low: #322D1D;
 }

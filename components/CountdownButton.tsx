@@ -1,3 +1,5 @@
+"use client"
+
 import React, {useRef, useState, useTransition} from "react";
 import {FiArrowUpRight, FiLoader, FiLock} from "react-icons/fi";
 import {motion} from "framer-motion";
@@ -97,19 +99,16 @@ const CountdownButton = ({glitch, scanLines, label, className}: { glitch?: boole
 
     return (
         <motion.button
-            whileHover={{
-                scale: 1.025,
-            }}
             whileTap={{
-                scale: 0.975,
+                scale: 0.955,
             }}
             disabled={isPending}
             onMouseEnter={scramble}
             onMouseLeave={handleMouseLeave}
             onClick={handleButtonClick}
-            className={clsx("group relative overflow-hidden bg-light-gray disabled:opacity-50 duration-200 active:scale-95 hover:bg-white hover:text-black transition-all border-b px-7 py-4" +
-                " my-5 text-white text-lg md:text-xl flex items-center gap-2 work-sans w-[100%] max-w-[25rem] md:w-[25rem] justify-center", className)}
+            className={clsx("group relative overflow-hidden bg-white/5 disabled:opacity-50 duration-300 active:scale-95 hover:text-black transition-all border-b px-7 py-4 my-5 text-white text-lg md:text-xl flex items-center gap-2 work-sans w-[100%] max-w-[25rem] md:w-[25rem] justify-center", className)}
         >
+            <div className="w-full h-full absolute inset-0 group-hover:translate-y-0 translate-y-24 duration-300 transition bg-white"/>
             <div className="relative z-10 flex items-center gap-2">
                 <span>{isPending ?
                     <div className="items-center flex gap-2"><FiLoader className="animate-spin"/> CONQUEST BEGINS

@@ -1,12 +1,7 @@
-import React from 'react';
-import { Playfair } from "next/font/google";
-import clsx from "clsx";
-import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+"use client"
 
-const font = Playfair({
-    subsets: ['latin'],
-    weight: ['500'],
-});
+import React from 'react';
+import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 
 const MyComponent = () => {
     let mouseX = useMotionValue(0);
@@ -67,7 +62,7 @@ const MyComponent = () => {
                     className="pb-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
             <div className="text-center items-center justify-center flex flex-col gap-2 px-6">
                 <p className="text-description tracking-widest leading-3">THE BEST INFORMATION</p>
-                <h1 className={clsx("text-5xl md:text-6xl lg:text-8xl font-medium", font.className)}>
+                <h1 className="text-5xl md:text-6xl lg:text-8xl font-medium">
                     <mark className="bg-transparent text-white">What you will learn</mark>
                 </h1>
             </div>
@@ -90,12 +85,12 @@ const MyComponent = () => {
                             <h1 className="text-2xl">{course.title}</h1>
                             <h2 className="text-gray font-light">{course.description}</h2>
                             <motion.div
-                                className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+                                className="md:block hidden pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
                                 style={{
                                     background: useMotionTemplate`
                                     radial-gradient(
                                     650px circle at ${index > 0 ? mouseX2 : mouseX}px ${index > 0 ? mouseY2 : mouseY}px,
-                                    var(--upgrade-glow),
+                                    var(--glow),
                                     transparent 75%
                                     )
                                 `,
