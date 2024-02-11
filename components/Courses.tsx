@@ -1,9 +1,39 @@
 "use client"
 
-import React from 'react';
+import React, {useState} from 'react';
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import clsx from "clsx";
+import Image from "next/image";
 
 const MyComponent = () => {
+    const [muted, setMuted] = useState('&muted=true');
+    const [controls, setControls] = useState('&controls=false');
+    const [playing, setPlaying] = useState(false)
+
+    const [muted2, setMuted2] = useState('&muted=true');
+    const [controls2, setControls2] = useState('&controls=false');
+    const [playing2, setPlaying2] = useState(false)
+
+    const handlePlay = () => {
+        setMuted('');
+        setControls('&controls=true');
+        setPlaying(!playing);
+
+        setPlaying2(false)
+        setMuted2('&muted=true');
+        setControls2('&controls=false');
+    };
+
+    const handlePlay2 = () => {
+        setMuted2('');
+        setControls2('&controls=true');
+        setPlaying2(!playing2);
+
+        setPlaying(false)
+        setMuted('&muted=true');
+        setControls('&controls=false');
+    };
+
     let mouseX = useMotionValue(0);
     let mouseY = useMotionValue(0);
 
@@ -48,18 +78,18 @@ const MyComponent = () => {
         {
             title: 'After Effects Crash Course',
             description: 'Learn everything you need to know about After Effects.',
-            link: 'https://player.vimeo.com/video/901189185?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/ae98ef95a5a63155c48d7d19f7f5e248/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fae98ef95a5a63155c48d7d19f7f5e248%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         },
         {
             title: 'Short Form Masterclass',
             description: 'Get the best lessons on Short Form Content',
-            link: 'https://player.vimeo.com/video/866449243?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/2df67f9a50031d68a8e68d8f58ea5736/iframe?${controls2}${muted2}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F2df67f9a50031d68a8e68d8f58ea5736%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         }
     ];
 
     return (
-        <motion.div id={'courses'} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-                    className="pb-24 scroll-my-20 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
+        <motion.div id='courses' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+                    className="pb-24 scroll-mt-40 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
             <div className="text-center items-center justify-center flex flex-col gap-2 px-6">
                 <p className="text-description tracking-widest leading-3">THE BEST INFORMATION</p>
                 <h1 className="text-5xl md:text-6xl lg:text-8xl font-medium">
@@ -85,7 +115,7 @@ const MyComponent = () => {
                             <h1 className="text-2xl">{course.title}</h1>
                             <h2 className="text-gray font-light">{course.description}</h2>
                             <motion.div
-                                className="md:block hidden pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+                                className="md:block hidden pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100"
                                 style={{
                                     background: useMotionTemplate`
                                     radial-gradient(
@@ -98,12 +128,29 @@ const MyComponent = () => {
                             />
                         </div>
                         <div className="relative h-[110%] aspect-video w-full">
+                            <div
+                                className={clsx(
+                                    "transition duration-300 z-20 absolute w-full aspect-video bg-black/30 flex items-center justify-center cursor-pointer bg-gradient-to-t from-background via-transparent to-transparent",
+                                    (index === 1 && playing2) && 'opacity-0 pointer-events-none',
+                                    (index === 0 && playing) && 'opacity-0 pointer-events-none'
+                                )}
+                                onClick={index > 0 ? handlePlay2 : handlePlay}
+                            >
+                                <Image src="/images/play.png" alt="play" width={50} height={0}/>
+                            </div>
                             <iframe
                                 src={course.link}
                                 allow="autoplay; fullscreen; picture-in-picture;"
                                 style={{width: '100%', height: '100%'}}
                                 className="w-full"
+
                             />
+                            {/*                            <iframe
+                                className="w-full h-full"
+                                src={`https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/a07c199380af93ce7c2744ca470972ad/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fa07c199380af93ce7c2744ca470972ad%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`}
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                                allowFullScreen={true}
+                            ></iframe>*/}
                         </div>
                     </motion.div>
                 ))}

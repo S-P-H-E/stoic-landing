@@ -89,11 +89,11 @@ export default function FAQs() {
 
             <div onMouseMove={handleMouseMove} className="relative group w-5/6 md:w-3/4 mx-auto max-w-8xl bg-light-gray rounded-2xl px-5 pt-1">
                 <motion.div
-                    className="md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+                    className="md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover:opacity-100"
                     style={{
                         background: useMotionTemplate`
                                     radial-gradient(
-                                    450px circle at ${mouseX}px ${mouseY}px,
+                                    350px circle at ${mouseX}px ${mouseY}px,
                                     var(--glow),
                                     transparent 85%
                                     )

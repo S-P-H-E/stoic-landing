@@ -77,7 +77,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="max-w-8xl mx-auto pb-8 px-8 flex flex-col items-center gap-2 lg:gap-6">
+      <div className="max-w-8xl mx-auto py-8 px-8 flex flex-col items-center gap-2 lg:gap-6">
         <h1 className="text-5xl lg:text-[5.5rem] lg:leading-[5rem] text-center font-semibold">
           <mark className='bg-transparent text-white font-medium'>Hundreds</mark> of
           <br/>

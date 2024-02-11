@@ -11,7 +11,7 @@ export default function Hero() {
     const [controls, setControls] = useState('&controls=false');
     const [playing, setPlaying] = useState(false)
 
-    const [mouseMoved, setMouseMoved] = useState(false)
+    const [hidden, setHidden] = useState(false)
 
     const handlePlay = () => {
         setMuted('');
@@ -30,20 +30,24 @@ export default function Hero() {
         mouseY.set(event.clientY - top);
     }
 
+    function handleMouseOver() {
+        setHidden(!hidden)
+    }
+
     return (
         <div onMouseMove={handleMouseMove} className="group/header overflow-hidden flex flex-col min-w-[20rem] items-center relative dot mx-auto">
-            <motion.div
-                className="md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/header:opacity-100"
-                style={{
-                    background: useMotionTemplate`
+                <motion.div
+                    className={clsx("md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover/header:opacity-100", hidden && '!opacity-0')}
+                    style={{
+                        background: useMotionTemplate`
                                     radial-gradient(
-                                    650px circle at ${mouseX}px ${mouseY}px,
+                                    350px circle at ${mouseX}px ${mouseY}px,
                                     var(--glow),
-                                    transparent 75%
+                                    transparent 80%
                                     )
                                 `,
-                }}
-            />
+                    }}
+                />
 
             <div className="absolute w-full h-full bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d] via-20% to-80% to-transparent "/>
             <div className="absolute w-full h-full bg-gradient-to-b from-[#0d0d0d] to-5% to-transparent "/>
@@ -53,10 +57,10 @@ export default function Hero() {
             <h1>LEARN NOW</h1>
         </div> */}
                 <h1 className="max-w-5xl mx-auto text-6xl md:text-8xl mb-4 font-medium mt-8 text-center">
-                    Conquer The Algorithm.
+                Conquer The Algorithm.
                 </h1>
                 <p className="text-lg break-words md:text-2xl mx-auto text-center mb-5 text-[#858585] font-medium">
-                    Learn how to make high quality videos that get engagement.
+                    Uncover the secrets to going viral and boosting your online presence.
                 </p>
                 <div className='mx-auto w-full justify-center flex items-center gap-6'>
                     <div className='hidden md:flex w-[8.5rem] lg:w-[12.5rem] h-[1px] bg-gradient-to-l from-[#ffffff]'/>
@@ -72,7 +76,7 @@ export default function Hero() {
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
-            <div className="order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto">
+            <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} className="order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto">
                 <motion.div
                     className="w-full h-full"
                     initial={{opacity: 0}}
@@ -87,12 +91,12 @@ export default function Hero() {
                     </div>
                     <iframe
                         className="w-full h-full"
-                        src={`https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/a07c199380af93ce7c2744ca470972ad/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fa07c199380af93ce7c2744ca470972ad%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`}
+                        src={`https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/4b47940531476dd77426b1aa55aec8dc/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F4b47940531476dd77426b1aa55aec8dc%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`}
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowFullScreen={true}
                     ></iframe>
                 </motion.div>
-                <div className="absolute top-0 w-full max-w-7xl rounded aspect-video mx-auto bg-neutral-800 animate-pulse -z-10" />
+                <div className="absolute top-0 w-full max-w-7xl md:rounded aspect-video mx-auto bg-neutral-800 animate-pulse -z-10" />
             </div>
         </div>
     );

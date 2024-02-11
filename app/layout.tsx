@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html className='!scroll-smooth' lang="en">
       <body className={GeistSans.className}>
           <div className="min-w-[320px]">
             {children}

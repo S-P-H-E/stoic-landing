@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/countdown/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/countdown/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BannerMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BannerMessage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CallToAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CallToAction.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CountdownButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CountdownButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FAQs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FAQs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Features.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Features.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Features2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Features2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Old/Hero/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Old/Hero/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Reviews.tsx" afterDir="false" />
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="slight changes">
       <change beforePath="$PROJECT_DIR$/components/Slideshow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Slideshow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TestThing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TestThing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,25 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Melih Yardım/Desktop/tr-rehber",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Users\\Melih Yardım\\Desktop\\landing\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Melih Yardım/Desktop/tr-rehber&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Melih Yardım\\Desktop\\landing\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -120,6 +102,7 @@
       <workItem from="1707490192904" duration="12881000" />
       <workItem from="1707506828469" duration="2179000" />
       <workItem from="1707514589614" duration="4960000" />
+      <workItem from="1707553034476" duration="22824000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -201,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707508229754</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="UPDATE">
+      <option name="closed" value="true" />
+      <created>1707573991562</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707573991562</updated>
+    </task>
+    <task id="LOCAL-00012" summary="slight changes">
+      <option name="closed" value="true" />
+      <created>1707576220588</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707576220588</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,21 +218,8 @@
     <MESSAGE value="responsive 2" />
     <MESSAGE value="responsive 3" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/Slideshow.tsx</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/Reviews.tsx</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="UPDATE" />
+    <MESSAGE value="slight changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight changes" />
   </component>
 </project>
