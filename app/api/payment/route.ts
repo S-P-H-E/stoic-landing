@@ -4,9 +4,7 @@ import { NextResponse, NextRequest } from 'next/server';
 export async function POST(request: NextRequest) {
     try {
         const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-        const data = await request.json();
-        // const priceId = data.priceId
-        // const promoId = data.promoId
+
         const session = await stripe.checkout.sessions.create({
             line_items: [
                 {

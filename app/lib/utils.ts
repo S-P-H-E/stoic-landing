@@ -10,10 +10,7 @@ export const handleSubscription = async (e: { preventDefault: () => void }) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                // priceId: 'price_1OQDteJVAR9FxLkw3SLA8UZv',
-                // promoId: 'promo_1OQDw8JVAR9FxLkwrpCHI1xO',
-            }),
+
         });
 
         if (!response.ok) {

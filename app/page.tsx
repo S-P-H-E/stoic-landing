@@ -10,11 +10,13 @@ import Features2 from "@/components/Features2";
 import BannerMessage from "@/components/BannerMessage";
 import Slideshow from "@/components/Slideshow";
 import Courses from "@/components/Courses";
+import LaunchSale from "@/components/LaunchSale";
 
 export default function Home() {
 
     return (
         <>
+            <LaunchSale/>
             <Navbar/>
             <Hero/>
             <About/>
