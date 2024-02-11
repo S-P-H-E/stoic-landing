@@ -110,7 +110,7 @@ export default function Slideshow() {
                         </motion.div>
 
                         <motion.div initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} viewport={{once: true}}
-                                    transition={{stiffness: 150, damping: 25, delay: .3, type: 'spring'}}
+                                    transition={{stiffness: 150, damping: 25, delay: .27, type: 'spring'}}
                                     className="border group border-border absolute h-[115%] -top-8 inset-0 bg-light-gray rounded-xl">
      {/*                       <motion.div
                                 className="md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover:opacity-100"

@@ -74,7 +74,7 @@ export default function Pricing() {
             </div>
 
             <div className='rounded overflow-hidden border border-border min-h-[400px] w-full max-w-[900px] mx-auto'>
-                <div onMouseMove={handleMouseMove} className='relative group bg-light-gray flex flex-col md:flex-row gap-8 justify-between items-center p-10'>
+                <div onMouseMove={handleMouseMove} className='relative group bg-light-gray flex flex-col sm:flex-row gap-4 sm:gap-8 justify-between items-center p-10'>
                     <motion.div
                         className="md:block hidden pointer-events-none absolute -inset-px transition duration-300 group-hover:opacity-100 opacity-0"
                         style={{
@@ -89,12 +89,12 @@ export default function Pricing() {
                     />
 
                     <div>
-                        <h1 className="font-medium text-5xl">Take Action</h1>
-                        <p className='text-description tracking-widest'>Let&apos;s begin your journey...</p>
+                        <h1 className="font-medium sm:text-start text-center sm:text-5xl text-4xl">Take Action</h1>
+                        <p className='text-description sm:text-start sm:text-base text-sm text-center tracking-widest'>Let&apos;s begin your journey...</p>
                     </div>
 
                     <div className="flex flex-col items-center md:items-end leading-3">
-                        <h1 className="font-medium text-5xl leading-5">$29.<span className="text-4xl">99</span>
+                        <h1 className="font-medium text-4xl md:text-5xl leading-5">$29.<span className="text-4xl">99</span>
                             <mark className='bg-transparent text-xl text-white italic'>/month</mark>
                         </h1>
                         <h2 className="text-2xl order-first md:order-last leading-tight items-center flex line-through text-description">$49.99<span className="text-lg italic">/month</span></h2>
