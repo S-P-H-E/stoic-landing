@@ -57,7 +57,7 @@ export default function Slideshow() {
             url: Platform4,
             title: 'Video and Text Lessons',
             description:
-                'The courses are packed with value, including text and video lessons',
+                'Benefit from both video and text lessons packed with valuable content.',
             id: 3,
             reverse: false
         },
@@ -97,7 +97,7 @@ export default function Slideshow() {
                         </motion.div>
                         <motion.div transition={{type: 'spring', damping: 20, delay: .13}} initial={card.reverse ? {x: -100, opacity: 0} : {x: 150, opacity: 0}} viewport={{once: true}} whileInView={{x: 0, opacity: 1}}
                                     className={clsx('z-10 xl:p-20 flex flex-col gap-2 justify-center xl:mt-0 mt-4', card.id % 2 === 0 && 'items-end text-end xl:text-start xl:items-baseline')}>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-[5.5rem] max-w-[500px] lg:leading-[5rem]">{card.title}</h1>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-[5.5rem] max-w-[600px] lg:leading-[5rem]">{card.title}</h1>
                             <p className='w-full xl:w-[300px] 2xl:w-[390px] text-description tracking-widest'>{card.description}</p>
                             {card.link &&
                             <Link href={`#${card.title.toLowerCase()}`}>
@@ -110,7 +110,7 @@ export default function Slideshow() {
                         </motion.div>
 
                         <motion.div initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} viewport={{once: true}}
-                                    transition={{stiffness: 150, damping: 25, delay: .4, type: 'spring'}}
+                                    transition={{stiffness: 150, damping: 25, delay: .3, type: 'spring'}}
                                     className="border group border-border absolute h-[115%] -top-8 inset-0 bg-light-gray rounded-xl">
      {/*                       <motion.div
                                 className="md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover:opacity-100"

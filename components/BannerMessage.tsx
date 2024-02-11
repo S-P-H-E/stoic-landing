@@ -11,7 +11,7 @@ export default function BannerMessage() {
     <div className="h-[600px] flex flex-col items-center justify-center relative w-full my-4 px-5 mx-auto">
         <motion.div initial={{scale: 0.8, opacity: 0}} transition={{type: 'spring', damping: 20}} whileInView={{scale: 1, opacity: 1}} viewport={{once: true}}
                     className='flex flex-col justify-center items-center gap-6 max-w-6xl mx-auto'>
-            <h1 className={clsx("text-4xl sm:text-5xl lg:text-[5.5rem] lg:max-w-[1000px] max-w-[600px] 2xl:text-8xl lg:leading-[5.5rem] text-center w-full")}>
+            <h1 className={clsx("text-4xl sm:text-5xl lg:text-[5.5rem] lg:max-w-[1000px] xl:max-w-[1400px] max-w-[600px] 2xl:text-8xl lg:leading-[5.5rem] text-center w-full")}>
                 Over <mark className='bg-transparent font-semibold text-white'>5 Billion</mark> People are on social media <mark className='bg-transparent text-white font-semibold'>everyday</mark>
             </h1>
             <p className='text-description font-light lg:text-xl tracking-widest text-center'>It&apos;s never been easier to go viral.</p>
