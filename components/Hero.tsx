@@ -48,7 +48,7 @@ export default function Hero() {
     return (
         <div onMouseMove={handleMouseMove} className="group/header overflow-hidden flex flex-col min-w-[20rem] items-center relative dot mx-auto">
                 <motion.div
-                    className={clsx("md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover/header:opacity-100", (hidden || !loaded) && '!opacity-0')}
+                    className={clsx("md:block hidden pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover/header:opacity-100", (hidden || !loaded) && '!opacity-0')}
                     style={{
                         background: useMotionTemplate`
                                     radial-gradient(
@@ -87,7 +87,7 @@ export default function Hero() {
         <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
-            <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} className="order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto">
+            <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} className={clsx("order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-t-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto", playing && 'md:rounded-lg')}>
                 <motion.div
                     className="w-full h-full"
                     initial={{opacity: 0}}

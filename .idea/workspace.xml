@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="fix min width AGAIN">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="wording fix and favicon" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +78,7 @@
       <recent name="C:\Users\Melih Yardım\Desktop\landing\public\Platform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Melih Yardım\Desktop\landing\app" />
       <recent name="C:\Users\Melih Yardım\Desktop\landing\public\Platform\new" />
       <recent name="C:\Users\Melih Yardım\Desktop\landing\public\Platform" />
       <recent name="C:\Users\Melih Yardım\Desktop\landing\public" />
@@ -115,6 +114,7 @@
       <workItem from="1707746025470" duration="5944000" />
       <workItem from="1707754628899" duration="793000" />
       <workItem from="1707755745633" duration="1617000" />
+      <workItem from="1707762007607" duration="1321000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -284,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707757352998</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="wording fix and favicon">
+      <option name="closed" value="true" />
+      <created>1707763217658</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707763217658</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +319,7 @@
     <MESSAGE value="launch update" />
     <MESSAGE value="fix min width" />
     <MESSAGE value="fix min width AGAIN" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix min width AGAIN" />
+    <MESSAGE value="wording fix and favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="wording fix and favicon" />
   </component>
 </project>
