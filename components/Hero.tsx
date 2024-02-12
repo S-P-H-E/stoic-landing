@@ -84,7 +84,7 @@ export default function Hero() {
 
             {/* <div className="relative">
         <div className="bg-gradient-to-t from-[#0140fd] to-transparent to-95% absolute w-full h-full z-10 opacity-20"/>
-        <Image src={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
+        <Image asdsrc={Landing} className=" w-[90vw] border-[5px] border-b-0 rounded-b-none rounded-xl border-white/10 drop-shadow-md" alt='lanidng' placeholder="blur"/>
     </div> */}
 
             <div onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} className={clsx("order-first group md:order-last w-full md:w-[min(100%,75vw)] lg:w-[min(100%,50vw)] overflow-hidden md:rounded-t-lg relative max-w-8xl z-20 m-0 md:m-5 aspect-video mx-auto", playing && 'md:rounded-lg')}>
