@@ -65,7 +65,7 @@ export default function Slideshow() {
             url: Platform5,
             title: 'Converters',
             description:
-                'Just to make things easier for you we also have video converters for all the major video social media platforms',
+                'Just to make things easier for you we also have video converters for all the major social media platforms',
             id: 4,
             reverse: true
         },
