@@ -29,9 +29,11 @@ export default function About() {
                         <h1 className="text-3xl md:text-5xl 2xl:text-6xl font-light mt-2 lg:mt-0">A few weeks of focus <br/> will get you there</h1>
                         <div className='max-w-[500px] font-light text-gray text-sm md:text-base w-full lg:w-4/6 flex flex-col gap-2 lg:gap-5'>
 
+{/*
                             <p>Unlock the precise guidance and tools essential for mastering social media</p>
+*/}
 
-                            <p className="lg:w-[400px] xl:w-[500px]">Our top-tier assets are tailored to elevate your social media journey, ensuring your success.</p>
+                            <p className="lg:w-[400px] xl:w-[500px]">We will give you the exact guidance and information you need to learn social media. We offer the best assets to assist you in your social media journey.</p>
                         </div>
                         <CountdownButton glitch/>
                     </div>

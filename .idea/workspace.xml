@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="launch sale">
-      <change beforePath="$PROJECT_DIR$/components/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LaunchSale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LaunchSale.tsx" afterDir="false" />
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="fix min width AGAIN">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +112,9 @@
       <workItem from="1707656967320" duration="16903000" />
       <workItem from="1707676792309" duration="603000" />
       <workItem from="1707683351137" duration="3604000" />
+      <workItem from="1707746025470" duration="5944000" />
+      <workItem from="1707754628899" duration="793000" />
+      <workItem from="1707755745633" duration="1617000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -243,7 +244,47 @@
       <option name="project" value="LOCAL" />
       <updated>1707684942737</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="launch update">
+      <option name="closed" value="true" />
+      <created>1707752188805</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707752188805</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix min width">
+      <option name="closed" value="true" />
+      <created>1707754956396</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707754956396</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix min width">
+      <option name="closed" value="true" />
+      <created>1707755410165</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707755410165</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix min width">
+      <option name="closed" value="true" />
+      <created>1707757127080</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707757127080</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix min width AGAIN">
+      <option name="closed" value="true" />
+      <created>1707757352998</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707757352998</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +308,9 @@
     <MESSAGE value="small fixes" />
     <MESSAGE value="pricing fix" />
     <MESSAGE value="launch sale" />
-    <option name="LAST_COMMIT_MESSAGE" value="launch sale" />
+    <MESSAGE value="launch update" />
+    <MESSAGE value="fix min width" />
+    <MESSAGE value="fix min width AGAIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix min width AGAIN" />
   </component>
 </project>
