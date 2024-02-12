@@ -107,7 +107,7 @@ export default function Hero() {
                         allowFullScreen={true}
                     ></iframe>
                 </motion.div>
-                <div className="absolute top-0 w-full max-w-7xl md:rounded aspect-video mx-auto bg-neutral-800 animate-pulse -z-10" />
+                <div className="absolute top-0 w-full max-w-7xl md:rounded-lg aspect-video mx-auto bg-neutral-800 animate-pulse -z-10" />
             </div>
         </div>
     );
