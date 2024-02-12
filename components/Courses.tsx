@@ -104,7 +104,7 @@ const MyComponent = () => {
         },
         {
             title: 'Short Form Masterclass',
-            description: 'Get the best lessons on Short Form Content',
+            description: 'Get the best lessons on Short Form Content.',
             link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/2df67f9a50031d68a8e68d8f58ea5736/iframe?${controls2}${muted2}&preload=${loaded ? 'true' : 'false'}&autoplay=${loaded ? 'true' : 'false'}&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F2df67f9a50031d68a8e68d8f58ea5736%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         }
     ];
@@ -134,7 +134,7 @@ const MyComponent = () => {
                         }}
                         className="relative rounded-lg overflow-hidden border border-border flex flex-col"
                     >
-                        <div onMouseMove={index > 0 ? handleMouseMove2 : handleMouseMove} className="bg-light-gray justify-center text-center group items-center px-4 py-8 flex flex-col gap-2">
+                        <div onMouseMove={index > 0 ? handleMouseMove2 : handleMouseMove} className="bg-light-gray h-auto lg:h-auto md:h-[58%] justify-center text-center group items-center px-4 py-8 flex flex-col gap-2">
                             <h1 className="text-2xl">{course.title}</h1>
                             <h2 className="text-gray font-light">{course.description}</h2>
                             <motion.div
@@ -153,7 +153,7 @@ const MyComponent = () => {
                         <div className="relative h-full w-full min-h-[15svh] aspect-video">
                             <div
                                 className={clsx(
-                                    "transition duration-300 z-20 absolute w-full aspect-video bg-black/30 flex items-center justify-center cursor-pointer bg-gradient-to-t from-background via-transparent to-transparent",
+                                    "transition duration-300 h-full z-20 absolute w-full aspect-video bg-black/30 flex items-center justify-center cursor-pointer bg-gradient-to-t from-background via-transparent to-transparent",
                                     (index === 1 && playing2) && 'opacity-0 pointer-events-none',
                                     (index === 0 && playing) && 'opacity-0 pointer-events-none'
                                 )}
@@ -166,7 +166,6 @@ const MyComponent = () => {
                                 allow="autoplay; fullscreen; picture-in-picture;"
                                 style={{width: '100%', height: '100%'}}
                                 className="w-full"
-
                             />
                         </div>
                     </motion.div>
