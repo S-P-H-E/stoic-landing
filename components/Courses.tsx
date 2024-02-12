@@ -150,7 +150,7 @@ const MyComponent = () => {
                                 }}
                             />
                         </div>
-                        <div className="relative h-full aspect-video w-full">
+                        <div className="relative h-full w-full min-h-[15svh] aspect-video">
                             <div
                                 className={clsx(
                                     "transition duration-300 z-20 absolute w-full aspect-video bg-black/30 flex items-center justify-center cursor-pointer bg-gradient-to-t from-background via-transparent to-transparent",
