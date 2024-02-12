@@ -4,6 +4,7 @@ import React, {useTransition} from 'react';
 import {useRouter} from "next/navigation";
 import {handleSubscription} from "@/app/lib/utils";
 import {FaRegClock} from "react-icons/fa6";
+import {FiLoader} from "react-icons/fi";
 
 const LaunchSale = () => {
     const [isPending, startTransition] = useTransition()
@@ -24,11 +25,11 @@ const LaunchSale = () => {
     };
 
     return (
-        <div className="w-full text-sm bg-white/20 text-white/85 text-center mx-auto flex items-center uppercase justify-center px-4 py-2 gap-x-1 md:gap-x-1.5">
+        <div className="w-full sm:text-sm text-xs bg-white/20 text-white/85 text-center mx-auto flex items-center uppercase justify-center px-4 py-2 gap-x-1 md:gap-x-1.5">
             <FaRegClock />
             <div className="flex flex-wrap gap-x-1 md:gap-x-1.5 items-center justify-center text-center">
             <h1>Limited time before price increase</h1>
-                <button className="font-bold text-white underline underline-offset-4 active:scale-90 hover:text-white/80 transition" onClick={handleButtonClick}>JOIN NOW</button>
+                <button className="font-bold text-white underline underline-offset-4 active:scale-90 hover:text-white/80 uppercase transition disabled:cursor-not-allowed disabled:opacity-60" disabled={isPending} onClick={handleButtonClick}>{isPending ? <div className="flex items-center gap-1"><h1>Joining</h1><FiLoader className="animate-spin"/></div> : 'Join now'}</button>
             </div>
         </div>
     );

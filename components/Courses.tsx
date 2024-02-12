@@ -1,7 +1,7 @@
 "use client"
 
-import React, {useState} from 'react';
-import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import React, {useEffect, useRef, useState} from 'react';
+import {motion, useMotionValue, useMotionTemplate, useInView} from 'framer-motion';
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -13,6 +13,28 @@ const MyComponent = () => {
     const [muted2, setMuted2] = useState('&muted=true');
     const [controls2, setControls2] = useState('&controls=false');
     const [playing2, setPlaying2] = useState(false)
+
+    const [loaded, setLoaded] = useState(false);
+
+    const ref = useRef(null)
+
+    const isInView = useInView(ref)
+
+    useEffect(() => {
+        if (isInView) {
+            setLoaded(true);
+        }
+    }, [isInView]);
+
+    useEffect(() => {
+        if (!loaded) {
+            const timeout = setTimeout(() => {
+                setLoaded(true);
+            }, 3500);
+
+            return () => clearTimeout(timeout);
+        }
+    }, [loaded]);
 
     const handlePlay = () => {
         setMuted('');
@@ -78,12 +100,12 @@ const MyComponent = () => {
         {
             title: 'After Effects Crash Course',
             description: 'Learn everything you need to know about After Effects.',
-            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/ae98ef95a5a63155c48d7d19f7f5e248/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fae98ef95a5a63155c48d7d19f7f5e248%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
+            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/ae98ef95a5a63155c48d7d19f7f5e248/iframe?${controls}${muted}&preload=${loaded ? 'true' : 'false'}&autoplay=${loaded ? 'true' : 'false'}&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fae98ef95a5a63155c48d7d19f7f5e248%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         },
         {
             title: 'Short Form Masterclass',
             description: 'Get the best lessons on Short Form Content',
-            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/2df67f9a50031d68a8e68d8f58ea5736/iframe?${controls2}${muted2}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F2df67f9a50031d68a8e68d8f58ea5736%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
+            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/2df67f9a50031d68a8e68d8f58ea5736/iframe?${controls2}${muted2}&preload=${loaded ? 'true' : 'false'}&autoplay=${loaded ? 'true' : 'false'}&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F2df67f9a50031d68a8e68d8f58ea5736%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         }
     ];
 
@@ -92,17 +114,18 @@ const MyComponent = () => {
                     className="pb-24 scroll-mt-40 h-full flex flex-col items-center justify-center relative max-w-8xl gap-8 mx-auto">
             <div className="text-center items-center justify-center flex flex-col gap-2 px-6">
                 <p className="text-description tracking-widest leading-3">THE BEST INFORMATION</p>
-                <h1 className="text-5xl md:text-6xl lg:text-8xl font-medium">
+                <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-medium">
                     <mark className="bg-transparent text-white">What you will learn</mark>
                 </h1>
             </div>
             <div
-                className="grid grid-cols-1 md:grid-cols-2 gap-6 px-8"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8"
             >
                 {courses.map((course, index) => (
                     <motion.div
                         key={index}
                         custom={index}
+                        ref={ref}
                         variants={fadeInAnimationVariants}
                         initial="initial"
                         whileInView="animate"
@@ -127,7 +150,7 @@ const MyComponent = () => {
                                 }}
                             />
                         </div>
-                        <div className="relative h-[110%] aspect-video w-full">
+                        <div className="relative h-full aspect-video w-full">
                             <div
                                 className={clsx(
                                     "transition duration-300 z-20 absolute w-full aspect-video bg-black/30 flex items-center justify-center cursor-pointer bg-gradient-to-t from-background via-transparent to-transparent",
@@ -145,12 +168,6 @@ const MyComponent = () => {
                                 className="w-full"
 
                             />
-                            {/*                            <iframe
-                                className="w-full h-full"
-                                src={`https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/a07c199380af93ce7c2744ca470972ad/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fa07c199380af93ce7c2744ca470972ad%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`}
-                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                                allowFullScreen={true}
-                            ></iframe>*/}
                         </div>
                     </motion.div>
                 ))}

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="pricing fix" />
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="launch sale">
+      <change beforePath="$PROJECT_DIR$/components/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LaunchSale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LaunchSale.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +113,7 @@
       <workItem from="1707553034476" duration="22824000" />
       <workItem from="1707656967320" duration="16903000" />
       <workItem from="1707676792309" duration="603000" />
+      <workItem from="1707683351137" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -230,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707677352578</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="launch sale">
+      <option name="closed" value="true" />
+      <created>1707684942737</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707684942737</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +266,7 @@
     <MESSAGE value="FINAL UPDATE" />
     <MESSAGE value="small fixes" />
     <MESSAGE value="pricing fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pricing fix" />
+    <MESSAGE value="launch sale" />
+    <option name="LAST_COMMIT_MESSAGE" value="launch sale" />
   </component>
 </project>

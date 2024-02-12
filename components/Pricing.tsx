@@ -63,7 +63,7 @@ export default function Pricing() {
     }
 
     return (
-        <motion.div id='pricing' className="px-8 pb-8 scroll-my-24" viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
+        <motion.div id='pricing' className="px-8 pb-12 scroll-my-24" viewport={{once: true}} initial={{opacity: 0, scale: 0.75}} whileInView={{opacity: 1, scale: 1}} transition={{type: 'spring', damping: 20}}>
             <div className="max-w-8xl mx-auto my-12 flex flex-col items-center gap-4 ">
                 <div>
                     <p className='text-description tracking-widest text-center'>JOIN THE 1%</p>

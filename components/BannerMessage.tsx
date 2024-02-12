@@ -8,7 +8,7 @@ import {motion} from 'framer-motion'
 
 export default function BannerMessage() {
  return(
-    <div className="h-[600px] flex flex-col items-center justify-center relative w-full my-4 px-5 mx-auto">
+    <div className="md:h-[550px] h-[400px] flex flex-col items-center justify-center relative w-full md:my-4 px-5 mx-auto">
         <motion.div initial={{scale: 0.8, opacity: 0}} transition={{type: 'spring', damping: 20}} whileInView={{scale: 1, opacity: 1}} viewport={{once: true}}
                     className='flex flex-col justify-center items-center gap-6 max-w-6xl mx-auto'>
             <h1 className={clsx("text-4xl sm:text-5xl lg:text-[5.5rem] lg:max-w-[1000px] xl:max-w-[1400px] max-w-[600px] 2xl:text-8xl lg:leading-[5.5rem] text-center w-full")}>
@@ -18,7 +18,7 @@ export default function BannerMessage() {
 
             <CountdownButton />
         </motion.div>
-        <motion.div viewport={{once: true}} whileInView={{opacity: 1}} initial={{opacity: 0}} className='w-full h-[550px] top-0 left-0 absolute -z-10'>
+        <motion.div viewport={{once: true}} whileInView={{opacity: 1}} initial={{opacity: 0}} className='w-full h-[400px] md:h-[500px] top-0 left-0 absolute -z-10'>
             <div className='w-full h-full bg-gradient-to-t from-background via-transparent to-background z-10 absolute'/>
             <Image alt="Banner background" src={BannerImage} placeholder={"blur"} fill quality={95} className='w-full h-full object-cover'/>
         </motion.div>

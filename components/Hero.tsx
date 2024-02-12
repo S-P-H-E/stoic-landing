@@ -2,7 +2,7 @@
 
 import {motion, useMotionTemplate, useMotionValue} from 'framer-motion';
 import Image from 'next/image';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import CountdownButton from './CountdownButton';
 import clsx from 'clsx'
 
@@ -12,6 +12,17 @@ export default function Hero() {
     const [playing, setPlaying] = useState(false)
 
     const [hidden, setHidden] = useState(false)
+
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setLoaded(true);
+        }, 50);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
 
     const handlePlay = () => {
         setMuted('');
@@ -37,7 +48,7 @@ export default function Hero() {
     return (
         <div onMouseMove={handleMouseMove} className="group/header overflow-hidden flex flex-col min-w-[20rem] items-center relative dot mx-auto">
                 <motion.div
-                    className={clsx("md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover/header:opacity-100", hidden && '!opacity-0')}
+                    className={clsx("md:block hidden pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-500 group-hover/header:opacity-100", (hidden || !loaded) && '!opacity-0')}
                     style={{
                         background: useMotionTemplate`
                                     radial-gradient(

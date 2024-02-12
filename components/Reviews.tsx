@@ -77,7 +77,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="max-w-8xl mx-auto py-8 px-8 flex flex-col items-center gap-2 lg:gap-6">
+      <div className="max-w-8xl mx-auto p-8 flex flex-col items-center gap-2 lg:gap-6">
         <h1 className="text-5xl lg:text-[5.5rem] lg:leading-[5rem] text-center font-semibold">
           <mark className='bg-transparent text-white font-medium'>Hundreds</mark> of
           <br/>
@@ -87,7 +87,7 @@ export default function Reviews() {
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-3 pb-20 px-8 gap-6 w-fit"
+      <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-3 pb-16 lg:pb-20 px-8 gap-6 w-fit"
       >
         {reviews.map((review, index) => (
             <motion.div
