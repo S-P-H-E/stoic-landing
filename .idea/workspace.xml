@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="rounded loading" />
+    <list default="true" id="0c9f4b8e-f6e4-44e4-be37-5a64d836ccdc" name="Changes" comment="typo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pricing.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +119,9 @@
       <workItem from="1707755745633" duration="1617000" />
       <workItem from="1707762007607" duration="1321000" />
       <workItem from="1707764568284" duration="2356000" />
+      <workItem from="1707772677864" duration="760000" />
+      <workItem from="1707779402865" duration="63000" />
+      <workItem from="1707814086210" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="window fix">
       <option name="closed" value="true" />
@@ -317,7 +323,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707767006035</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="opengraph">
+      <option name="closed" value="true" />
+      <created>1707772812659</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1707772812659</updated>
+    </task>
+    <task id="LOCAL-00027" summary="typo">
+      <option name="closed" value="true" />
+      <created>1707779424901</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1707779424901</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +369,8 @@
     <MESSAGE value="wording fix and favicon" />
     <MESSAGE value="fixed weird whiteness" />
     <MESSAGE value="rounded loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="rounded loading" />
+    <MESSAGE value="opengraph" />
+    <MESSAGE value="typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo" />
   </component>
 </project>

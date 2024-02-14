@@ -6,6 +6,7 @@ import {FaBook, FaCheck, FaGraduationCap, FaTrophy} from 'react-icons/fa';
 import React from "react";
 import clsx from 'clsx'
 import CountdownButton from './CountdownButton';
+import {FaUpDown} from "react-icons/fa6";
 
 export default function Pricing() {
 
@@ -34,6 +35,11 @@ export default function Pricing() {
             id: 5,
             icon: <FaTrophy size={25}/>,
             name: 'No Experience Required',
+        },
+        {
+            id: 6,
+            icon: <FaUpDown size={25}/>,
+            name: 'Constantly Updated',
         },
     ];
 
