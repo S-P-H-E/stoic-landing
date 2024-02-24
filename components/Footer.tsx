@@ -31,7 +31,7 @@ export default function Footer() {
                     do the work.
                     Our team does not guarantee any financial success
                 </p>
-                <Link className="flex gap-1.5 active:scale-95 text-description items-center hover:text-white transition" href="mailto:support@stoiccord.com">
+                <Link className="flex gap-1.5 active:scale-95 text-description items-center hover:text-white transition" href="mailto:stoic@stoiccord.com">
                     <MdOutlineEmail/>
                     Contact Us
                 </Link>
