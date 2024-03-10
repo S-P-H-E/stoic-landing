@@ -16,7 +16,7 @@ className="flex gap-2 items-center bg-light-gray hover:bg-border transition md:p
     >
       <SiDiscord size={22}/>
       <p className="font-medium md:flex hidden">Join the community!</p>
-      <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 animate-ping rounded-full " />
+      <div className="absolute -top-0.5 -right-0.5 md:-top-1 md:-right-1 w-2 h-2 md:w-4 md:h-4 bg-emerald-500 animate-ping rounded-full " />
     </Link>  
 </motion.div>
 
