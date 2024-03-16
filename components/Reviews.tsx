@@ -105,46 +105,18 @@ export default function Reviews() {
   const fadeInBox = {
     initial: {
       opacity: 0,
-      x: 80,
+      scale: 0.7,
     },
     animate: (index: number) => ({
       opacity: 1,
-      x: 0,
+      scale: 1,
       transition: {
         type: 'spring',
-        delay: index <= 2 ? 0.12 * index : 0.03 * index,
+        damping: 20,
+        delay: index <= 2 ? 0.12 * index : 0.08 * index,
       },
     }),
   };
-
-  const fadeInBoxMobile = {
-    initial: {
-      opacity: 0,
-      y: 100,
-    },
-    animate: (index: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        delay: 0.1 * index,
-      },
-    }),
-  };
-
-const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const fadeInBoxVariants = isMobile ? fadeInBoxMobile : fadeInBox;
 
   return (
     <>
@@ -168,7 +140,7 @@ const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
             key={index}
             className="bg-light-gray group rounded w-full max-w-[650px] mx-auto border border-border p-5 relative  flex flex-col justify-between gap-4"
             initial="initial"
-            variants={isMobile ? fadeInBoxMobile : fadeInBox}
+            variants={fadeInBox}
             custom={index}
             whileInView="animate"
             viewport={{
