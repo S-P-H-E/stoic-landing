@@ -16,7 +16,7 @@ export default function CallToAction() {
                     <JoinButton noGroup/>
                 </div>
             </div>
-            <Image src={Phone} alt="Phone" className="absolute object-cover -bottom-[25%] md:-bottom-[25%] lg:bottom-0 lg:relative h-full w-fit"/>
+            <Image src={Phone} placeholder='blur' alt="Phone" className="absolute object-cover -bottom-[25%] md:-bottom-[25%] lg:bottom-0 lg:relative h-full w-fit"/>
 
             <div className="absolute w-full lg:right-[200px] bottom-[-500px] h-[500px] bg-white/25 rounded-full opacity-0 group-hover:opacity-100 blur-[120px] transition duration-500 z-20"/>
         </div>

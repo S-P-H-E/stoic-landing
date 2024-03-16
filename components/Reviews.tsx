@@ -1,138 +1,202 @@
-"use client"
+'use client';
 
-import {motion, useMotionTemplate, useMotionValue} from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import Image from 'next/image';
-import clsx from 'clsx'
-import React from "react";
+import clsx from 'clsx';
+import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from './ui/carousel';
 export default function Reviews() {
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
 
-    let mouseX = useMotionValue(0);
-    let mouseY = useMotionValue(0);
+  function handleMouseMove(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    let currentTarget = event.currentTarget as HTMLDivElement;
+    let { left, top } = currentTarget.getBoundingClientRect();
 
-    function handleMouseMove(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-        let currentTarget = event.currentTarget as HTMLDivElement;
-        let { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(event.clientX - left);
+    mouseY.set(event.clientY - top);
+  }
 
-        mouseX.set(event.clientX - left);
-        mouseY.set(event.clientY - top);
-    }
+  let mouseX2 = useMotionValue(0);
+  let mouseY2 = useMotionValue(0);
 
-    let mouseX2 = useMotionValue(0);
-    let mouseY2 = useMotionValue(0);
+  function handleMouseMove2(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    let currentTarget = event.currentTarget as HTMLDivElement;
+    let { left, top } = currentTarget.getBoundingClientRect();
 
-    function handleMouseMove2(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-        let currentTarget = event.currentTarget as HTMLDivElement;
-        let { left, top } = currentTarget.getBoundingClientRect();
+    mouseX2.set(event.clientX - left);
+    mouseY2.set(event.clientY - top);
+  }
 
-        mouseX2.set(event.clientX - left);
-        mouseY2.set(event.clientY - top);
-    }
+  let mouseX3 = useMotionValue(0);
+  let mouseY3 = useMotionValue(0);
 
-    let mouseX3 = useMotionValue(0);
-    let mouseY3 = useMotionValue(0);
+  function handleMouseMove3(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    let currentTarget = event.currentTarget as HTMLDivElement;
+    let { left, top } = currentTarget.getBoundingClientRect();
 
-    function handleMouseMove3(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-        let currentTarget = event.currentTarget as HTMLDivElement;
-        let { left, top } = currentTarget.getBoundingClientRect();
+    mouseX3.set(event.clientX - left);
+    mouseY3.set(event.clientY - top);
+  }
 
-        mouseX3.set(event.clientX - left);
-        mouseY3.set(event.clientY - top);
-    }
+  let mouseX4 = useMotionValue(0);
+  let mouseY4 = useMotionValue(0);
+
+  function handleMouseMove4(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    let currentTarget = event.currentTarget as HTMLDivElement;
+    let { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX4.set(event.clientX - left);
+    mouseY4.set(event.clientY - top);
+  }
+
+  const handleMouseMoveFunctions = [
+    handleMouseMove,
+    handleMouseMove2,
+    handleMouseMove3,
+    handleMouseMove4,
+  ];  
+
+  const reviews = [
+    {
+      id: 1,
+      text: 'If anyone is thinking about upgrading, do it. Only been in there 15 minutes and it is awesome, so many guides and content to encorporate in your videos, great people to network with as well.',
+      //   image: "https://cdn.discordapp.com/avatars/444898972046458880/0d57c117707379730e2ffff399fed496.webp?size=80",
+      author: 'Ozzy',
+    },
+    {
+      id: 2,
+      text: 'If you are new to video editing and are looking for a place to receive 1-on-1 help and feedback, well, then you have found the right place. The staff members are welcoming and wonderful to chat with. Not only do they provide assistance, but they also offer creative ideas and supervised tutorials to expedite your learning. The coaching calls have proven quite helpful in receiving personalized feedback on each of my videos.',
+      image:
+        'https://cdn.discordapp.com/avatars/277460064531644416/be8c9f4771f325a4dd9c6025ea6887b7.webp?size=80',
+      author: 'Knowledge Kombat',
+    },
+    {
+      id: 3,
+      text: 'Excellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much',
+      image:
+        'https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80',
+      author: 'The Last Rebel',
+    },
+    {
+      id: 4,
+      text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰.",
+      image:
+        'https://cdn.discordapp.com/avatars/933087941734060071/5168de81c31f0c1d13ddfcdf496c3814.webp?size=80',
+      author: 'rocco',
+    },
+  ];
+
+  const fadeInBox = {
+    initial: {
+      opacity: 0,
+      x: 80,
+    },
+    animate: (index: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: 'spring',
     
-    const reviews = [
-        {
-          id: 1,
-          text: "If anyone is thinking about upgrading, do it. Only been in there 15 minutes and it is awesome, so many guides and content to encorporate in your videos, great people to network with as well.",
-        //   image: "https://cdn.discordapp.com/avatars/444898972046458880/0d57c117707379730e2ffff399fed496.webp?size=80",
-          author: "Ozzy"
-        },
-        {
-          id: 2,
-          text: "If you are new to video editing and are looking for a place to receive 1-on-1 help and feedback, well, then you have found the right place. The staff members are welcoming and wonderful to chat with. Not only do they provide assistance, but they also offer creative ideas and supervised tutorials to expedite your learning. The coaching calls have proven quite helpful in receiving personalized feedback on each of my videos.",
-          image: "https://cdn.discordapp.com/avatars/277460064531644416/be8c9f4771f325a4dd9c6025ea6887b7.webp?size=80",
-          author: "Knowledge Kombat"
-        },
-        {
-          id: 3,
-          text: "Excellent! Taking the guide with you guys, was the best idea and investment I made, really really really thanks so much",
-          image: "https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80",
-          author: "The Last Rebel"
-        },
-    ]
-
-    const fadeInBox = {
-      initial: {
-        opacity: 0,
-        y: 100,
+        delay: 0.15 * index,
       },
-      animate: (index: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: 'spring',
-          delay: 0.15 * index,
-        },
-      }),
-    };
+    }),
+  };
 
   return (
     <>
       <div className="max-w-8xl mx-auto p-8 flex flex-col items-center gap-2 lg:gap-6">
         <h1 className="text-5xl lg:text-[5.5rem] lg:leading-[5rem] text-center font-semibold">
-          <mark className='bg-transparent text-white font-medium'>Hundreds</mark> of
-          <br/>
+          <mark className="bg-transparent text-white font-medium">
+            Hundreds
+          </mark>{' '}
+          of
+          <br />
           users talk about us.
         </h1>
         <p className="text-center text-description tracking-widest">
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-3 pb-16 lg:pb-20 px-8 gap-6 w-fit"
-      >
-        {reviews.map((review, index) => (
-            <motion.div
-                key={review.id}
-                className="bg-light-gray group rounded w-full max-w-[650px] border border-border p-5 relative flex flex-col justify-between gap-4"
-                initial="initial"
-                variants={fadeInBox}
-                custom={index}
-                whileInView="animate"
-                viewport={{
-                    once: true,
-                }}
-                onMouseMove={index > 1 ? handleMouseMove3 : index > 0 ? handleMouseMove2 : handleMouseMove}
-            >
+      <div className="max-w-9xl mx-auto pb-16 lg:pb-20 px-8 gap-6 w-fit">
+        <Carousel>
+          <CarouselContent>
+            {reviews.map((review, index) => (
+              <CarouselItem className="lg:basis-1/3" key={review.id}>
                 <motion.div
+                  className="bg-light-gray group rounded w-full max-w-[650px] border border-border p-5 relative h-full flex flex-col justify-between gap-4"
+                  initial="initial"
+                  variants={fadeInBox}
+                  custom={index}
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  onMouseMove={handleMouseMoveFunctions[index]}
+                >
+                  <motion.div
                     className="md:block hidden pointer-events-none absolute -inset-px rounded-md opacity-0 transition duration-300 group-hover:opacity-100"
                     style={{
-                        background: useMotionTemplate`
+                      background: useMotionTemplate`
                                     radial-gradient(
-                                    650px circle at ${index > 1 ? mouseX3 : index > 0 ? mouseX2 : mouseX}px ${index > 1 ? mouseY3 : index > 0 ? mouseY2 : mouseY}px,
+                                    650px circle at ${
+                                      index > 1
+                                        ? mouseX3
+                                        : index > 0
+                                        ? mouseX2
+                                        : mouseX
+                                    }px ${
+                        index > 1 ? mouseY3 : index > 0 ? mouseY2 : mouseY
+                      }px,
                                     var(--glow),
                                     transparent 75%
                                     )
                                 `,
                     }}
-                />
-                <h1 className={clsx("text-highlight font-medium", review.text.length < 200 && 'text-lg')}>
+                  />
+                  <h1
+                    className={clsx(
+                      'text-highlight font-medium',
+                      review.text.length < 200 && 'text-lg'
+                    )}
+                  >
                     &quot;{review.text}&quot;
-                </h1>
-                <div className="flex gap-3 items-center">
+                  </h1>
+                  <div className="flex gap-3 items-center">
                     <Image
-                        alt='Review Profile Picture'
-                        width={40}
-                        height={40}
-                        src={
-                            review.image
-                                ? review.image
-                                : 'https://yt3.googleusercontent.com/ytc/AIf8zZQ6Beteem4h6iwgtemlku2M0sJjq64BgZFculaewg=s900-c-k-c0x00ffffff-no-rj'
-                        }
-                        className="rounded-full w-[40px]"
+                      alt="Review Profile Picture"
+                      width={40}
+                      height={40}
+                      src={
+                        review.image
+                          ? review.image
+                          : 'https://yt3.googleusercontent.com/ytc/AIf8zZQ6Beteem4h6iwgtemlku2M0sJjq64BgZFculaewg=s900-c-k-c0x00ffffff-no-rj'
+                      }
+                      className="rounded-full w-[40px]"
                     />
                     <h1 className="font-semibold">{review.author}</h1>
-                </div>
-            </motion.div>
-        ))}
+                  </div>
+                </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious variant={'secondary'}/>
+          <CarouselNext variant={'secondary'}/>
+        </Carousel>
       </div>
     </>
   );

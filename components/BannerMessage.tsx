@@ -20,7 +20,7 @@ export default function BannerMessage() {
         </motion.div>
         <motion.div viewport={{once: true}} whileInView={{opacity: 1}} initial={{opacity: 0}} className='w-full h-[400px] md:h-[500px] top-0 left-0 absolute -z-10'>
             <div className='w-full h-full bg-gradient-to-t from-background via-transparent to-background z-10 absolute'/>
-            <Image alt="Banner background" src={BannerImage} placeholder={"blur"} fill quality={95} className='w-full h-full object-cover'/>
+            <Image alt="Banner background" src={BannerImage} placeholder="blur" fill quality={95} className='w-full h-full object-cover'/>
         </motion.div>
     </div>
  )
