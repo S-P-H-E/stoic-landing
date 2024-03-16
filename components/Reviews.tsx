@@ -111,8 +111,7 @@ export default function Reviews() {
       x: 0,
       transition: {
         type: 'spring',
-    
-        delay: 0.15 * index,
+        delay: index <= 2  ? 0.12 * index : 0.03 * index
       },
     }),
   };
