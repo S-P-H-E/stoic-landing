@@ -92,9 +92,9 @@ export default function Reviews() {
         'https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80',
       author: 'The Last Rebel',
     },
-    {
+    { // text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰. This is the first one where we agreed on, looking to charge around 20-25$ per video and around 15-20 videos p/m so around 400$",
       id: 4,
-      text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰.",
+      text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰. This is the first one where we agreed on, looking to charge around 20-25$ per video and around 15-20 videos per month so around 400$",
       image:
         'https://cdn.discordapp.com/avatars/933087941734060071/5168de81c31f0c1d13ddfcdf496c3814.webp?size=80',
       author: 'rocco',
@@ -171,7 +171,7 @@ export default function Reviews() {
                   <h1
                     className={clsx(
                       'text-highlight font-medium',
-                      review.text.length < 200 && 'text-lg'
+                      review.text.length < 250 && 'text-lg'
                     )}
                   >
                     &quot;{review.text}&quot;

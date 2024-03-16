@@ -2,13 +2,14 @@
 import Link from 'next/link';
 import React from 'react';
 import { SiDiscord } from 'react-icons/si';
-import { motion, spring } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Discord() {
   const inviteLink = 'https://discord.gg/stoiccord';
+  
   return (
     <motion.div
-      className="z-[999] active:scale-90 fixed bottom-5 right-5"
+      className="z-[999] fixed bottom-5 right-5"
       viewport={{ once: true }}
       transition={{
         duration: 0.35,
@@ -20,7 +21,7 @@ export default function Discord() {
       whileInView={{ y: 0, opacity: 1 }}
     >
       <Link
-        className="flex gap-2 items-center bg-light-gray hover:bg-border transition md:px-4 p-2 rounded-lg border border-border"
+        className="flex gap-2 items-center active:scale-90 bg-light-gray hover:bg-border transition md:px-4 p-2 rounded-lg border border-border"
         href={inviteLink}
         target="_blank"
       >
