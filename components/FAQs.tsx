@@ -114,7 +114,7 @@ export default function FAQs() {
                         className={clsx("my-4 p-8 overflow-hidden cursor-pointer", index === faqs.length - 1 && "border-none", "border-b border-border")}
                     >
                         <button
-                            className="font-bold md:font-medium text-xl md:text-2xl flex justify-between w-full text-start items-center"
+                            className="font-semibold md:font-medium text-xl md:text-2xl flex justify-between w-full text-start items-center"
                         >
                             <p>{faq.question}</p>
                             <div

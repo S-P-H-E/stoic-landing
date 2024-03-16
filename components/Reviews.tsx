@@ -3,7 +3,7 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import Image from 'next/image';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -69,7 +69,7 @@ export default function Reviews() {
     handleMouseMove2,
     handleMouseMove3,
     handleMouseMove4,
-  ];  
+  ];
 
   const reviews = [
     {
@@ -92,7 +92,8 @@ export default function Reviews() {
         'https://cdn.discordapp.com/avatars/1121888745092812871/d36a6e750875da0ecd8799282fb9dcd9.webp?size=80',
       author: 'The Last Rebel',
     },
-    { // text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰. This is the first one where we agreed on, looking to charge around 20-25$ per video and around 15-20 videos p/m so around 400$",
+    {
+      // text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰. This is the first one where we agreed on, looking to charge around 20-25$ per video and around 15-20 videos p/m so around 400$",
       id: 4,
       text: "Thanks to your editing help, I've been able to get people messaging me for work - closing on a client too 🏦💰. This is the first one where we agreed on, looking to charge around 20-25$ per video and around 15-20 videos per month so around 400$",
       image:
@@ -111,10 +112,39 @@ export default function Reviews() {
       x: 0,
       transition: {
         type: 'spring',
-        delay: index <= 2  ? 0.12 * index : 0.03 * index
+        delay: index <= 2 ? 0.12 * index : 0.03 * index,
       },
     }),
   };
+
+  const fadeInBoxMobile = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        delay: 0.1 * index,
+      },
+    }),
+  };
+
+const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const fadeInBoxVariants = isMobile ? fadeInBoxMobile : fadeInBox;
 
   return (
     <>
@@ -131,13 +161,74 @@ export default function Reviews() {
           Here is what a few had to say.
         </p>
       </div>
-      <div className="max-w-9xl mx-auto pb-16 lg:pb-20 px-8 gap-6 w-fit">
-        <Carousel>
+      <div className="max-w-9xl mx-auto pb-16 grid lg:block lg:pb-20 px-8 gap-6 w-fit">
+        <div className='lg:hidden flex flex-col gap-5'>
+        {reviews.map((review, index) => (
+          <motion.div
+            key={index}
+            className="bg-light-gray group rounded w-full max-w-[650px] mx-auto border border-border p-5 relative  flex flex-col justify-between gap-4"
+            initial="initial"
+            variants={isMobile ? fadeInBoxMobile : fadeInBox}
+            custom={index}
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            onMouseMove={handleMouseMoveFunctions[index]}
+          >
+            <motion.div
+              className="md:block hidden pointer-events-none absolute -inset-px rounded-md opacity-0 transition duration-300 group-hover:opacity-100"
+              style={{
+                background: useMotionTemplate`
+                                    radial-gradient(
+                                    650px circle at ${
+                                      index > 1
+                                        ? mouseX3
+                                        : index > 0
+                                        ? mouseX2
+                                        : mouseX
+                                    }px ${
+                  index > 1 ? mouseY3 : index > 0 ? mouseY2 : mouseY
+                }px,
+                                    var(--glow),
+                                    transparent 75%
+                                    )
+                                `,
+              }}
+            />
+            <h1
+              className={clsx(
+                'text-highlight font-medium',
+                review.text.length < 250 && 'text-lg'
+              )}
+            >
+              &quot;{review.text}&quot;
+            </h1>
+            <div className="flex gap-3 items-center">
+              <Image
+                alt="Review Profile Picture"
+                width={40}
+                height={40}
+                src={
+                  review.image
+                    ? review.image
+                    : 'https://yt3.googleusercontent.com/ytc/AIf8zZQ6Beteem4h6iwgtemlku2M0sJjq64BgZFculaewg=s900-c-k-c0x00ffffff-no-rj'
+                }
+                className="rounded-full w-[40px]"
+              />
+              <h1 className="font-semibold">{review.author}</h1>
+            </div>
+          </motion.div>
+        ))}
+        </div>
+
+        <Carousel className="lg:block hidden">
           <CarouselContent>
             {reviews.map((review, index) => (
-              <CarouselItem className="lg:basis-1/3" key={review.id}>
+              <CarouselItem className="basis-1/3" key={review.id}>
                 <motion.div
-                  className="bg-light-gray group rounded w-full max-w-[650px] border border-border p-5 relative h-full flex flex-col justify-between gap-4"
+                  key={index}
+                  className="bg-light-gray group rounded w-full max-w-[650px] border border-border p-5 relative mx-auto h-full flex flex-col justify-between gap-4"
                   initial="initial"
                   variants={fadeInBox}
                   custom={index}
@@ -193,8 +284,8 @@ export default function Reviews() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious variant={'secondary'}/>
-          <CarouselNext variant={'secondary'}/>
+          <CarouselPrevious variant={'secondary'} />
+          <CarouselNext variant={'secondary'} />
         </Carousel>
       </div>
     </>
