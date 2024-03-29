@@ -194,7 +194,7 @@ export default function Reviews() {
         ))}
         </div>
 
-        <Carousel className="lg:block hidden">
+        <Carousel className="lg:block hidden 2xl:w-full md:w-[90%] mx-auto w-full">
           <CarouselContent>
             {reviews.map((review, index) => (
               <CarouselItem className="basis-1/3" key={review.id}>
