@@ -102,7 +102,9 @@ export default function Hero() {
                     </div>
                     <iframe
                         className="w-full h-full"
-                        src={`https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/4b47940531476dd77426b1aa55aec8dc/iframe?${controls}${muted}&preload=true&autoplay=true&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F4b47940531476dd77426b1aa55aec8dc%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`}
+                        src={`
+                        https://customer-m0okwjgscx6jj5he.cloudflarestream.com/c949ae4700d79da648b6514d09604e53/iframe?${controls}${muted}&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-m0okwjgscx6jj5he.cloudflarestream.com%2Fc949ae4700d79da648b6514d09604e53%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600
+                        `}
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowFullScreen={true}
                     ></iframe>

@@ -19,6 +19,7 @@ const JoinButton2 = () => {
             try {
                 e.preventDefault();
 
+                // analytics call to affiliate site
                 const data = await handleSubscription(e);
                 router.push(data);
             } catch (error: any) {

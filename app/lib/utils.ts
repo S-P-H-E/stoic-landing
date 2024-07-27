@@ -6,11 +6,11 @@ export const handleSubscription = async (e: { preventDefault: () => void }) => {
 
     try {
         const response = await fetch('/api/payment', {
+            // pass referal code here
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-
         });
 
         if (!response.ok) {

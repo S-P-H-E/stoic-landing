@@ -30,7 +30,7 @@ const MyComponent = () => {
         if (!loaded) {
             const timeout = setTimeout(() => {
                 setLoaded(true);
-            }, 3500);
+            }, 2800);
 
             return () => clearTimeout(timeout);
         }
@@ -100,12 +100,12 @@ const MyComponent = () => {
         {
             title: 'After Effects Crash Course',
             description: 'Learn everything you need to know about After Effects.',
-            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/ae98ef95a5a63155c48d7d19f7f5e248/iframe?${controls}${muted}&preload=${loaded ? 'true' : 'false'}&autoplay=${loaded ? 'true' : 'false'}&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2Fae98ef95a5a63155c48d7d19f7f5e248%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
+            link: `https://customer-m0okwjgscx6jj5he.cloudflarestream.com/1275824866a9d148a79d526a0d4d593e/iframe?${controls}${muted}&preload=${loaded ? 'true' : 'false'}&loop=true&autoplay=${loaded ? 'true' : 'false'}&poster=https%3A%2F%2Fcustomer-m0okwjgscx6jj5he.cloudflarestream.com%2F1275824866a9d148a79d526a0d4d593e%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
         },
         {
             title: 'Short Form Masterclass',
             description: 'Get the best lessons on Short Form Content.',
-            link: `https://customer-hyo06dqr7c3pgrtr.cloudflarestream.com/2df67f9a50031d68a8e68d8f58ea5736/iframe?${controls2}${muted2}&preload=${loaded ? 'true' : 'false'}&autoplay=${loaded ? 'true' : 'false'}&loop=true&poster=https%3A%2F%2Fcustomer-hyo06dqr7c3pgrtr.cloudflarestream.com%2F2df67f9a50031d68a8e68d8f58ea5736%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600`
+            link: `https://customer-m0okwjgscx6jj5he.cloudflarestream.com/10ab594f4db1e59a0c53c222d944b329/iframe?${controls2}${muted2}&preload=${loaded ? 'true' : 'false'}&loop=true&autoplay=${loaded ? 'true' : 'false'}&poster=https%3A%2F%2Fcustomer-m0okwjgscx6jj5he.cloudflarestream.com%2F10ab594f4db1e59a0c53c222d944b329%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600            `
         }
     ];
 
