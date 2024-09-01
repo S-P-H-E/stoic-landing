@@ -19,7 +19,7 @@ export default function Footer() {
                     </Link>
                     <h1 className="text-description">|</h1>
                     <Link href="/Legal/Privacy Policy.pdf" target="_blank">
-                        <button className="text-gray hover:underline">
+                        <button className="text-description hover:underline">
                             Privacy Policy
                         </button>
                     </Link>
